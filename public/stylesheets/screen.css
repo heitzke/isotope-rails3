@@ -317,6 +317,16 @@ ul.nav li a {
   font-size:2em; 
   margin: 0 0 7px 0;
 }
+
+#content .doc_list li {
+  padding: 0 0 7px 0;
+}
+
+#content .doc_list li a {
+  font-size:1.2em;
+  padding: 0 0 7px 0;
+}
+
 .notice {
   background:#ccc;
   border:1px solid #83B0BE;
@@ -961,7 +971,7 @@ a.content_link {
 }
 #footer .footer-content2 {
   padding: 25px 0 10px 0; 
-  margin:0 122px 0 0; 
+  margin:0 128px 0 0; 
   float:right; 
   color:#3d606f; 
   font-size:1.1em;
@@ -979,7 +989,7 @@ a.content_link {
 }
 #footer-content-wrap ul.footer-content {
   float:left; 
-  margin: 0 150px 15px 131px; 
+  margin: 0 0 15px 131px; 
   padding: 25px 0 0 0; 
   color:#3d606f; 
   font-size:1.1em;
