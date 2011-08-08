@@ -33,6 +33,8 @@ IsotopeRails3::Application.routes.draw do
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
+  match '/home/resources' => 'home#resources'
+  
   match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:
