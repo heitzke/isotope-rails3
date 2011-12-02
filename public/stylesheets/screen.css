@@ -12,7 +12,7 @@ body {
   width:auto; 
   font: 62.5% Verdana, Arial, Helvetica, sans-serif; 
   background:url(../images/body-bg.jpg) repeat-x; 
-  background-color:#ececec; 
+  background-color:#f4f4f4; 
   margin: 0 auto;
 }
 
@@ -23,7 +23,7 @@ a {
 
 body.internal {
   background:url(../images/body-bg-internal.png) repeat-x;  
-  background-color:#ececec;
+  background-color:#f4f4f4;
 }
 
 #main-wrap {
