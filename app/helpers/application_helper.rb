@@ -1,7 +1,8 @@
 module ApplicationHelper
   def coderay(text)
     text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
-      CodeRay.scan($3, $2).div(:css => :class)
+      lang = $2 || 'ruby'
+      CodeRay.scan($3, lang).div(:css => :class)
     end
   end
 end
