@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
+  acts_as_url :title, :url_attribute => :slug
+
   validates_presence_of :title, :body, :user_id, :slug
   validates_uniqueness_of :slug
   validates_format_of :slug, :with => /^[a-zA-Z0-9\-]+$/, :message => " can only contain letters, numbers, and dashes."
