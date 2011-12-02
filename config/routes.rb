@@ -4,8 +4,13 @@ IsotopeRails3::Application.routes.draw do
   devise_for :users, :path => '/', :path_names => { :sign_in => 'login', :sign_out => 'logout' }
 
   match '/about' => 'users#index', :as => :about_index
+  match '/about/alumni' => 'users#alumni', :as => :about_alumni
   match '/about/:id' => 'users#show', :as => :about
-  resources :users
+  resources :users do
+    member do
+      put :change_password
+    end
+  end
   resources :posts, :path => :blog
   resources :contact
 
@@ -23,10 +28,13 @@ IsotopeRails3::Application.routes.draw do
   match '/community/xrono' => 'community#xrono'
   match '/community/rubyham' => 'community#rubyham'
   match '/community/state_machine_audits' => 'community#state_machine_audits'
+  match '/community/techbirmingham' => 'community#techbirmingham'
   match '/community/contract_acceptance_framework' => 'community#contract_acceptance_framework'
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
+  match '/home/resources' => 'home#resources'
+  
   match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:

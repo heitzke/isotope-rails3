@@ -13,3 +13,4 @@ public/stylesheets/compiled/*
 tmp/**/*
 
 .gitpusshuten/**/*
+vendor/ruby
