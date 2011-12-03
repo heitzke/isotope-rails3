@@ -25,6 +25,10 @@ ol li{
   font-style: oblique;
 }
 
+em {
+  font-weight: 600;
+}
+
 a {
   border:none; 
   outline:none;
