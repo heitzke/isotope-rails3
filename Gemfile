@@ -14,6 +14,7 @@ gem 'rdiscount'
 group :development do
   gem 'mysql'
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'sqlite3'
 end
 
 group :test do
