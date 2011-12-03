@@ -16,8 +16,13 @@ body {
   margin: 0 auto;
 }
 
+ol {
+  margin-bottom: 1em;
+}
+
 ol li{
   list-style-type: decimal;
+  font-style: oblique;
 }
 
 a {
