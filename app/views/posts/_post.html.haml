@@ -10,5 +10,7 @@
         %p
           = post.created_at.to_formatted_s(:long_ordinal)
       .clear
+    - if local_assigns[:share]
+      %span.share= share_this
     .blog_content
       =coderay(post.body.html_safe)
