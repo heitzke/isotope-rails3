@@ -925,6 +925,7 @@ a.content_link {
 #content .blog_post {
   padding: 0 0 10px 0;
   margin: 25px 0 15px 0;  
+  position: relative;
 }
 
 .blog_info_top {
@@ -958,6 +959,10 @@ a.content_link {
   font-size:1.4em;
   color:#ccc;
   float: right;
+}
+
+#content .blog_post .share {
+  position: absolute;
 }
 
 .blog_content {
