@@ -228,12 +228,12 @@ ul.nav li a {
   width:69px;
   background:url(../images/blog.png) no-repeat 0 -45px;
   padding: 0 5px 0 0;
-  }
+}
 #blog_tab a:hover {
-   background:url(../images/blog.png) no-repeat 0 0;
+  background:url(../images/blog.png) no-repeat 0 0;
 }
 #blog_tab.active {
-   background:url(../images/blog.png) no-repeat 0 0;
+  background:url(../images/blog.png) no-repeat 0 0;
 }
 #clients_tab a {
   width:77px;
@@ -296,11 +296,13 @@ ul.nav li a {
   width:962px; 
   height:auto;
 }
-#content a {
+#content a,
+#footer a{
   color: #83B0BE;
   text-decoration: none;
 }
-#content a:hover {
+#content a:hover,
+#footer a:hover{
   text-decoration: underline;
 }
 #content p {
@@ -321,7 +323,8 @@ ul.nav li a {
 #content h3.typeface-js {
   font-family: 'greyscalebasic', arial, serif;
 }
-#content h4 {
+#content h4,
+#footer h4{
   font-size:1.6em; 
   margin: 5px 0 10px 0; 
   color:#003366; 
@@ -366,7 +369,6 @@ ul.nav li a {
 }
 
 #project_slider_bottom {
-  height:182px;
   width:962px;
   margin: 0 auto;
 }
@@ -378,7 +380,6 @@ ul.nav li a {
 #project_slider_bottom .feature {
   width:230px;
   float:left;
-  border-right:1px solid #a0b2b9;
   margin: 0 5px 0 0;
 }
 * + html #project_slider_bottom .feature {
@@ -537,8 +538,6 @@ ul.nav li a {
   line-height:1.5em;
   margin: 0 0 10px 0;
 }
-
-
 #project-slider .feature-wrap {
   width:950px;
   margin: 0 0 0 14px;
@@ -547,7 +546,6 @@ ul.nav li a {
   width:230px;
   height:148px;
   float:left;
-  border-right:1px solid #a0b2b9;
   padding: 10px 0 15px 0;
   margin: 0 5px 0 0;
 }
@@ -930,8 +928,8 @@ a.content_link {
 }
 
 .blog_info_top {
- margin: 0 0 8px 0;
- border-bottom: 1px solid #ddd;
+  margin: 0 0 8px 0;
+  border-bottom: 1px solid #ddd;
 }
 .blog_info_top img {
   float:left;
@@ -1013,57 +1011,20 @@ a.content_link {
 /*----------------------------------------------------------footer----------------------------------*/
 #footer {
   width:100%; 
-  background:url(../images/footer-bg.png) repeat-x; 
-  height:94px;
+  background-color: #d3d3d3;
+  color: #666;
+  margin-top: 20px;
+  border-top: 4px solid #bbb;
 }
 #footer-content-wrap {
-  width:1200px; 
-  margin: 0 auto; 
+  width:950px; 
+  margin: 0 auto;
+  padding: 20px 0 20px 14px;
   display:block; 
-  height:94px;
 }
-#footer .footer-content2 {
-  padding: 25px 0 10px 0; 
-  margin:0 128px 0 0; 
-  float:right; 
-  color:#3d606f; 
-  font-size:1.1em;
-} 
-#footer .footer-content2 li {
-  display:inline; 
-  padding: 0 3px 0 0;
+#footer a{
+  color:#003366; 
 }
-#footer .footer-content2 li a {
-  color:#3d606f; 
-  text-transform:none;
-}
-#footer .footer-content2 li a:hover {
-  color:#000066;
-}
-#footer-content-wrap ul.footer-content {
-  float:left; 
-  margin: 0 0 15px 131px; 
-  padding: 25px 0 0 0; 
-  color:#3d606f; 
-  font-size:1.1em;
-  width:180px;
-  height:auto;
-}
-#footer .footer-content li {
-  padding: 0 5px 3px 0;
-}
-#footer .footer-content li a {
-  color:#3d606f;
-}
-#footer .footer-content li a:hover {
-  color:#000066;
-}
-
-.footer-content3 {
-  float:right;
-  margin: 5px 124px 0 0;
-}
-
 
 /*-----------------------------------------------mad lib form--------------------------------------------------------------*/
 
@@ -1156,13 +1117,19 @@ form blockquote .passwordtoggle {
 }
 
 #user_nav {
-float: right;
-margin: 0 8px 0 0;
-width:600px;
+  float: right;
+  margin: 0 8px 0 0;
+  width:600px;
 }
 
 .clear {
-clear: both;
+  clear: both;
+}
+
+.quarter{
+  width: 230px;
+  margin: 0 5px 0 0;
+  float: left;
 }
 
 .CodeRay {
