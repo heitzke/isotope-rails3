@@ -228,12 +228,12 @@ ul.nav li a {
   width:69px;
   background:url(../images/blog.png) no-repeat 0 -45px;
   padding: 0 5px 0 0;
-  }
+}
 #blog_tab a:hover {
-   background:url(../images/blog.png) no-repeat 0 0;
+  background:url(../images/blog.png) no-repeat 0 0;
 }
 #blog_tab.active {
-   background:url(../images/blog.png) no-repeat 0 0;
+  background:url(../images/blog.png) no-repeat 0 0;
 }
 #clients_tab a {
   width:77px;
@@ -930,8 +930,8 @@ a.content_link {
 }
 
 .blog_info_top {
- margin: 0 0 8px 0;
- border-bottom: 1px solid #ddd;
+  margin: 0 0 8px 0;
+  border-bottom: 1px solid #ddd;
 }
 .blog_info_top img {
   float:left;
@@ -1156,13 +1156,13 @@ form blockquote .passwordtoggle {
 }
 
 #user_nav {
-float: right;
-margin: 0 8px 0 0;
-width:600px;
+  float: right;
+  margin: 0 8px 0 0;
+  width:600px;
 }
 
 .clear {
-clear: both;
+  clear: both;
 }
 
 .CodeRay {
