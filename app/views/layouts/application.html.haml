@@ -6,6 +6,7 @@
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
     = auto_discovery_link_tag :atom, posts_path(:atom)
+    = yield :head_javascripts
   %body.internal
     #main-wrap
       #header-internal
