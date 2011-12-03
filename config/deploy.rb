@@ -17,7 +17,7 @@ set :use_sudo, false
 # repo details
 set :scm, :git
 #set :git_username, "knewter"
-set :repository, "git://github.com/isotope11/isotope-rails3.git"
+set :repository, "git@github.com:isotope11/isotope-rails3.git"
 set :branch, "production"
 set :git_enable_submodules, 1
 
