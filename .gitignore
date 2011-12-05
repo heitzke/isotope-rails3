@@ -3,6 +3,7 @@
 *.sw*
 capybara*
 config/database.yml
+config/database.yml.staging
 coverage/
 db/*.sqlite3
 log/*.log
@@ -10,4 +11,6 @@ public/system/**/*
 public/stylesheets/compiled/*
 .rvmrc
 tmp/**/*
+
+.gitpusshuten/**/*
 vendor/ruby
