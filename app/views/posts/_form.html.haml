@@ -15,7 +15,7 @@
       = f.text_field :slug
     .field
       = f.label :body
-      = f.cktext_area :body
+      = f.cktext_area :body, :toolbar => 'Full', :width => 1000, :height => 200
     .clear  
     .actions
       = f.submit
