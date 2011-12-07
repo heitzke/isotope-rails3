@@ -71,9 +71,9 @@
 
     .content.clearfix
       %div{ :role => "main" }
-        This is the main section
+        = yield
       %div{ :role => "complementary" }
-        And this is the complementary section
+        This is the complementary section
 
     %footer{ :role => "contentinfo", :class => "clearfix" }
 
