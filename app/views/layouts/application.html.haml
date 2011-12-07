@@ -5,7 +5,9 @@
       = yield :title
     = render :partial => 'shared/meta'
     = stylesheet_link_tag 'reset-min', 'screen'
+    = javascript_include_tag :ckeditor 
     = auto_discovery_link_tag :atom, posts_path(:atom)
+    = yield :head_javascripts
   %body.internal
     #main-wrap
       #header-internal

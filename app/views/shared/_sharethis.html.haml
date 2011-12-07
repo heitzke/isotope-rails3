@@ -1,0 +1,13 @@
+%span.st_twitter_large
+%br
+%span.st_facebook_large
+%br
+%span.st_email_large
+%br
+%br
+%span.st_plusone_large{ :st_url => request.url }
+%br
+
+- content_for :head_javascripts do
+  :plain
+    <script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'76697a04-4a41-4a36-9923-590e6117708e'});</script>

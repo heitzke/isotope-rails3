@@ -14,7 +14,7 @@ IsotopeRails3::Application.routes.draw do
   resources :posts, :path => :blog
   resources :contact
 
-  resources :incoming_mails
+  resources :lolnohaxplz_incoming_mails, :controller => 'incoming_mails'
 
   match '/services' => 'services#index'
   match '/services/phasezero' => 'services#phasezero'

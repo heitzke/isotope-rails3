@@ -9,6 +9,7 @@ db/*.sqlite3
 log/*.log
 public/system/**/*
 public/stylesheets/compiled/*
+public/ckeditor_assets/*
 .rvmrc
 tmp/**/*
 
