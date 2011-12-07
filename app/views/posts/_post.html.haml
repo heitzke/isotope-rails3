@@ -1,14 +1,16 @@
 = div_for post do
   .blog_post
     .blog_info_top
-      = image_tag post.user.avatar.url(:thumb)
-      %h2= link_to_unless_current h(post.title), post
-      .author
-        %h3
-          by:
-          = link_to_unless_current post.user, about_path(post.user) 
-        %p
-          = post.created_at.to_formatted_s(:long_ordinal)
+      .author_image
+        = image_tag post.user.avatar.url(:thumb)
+      .title
+        %h2= link_to_unless_current h(post.title), post
+        .author
+          %h3
+            by:
+            = link_to_unless_current post.user, about_path(post.user) 
+          %p
+            = post.created_at.to_formatted_s(:long_ordinal)
       .clear
     - if local_assigns[:share]
       %span.share= share_this

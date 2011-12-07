@@ -933,9 +933,26 @@ a.content_link {
   margin: 0 0 8px 0;
   border-bottom: 1px solid #ddd;
 }
+.blog_info_top .author_image {
+  display:inline-block;
+  vertical-align:top;
+  zoom: 1;
+  *display:block;
+}
+.blog_info_top .title {
+  display:inline-block;
+  vertical-align:top;
+  zoom: 1;
+  *display:block;
+}
+.blog_info_top .title h2{
+  width: 896px;
+  line-height: .8em;
+}
+
 .blog_info_top img {
   float:left;
-  margin: 3px 13px 0 0;
+  margin: 3px 5px 0 0;
 }
 #content .blog_info_top h2 {
   margin: 0 0 0 6px;
@@ -952,14 +969,15 @@ a.content_link {
   border:none;
 }
 .author {
-  margin: -12px 0 0 0;
+  margin: -4px 0 0 6px;
 }
 
 #content .author p {
-  padding:5px 0 0 7px;
+  padding: 0 0 0 0;
   font-size:1.4em;
   color:#ccc;
   float: right;
+  margin: 8px 0 0 0;
 }
 
 #content .blog_post .share {
