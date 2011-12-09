@@ -7,6 +7,9 @@ gem 'rake', '0.9.2'
 gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
 #gem 'stylexicon', :path => '/home/jadams/rails/stylexicon'
 
+# Get static pages
+gem 'high_voltage'
+
 gem 'devise', '~> 1.4.9'
 gem 'paperclip', '~> 2.3.11'
 gem 'haml', '~> 3.1.3'
