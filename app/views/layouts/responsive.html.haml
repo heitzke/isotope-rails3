@@ -9,25 +9,26 @@
 - conditional_html 'en-US' do
   %head
     %title= yield(:title)
-    = render :partial => 'layouts/responsive/meta'
-    = render :partial => 'layouts/responsive/stylesheets'
-    = render :partial => 'layouts/responsive/shims'
-    = render :partial => 'layouts/responsive/favicons'
-    = render :partial => 'layouts/responsive/apple_config'
+    = render partial: 'layouts/responsive/meta'
+    = render partial: 'layouts/responsive/fonts'
+    = render partial: 'layouts/responsive/stylesheets'
+    = render partial: 'layouts/responsive/shims'
+    = render partial: 'layouts/responsive/favicons'
+    = render partial: 'layouts/responsive/apple_config'
 
     / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
-    %link{ :rel => "canonical", :href => "/" }
+    %link{ rel: "canonical", href: "/" }
 
   %body.clearfix
-    %header{ :role => "banner" }
+    %header{ role: "banner" }
       %h1= link_to 'isotope|eleven', root_path
 
     .content.clearfix
-      %div{ :role => "main" }
+      %div{ role: "main" }
         = yield
 
-    %footer{ :role => "contentinfo", :class => "clearfix" }
+    %footer{ role: "contentinfo", class: "clearfix" }
       &copy; 2012 Isotope Eleven, Inc.
 
-    = render :partial => 'layouts/responsive/javascripts'
+    = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
