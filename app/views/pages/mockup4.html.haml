@@ -2,11 +2,17 @@
   .topbar
 
   %header{ role: "banner" }
-    %h1= link_to 'isotope|eleven', root_path
+    %h1
+      %span= link_to 'isotope|eleven', root_path
 
   .content.clearfix
     %div{ role: "main" }
-      = yield
+      %h2.lighter.continued
+        lorem ipsum dor de ipsum
+      %h2.light.continued
+        miserocordian de duo tuo
+      %h2.medium.final
+        lorem ipsum.
 
   %footer{ role: "contentinfo", class: "clearfix" }
     &copy; 2012 Isotope Eleven, Inc.

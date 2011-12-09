@@ -524,14 +524,50 @@ header h1 a{
 }
 
 .mockup4{
+  background-color: #fafaf7;
+  header h1{
+    background-image: image-url('/assets/mockups/mockup4/logo.png');
+    height: 101px;
+    z-index: 10;
+    position: relative;
+  }
+  header h1 span{
+    display: none;
+  }
+  h2{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    font-size: 1.4em;
+    &.continued{
+      margin-bottom: 0;
+    }
+    &.final{
+      padding-bottom: .5em;
+      border-bottom: 1px solid #5b99ab;
+    }
+  }
+  .medium{
+    color: #5b99ab;
+  }
+  .light{
+    color: #67b1c9;
+  }
+  .lighter{
+    color: #9dd7ea;
+  }
   .topbar{
     height: 4px;
     background-image: image-url('/assets/mockups/mockup4/topbar.png');
     .drop-shadow(0px, 3px, 3px, 0.1);
+    z-index: 100;
+    position: relative;
   }
   .bottombar{
     height: 4px;
     background-image: image-url('/assets/mockups/mockup4/bottombar.png');
     .drop-shadow(0px, -3px, 3px, 0.1);
+    z-index: 100;
+    position: relative;
   }
 }
