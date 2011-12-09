@@ -1,0 +1,14 @@
+.mockup4
+  .topbar
+
+  %header{ role: "banner" }
+    %h1= link_to 'isotope|eleven', root_path
+
+  .content.clearfix
+    %div{ role: "main" }
+      = yield
+
+  %footer{ role: "contentinfo", class: "clearfix" }
+    &copy; 2012 Isotope Eleven, Inc.
+
+  .bottombar

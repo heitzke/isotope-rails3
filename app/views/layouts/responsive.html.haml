@@ -8,10 +8,14 @@
   License: http://creativecommons.org/licenses/MIT
 - conditional_html 'en-US' do
   %head
-    %title= yield(:title)
+    %title
+      = content_for?(:title) ? yield(:title) : "isotope|eleven"
     = render partial: 'layouts/responsive/meta'
     = render partial: 'layouts/responsive/fonts'
     = render partial: 'layouts/responsive/stylesheets'
+    / Yield any custom stylesheets
+    = yield :stylesheets
+
     = render partial: 'layouts/responsive/shims'
     = render partial: 'layouts/responsive/favicons'
     = render partial: 'layouts/responsive/apple_config'
@@ -20,15 +24,7 @@
     %link{ rel: "canonical", href: "/" }
 
   %body.clearfix
-    %header{ role: "banner" }
-      %h1= link_to 'isotope|eleven', root_path
-
-    .content.clearfix
-      %div{ role: "main" }
-        = yield
-
-    %footer{ role: "contentinfo", class: "clearfix" }
-      &copy; 2012 Isotope Eleven, Inc.
+    = yield
 
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
