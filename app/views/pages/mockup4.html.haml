@@ -1,8 +1,8 @@
 .mockup4
   .topbar
 
-  %header{ role: "banner" }
-    #who-we-are
+  #who-we-are
+    %header{ role: "banner" }
       %h1
         %span= link_to 'isotope|eleven', root_path
 
@@ -16,7 +16,8 @@
         %h2.medium.final
           lorem ipsum.
 
-        = image_tag 'mockups/mockup4/portfolio_mock.jpg'
+        .portfolio
+          = image_tag 'mockups/mockup4/portfolio_mock.jpg'
 
       #how-we-do-it
         %ol.how-we-do-it

@@ -514,7 +514,8 @@ p {
 }
 /* 17 TEMPLATE SPECIFICS ============================================================================= */
 body{
-  width: 100%;
+  //width: 100%;
+  width: 320px;
 }
 header h1{
   font-size: 2em;
@@ -532,6 +533,7 @@ header h1 a{
     height: 101px;
     z-index: 10;
     position: relative;
+    margin-bottom: 0;
   }
   header h1 span{
     display: none;
@@ -572,6 +574,11 @@ header h1 a{
     z-index: 100;
     position: relative;
   }
+  #what-we-do{
+    .portfolio{
+      margin-left: 10px;
+    }
+  }
   #how-we-do-it{
     ol{
       list-style: decimal;
@@ -590,7 +597,7 @@ header h1 a{
         }
         p{
           font-size: .85em;
-          color: 3999;
+          color: #999;
         }
       }
     }
