@@ -8,3 +8,4 @@ To get started:
 	Run the bundle   "bundle install"
 	Create the database "rake db:create"
 	Run database migrations "rake db:migrate"
+
