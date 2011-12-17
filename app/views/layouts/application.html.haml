@@ -8,6 +8,7 @@
     = javascript_include_tag :ckeditor 
     = auto_discovery_link_tag :atom, posts_path(:atom)
     = yield :head_javascripts
+    = render :partial => 'shared/google_analytics_script'
   %body.internal
     #main-wrap
       #header-internal
