@@ -602,3 +602,82 @@ header h1 a{
     }
   }
 }
+
+.mockup6 {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #f8f5f0;
+  font-family: 'Ubuntu', sans-serif;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bree Serif', serif;
+  }
+  #who-we-are{
+    background-image: image-url('/assets/mockups/mockup6/header.png');
+    height: 203px;
+    h1{
+      height: 105px;
+      margin: 0;
+      span{
+        display: none;
+      }
+    }
+    h2{
+      text-align: center;
+      margin: 0 auto;
+      color: #4f7b94;
+      &.first{
+        margin-top: -.3em;
+        font-size: 3.8em;
+        text-shadow: #d4effa 1px 1px, #d4effa 2px 2px, #4f7b94 3px 3px;
+      }
+      &.second{
+        margin-top: -.4em;
+        font-size: 2.5em;
+        text-shadow: #d4effa 1px 1px, #d4effa 2px 2px, #4f7b94 3px 3px;
+      }
+    }
+  }
+  #what-we-do{
+    .services-slider{
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #fefdff;
+      .drop-shadow(0px, -3px, 3px, 0.1);
+    }
+    .bullets{
+      height: 28px;
+      width: 199px;
+      background-image: image-url('/assets/mockups/mockup6/bullets.jpg');
+      margin: .5em auto;
+    }
+  }
+  #how-we-do-it{
+    border-top: 4px solid #d4effa;
+    background-color: #4f7b94;
+    .section{
+      padding-left: 4em;
+      padding-right: 1em;
+      position: relative;
+      color: #fcfbf7;
+      h3{
+        color: #fcfbf7;
+        font-size: 2.5em;
+        text-shadow: #4f7b94 1px 1px, #4f7b94 2px 2px, #fcfbf7 3px 3px;
+        margin-bottom: 0;
+      }
+      h4{
+        font-family: 'Ubuntu', sans-serif;
+        margin-top: -.5em;
+        color: #aed2de;
+      }
+      h5{
+        color: #aed2de;
+        position: absolute;
+        left: .2em;
+        top: -.05em;
+        font-size: 4.2em;
+        text-shadow: #4f7b94 1px 1px, #4f7b94 2px 2px, #aed2de 3px 3px;
+      }
+    }
+  }
+}
