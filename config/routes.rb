@@ -32,6 +32,8 @@ IsotopeRails3::Application.routes.draw do
   match '/community/state_machine_audits' => 'community#state_machine_audits'
   match '/community/techbirmingham' => 'community#techbirmingham'
   match '/community/contract_acceptance_framework' => 'community#contract_acceptance_framework'
+  match '/community/bootstrap_will_paginate' => 'community#bootstrap_will_paginate'
+  match '/community/css3_progress_bar_rails' => 'community#css3_progress_bar_rails'
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
