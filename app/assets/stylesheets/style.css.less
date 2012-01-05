@@ -172,7 +172,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Cabin', sans-serif;
   font-weight: 300;
 }
 h1 {
@@ -607,7 +607,7 @@ header h1 a{
   width: 320px;
   margin: 0 auto;
   background-color: #f8f5f0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Cabin', sans-serif;
   &.bree {
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Bree Serif', serif;
@@ -619,11 +619,14 @@ header h1 a{
     }
   }
   #who-we-are{
-    background-image: image-url('/assets/mockups/mockup6/header.png');
+    background-image: image-url('/assets/top_clouds_bg.jpg');
     height: 203px;
     h1{
       height: 105px;
       margin: 0;
+      background-image: image-url('/assets/isotope_logo.png');
+      background-position: 20px 0px;
+      background-repeat: no-repeat;
       span{
         display: none;
       }
@@ -670,7 +673,7 @@ header h1 a{
       padding-top: 10px;
       padding-bottom: 10px;
       background-color: #fefdff;
-      .drop-shadow(0px, -3px, 3px, 0.1);
+      .drop-shadow(0px, 0px, 5px, 0.2);
     }
     .bullets{
       height: 28px;
@@ -685,6 +688,7 @@ header h1 a{
     .section{
       padding-left: 4em;
       padding-right: 1em;
+      padding-bottom: 1.5em;
       position: relative;
       color: #fcfbf7;
       h3{
@@ -693,7 +697,9 @@ header h1 a{
         margin-bottom: 0;
       }
       h4{
-        font-family: 'Ubuntu', sans-serif;
+        font-weight: normal;
+        font-size: 1em;
+        font-family: 'Cabin', sans-serif;
         margin-top: -.5em;
         color: #aed2de;
       }
@@ -730,6 +736,36 @@ header h1 a{
           font-size: 3.5em;
         }
       }
+    }
+  }
+  footer{
+    height: 320px;
+    background-image: image-url('footer_map.jpg');
+    text-align: center;
+    padding-top: 1em;
+    .location{
+      margin: 4em auto 0;
+      padding-top: 42px;
+      background-image: image-url('location_bg.png');
+      width: 237px;
+      height: 111px;
+    }
+  }
+  .btn{
+    display: inline-block;
+    text-decoration: none;
+    .rounded(5px);
+    .gradient(#25a8d9, #2494be, #25a8d9);
+    color: #a1e5ff;
+    padding: 1em;
+    span{
+      font-size: 2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-shadow: 0 0px 3px #666;
+    }
+    &:hover {
+      .gradient(#2494be, #2494be, #2494be);
     }
   }
 }

@@ -1,4 +1,4 @@
-%div{ class: "mockup6 #{ params[:vast] ? 'vast' : 'bree' }" }
+%div{ class: "mockup6 #{ params[:bree] ? 'bree' : 'vast' }" }
   #who-we-are
     %header{ role: "banner" }
       %h1
@@ -7,7 +7,7 @@
     %h2.second Development
   #what-we-do
     .services-slider
-      = image_tag 'mockups/mockup6/ecommerce.jpg'
+      = image_tag 'fader_slide1.png'
     .bullets
   #how-we-do-it
     .section.section0
@@ -58,3 +58,15 @@
         Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
         durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
         Durpa Hurp da durpa durpa derrrr.
+  %footer
+    %a.btn.primary{ href: '#' }
+      %span Visit Blog
+    .location
+      %strong Isotope11
+      %br
+      529 Beacon Parkway W
+      %br
+      Suite 105
+      %br
+      Birmingham, AL 35209
+
