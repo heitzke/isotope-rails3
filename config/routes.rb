@@ -34,6 +34,7 @@ IsotopeRails3::Application.routes.draw do
   match '/community/contract_acceptance_framework' => 'community#contract_acceptance_framework'
   match '/community/bootstrap_will_paginate' => 'community#bootstrap_will_paginate'
   match '/community/css3_progress_bar_rails' => 'community#css3_progress_bar_rails'
+  match '/community/isotope_contacts' => 'community#isotope_contacts'
   
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
