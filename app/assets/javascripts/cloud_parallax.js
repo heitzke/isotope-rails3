@@ -1,15 +1,4 @@
 $(function(){
-  window.requestAnimFrame = (function(){
-    return  window.requestAnimationFrame       ||
-            window.webkitRequestAnimationFrame ||
-            window.mozRequestAnimationFrame    ||
-            window.oRequestAnimationFrame      ||
-            window.msRequestAnimationFrame     ||
-            function( callback ){
-              window.setTimeout(callback, 1000 / 60);
-            };
-  })();
-
   function cloud_animation(){
     var base_distance = 30;
     // percentages to reflect parallax depth
@@ -27,12 +16,12 @@ $(function(){
       'cloud11': 0.2
     }
     for(var i=1; i<=11; i++){
-      $('#cloud' + i).animate({left: '-=' + (base_distance * cloud_percentages['cloud' + i]) + 'px'}, 1000);
+      $('#cloud' + i).animate({left: '-=' + (base_distance * cloud_percentages['cloud' + i]) + 'px'}, 500);
     }
   }
 
   (function cloudloop(){
     cloud_animation();
-    requestAnimFrame(cloudloop);
+    requestAnimationFrame(cloudloop);
   })();
 });
