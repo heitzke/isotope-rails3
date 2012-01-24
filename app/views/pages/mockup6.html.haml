@@ -1,5 +1,8 @@
 %div{ class: "mockup6 #{ params[:bree] ? 'bree' : 'vast' }" }
   #who-we-are
+    #parallax-bg1
+      - (1..11).each do |i|
+        = image_tag "cloud/cloud_#{i}.png", :id => "cloud#{i}", :class => 'cloud'
     %header{ role: "banner" }
       %h1
         %span= link_to 'isotope|eleven', root_path
@@ -70,3 +73,5 @@
       %br
       Birmingham, AL 35209
 
+- content_for :javascripts do
+  = javascript_include_tag 'cloud_parallax'

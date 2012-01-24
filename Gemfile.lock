@@ -1,7 +1,7 @@
 PATH
   remote: /home/jadams/rails/stylexicon
   specs:
-    stylexicon (0.0.2)
+    stylexicon (0.0.1)
       haml (~> 3.1.4)
       rails (~> 3.1.3)
 

@@ -619,9 +619,11 @@ header h1 a{
     }
   }
   #who-we-are{
-    background-image: image-url('/assets/top_clouds_bg.jpg');
+    // background-image: image-url('/assets/top_clouds_bg.jpg');
     height: 203px;
     h1{
+      position: relative;
+      z-index: 2;
       height: 105px;
       margin: 0;
       background-image: image-url('/assets/isotope_logo.png');
@@ -632,6 +634,8 @@ header h1 a{
       }
     }
     h2{
+      position: relative;
+      z-index: 2;
       text-align: center;
       margin: 0 auto;
       color: #4f7b94;
@@ -767,5 +771,16 @@ header h1 a{
     &:hover {
       .gradient(#2494be, #2494be, #2494be);
     }
+  }
+}
+
+#parallax-bg1{
+  position: relative;
+  .cloud{
+    z-index: 1;
+    max-width: inherit;
+    left: 0;
+    position: absolute;
+    top: 0;
   }
 }
