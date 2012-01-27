@@ -1,0 +1,30 @@
+!!!
+/
+  320 and Up boilerplate extension
+  Andy Clarke http://about.me/malarkey
+  Keith Clark http://twitter.com/keithclarkcouk
+  Version: 2
+  URL: http://stuffandnonsense.co.uk/projects/320andup/
+  License: http://creativecommons.org/licenses/MIT
+- conditional_html 'en-US' do
+  %head
+    %title
+      = content_for?(:title) ? yield(:title) : "isotope|eleven"
+    = render partial: 'layouts/responsive/meta'
+    = render partial: 'layouts/responsive/fonts'
+    = render partial: 'layouts/responsive/stylesheets'
+    / Yield any custom stylesheets
+    = yield :stylesheets
+
+    = render partial: 'layouts/responsive/shims'
+    = render partial: 'layouts/responsive/favicons'
+    = render partial: 'layouts/responsive/apple_config'
+
+    / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
+    %link{ rel: "canonical", href: "/" }
+
+  %body.clearfix
+    = yield
+
+    = render partial: 'layouts/responsive/javascripts'
+    = yield :javascripts

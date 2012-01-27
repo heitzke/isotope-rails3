@@ -1,20 +1,26 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.0'
-gem 'mysql2', '~> 0.2.7'
-gem 'devise', '~> 1.1.3'
+gem 'rails', '~> 3.1.0'
+gem 'mysql2', '~> 0.3.0'
+gem 'rake', '0.9.2'
+
+#gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
+gem 'stylexicon', :path => '/home/jadams/rails/stylexicon'
+
+# Get static pages
+gem 'high_voltage'
+
+gem 'devise', '~> 1.4.9'
 gem 'paperclip', '~> 2.3.11'
-gem 'haml', '~> 3.1.1'
-gem 'sass', '~> 3.1.1'
-gem 'will_paginate', '~> 3.0.pre2'
-gem 'coderay', '~> 0.9.7'
-gem 'capistrano'
-gem 'ckeditor'
+
+gem 'haml', '~> 3.1.3'
+gem 'will_paginate', '~> 3.0.2'
+gem 'coderay', '~> 1.0.4'
 gem 'stringex'
 gem 'rdiscount'
+gem 'less-rails'
 
 group :development do
-  gem 'mysql'
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'sqlite3'
 end

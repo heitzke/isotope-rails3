@@ -1,4 +1,22 @@
 module ApplicationHelper
+  def conditional_html(lang = "en", &block)
+    # see http://gf3.ca/2011/02/12/conditional-html-tag-haml for technique used
+    header = <<-"HTML"
+<!--[if IEMobile 7]><html class="no-js iem7 oldie"><![endif]-->
+<!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js ie7 oldie" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+    HTML
+    haml_concat header.html_safe
+    if block_given?
+      yield
+      haml_concat "\n</html>".html_safe
+    end
+    true
+  end
+
   def coderay(text)
     text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
       lang = $2 || 'ruby'
