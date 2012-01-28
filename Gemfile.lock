@@ -1,5 +1,6 @@
-PATH
-  remote: /home/jadams/rails/stylexicon
+GIT
+  remote: http://github.com/isotope11/stylexicon.git
+  revision: f66fdcb58fbb6eac8f6d07881e417b96ba1ce7cb
   specs:
     stylexicon (0.0.2)
       haml (~> 3.1.4)
