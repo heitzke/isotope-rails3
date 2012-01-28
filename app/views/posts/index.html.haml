@@ -1,10 +1,12 @@
 - content_for(:title, "Blog &ndash; Isotope|eleven".html_safe)
-%h2
-  Blog
-  %span#rss_link= link_to (image_tag 'feed-icon-28x28.png'), posts_path(:atom)
+#how-we-do-it
+  .fixed_content
+    %h2
+      Blog
+      %span#rss_link= link_to (image_tag 'feed-icon-28x28.png'), posts_path(:atom)
 
-= render @posts
-= will_paginate @posts
+    = render @posts
+    = will_paginate @posts
 
-- if current_user
-  = link_to 'New Post', new_post_path
+    - if current_user
+      = link_to 'New Post', new_post_path

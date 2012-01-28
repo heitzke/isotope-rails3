@@ -27,7 +27,16 @@
     #parallax-bg1
       - [11, 10, 7, 5, 4, 3, 2, 1].each do |i|
         .cloud{ class: "cloud#{i}" }
+    #who-we-are
+      %header{ role: "banner" }
+        %h1
+          %span= link_to 'isotope|eleven', root_path
+      %hr
+      %h2.first Software
+      %h2.second Development
     = yield
 
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
+    = javascript_include_tag 'request_animation_frame_polyfill'
+    = javascript_include_tag 'cloud_parallax'
