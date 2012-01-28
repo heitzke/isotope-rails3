@@ -103,10 +103,10 @@
     loaded: function () {
       this.$element
         .addClass('orbit')
-        .width('1px')
-        .height('1px');
+        .width('320px')
+        .height('148px');
         
-      this.setDimentionsFromLargestSlide();
+      this.setDimensionsFromLargestSlide();
       this.updateOptionsIfOnlyOneSlide();
       this.setupFirstSlide();
       
@@ -133,7 +133,7 @@
       return this.$slides.eq(this.activeSlide);
     },
     
-    setDimentionsFromLargestSlide: function () {
+    setDimensionsFromLargestSlide: function () {
       //Collect all slides and set slider size of largest image
       var self = this;
       this.$slides.each(function () {
