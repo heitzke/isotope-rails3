@@ -1,66 +1,80 @@
-- content_for :title do
-  Isotope|eleven
+#who-we-are
+  %header{ role: "banner" }
+    %h1
+      %span= link_to 'isotope|eleven', root_path
+  %hr
+  %h2.first Software
+  %h2.second Development
+#what-we-do
+  .services-slider
+    = image_tag 'fader_slide1.png'
+    .section.fixed_content
+      %h3 E-Commerce
+      %p Lorem ipsum consectetur fizzle my dizzle, etc. and so forth.
+  .bullets
+#how-we-do-it
+  .fixed_content
+    .section.section0
+      %h5 0
+      %h3 Phase Zero
+      %h4 strategy / layout ish
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+    .section.section1
+      %h5 1
+      %h3 Wireframe
+      %h4 mockup / user stories
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+    .section.section2
+      %h5 2
+      %h3 Implement
+      %h4 minimum viable product
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+    .section.section3
+      %h5 3
+      %h3 Iterate
+      %h4 hand-in-hand with customer
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+    .section.section4
+      %h5 4
+      %h3 Ship It
+      %h4 deploy &amp; manage
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+    .section.section5
+      %h5 5
+      %h3 Tweak
+      %h4 add features
+      %p
+        Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
+        durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
+        Durpa Hurp da durpa durpa derrrr.
+%footer
+  .fixed_content
+    %a.btn.primary{ href: '#' }
+      %span View Blog
+    .location
+      %strong Isotope11
+      %br
+      529 Beacon Parkway W
+      %br
+      Suite 105
+      %br
+      Birmingham, AL 35209
 
-#project-top
-  &nbsp;
-#content-wrap
-  #content-home
-    #project-slider
-      .feature-wrap
-        .feature
-          .feature_title
-            %h3
-              = link_to 'Phase Zero', 'services/phasezero'
-            = image_tag 'feature_phasezero.png'
-          = link_to 'Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project...', 'services/phasezero'
-
-        .feature
-          .feature_title
-            %h3
-              = link_to 'E-commerce', 'services/ecommerce'
-            = image_tag 'feature_ecom.png'
-          = link_to 'Ready to get your business online, and move beyond a basic webpage?...', 'services/ecommerce'
-        .feature
-          .feature_title
-            %h3
-              = link_to 'Social Media', 'services/socialmedia'
-            = image_tag 'feature_social.png'
-          = link_to  'Social Media is all the buzz, work with a team that knows the ins and outs of the business...', 'services/socialmedia'
-        .feature-last
-          .feature_title
-            %h3
-              = link_to 'MLM', 'services/mlm'
-            = image_tag 'feature_mlm.png', :class => 'mlm'
-          = link_to 'Need multi-level marketing? We have the complete solution...', 'services/mlm'
-    .clear
-    #project_slider_bottom
-      .feature-wrap
-        .feature
-          .feature_title
-            %h3 
-              = link_to 'Financial', 'services/financial'
-            = image_tag 'feature_financial.png'
-          = link_to 'Having architected, developed, and maintained one of the largest Ruby based financial applications in the world...', 'services/financial'
-        .feature
-          .feature_title
-            %h3 
-              = link_to 'Insurance', 'services/insurance'
-            = image_tag 'feature_insurance.png'
-          = link_to 'Many factors go into formulating a successful and accurate insurance quote...', 'services/insurance' 
-        .feature
-          .feature_title
-            %h3 
-              = link_to 'Mobile', 'services/mobile'
-            = image_tag 'feature_mobile.png'
-          = link_to 'Good mobile applications are much more than a basic functioning iPhone app...', 'services/mobile' 
-        .feature-last
-          .feature_title
-            %h3
-              = link_to 'SaaS', 'services/saas'
-            = image_tag 'feature_saas.png'
-          = link_to 'Software as a service isn\'t just about re-occurring revenue...', 'services/saas'
-    
-    <!--content featured gallery here -->
-    <script type="text/javascript">
-    if(!window.slider) var slider={};slider.data=[{"id":"slide-img-1","client":"Financial Services","desc":""},{"id":"slide-img-3","client":"AIUA","desc":""},{"id":"slide-img-4","client":"Sportgraphics","desc":""}];
-    </script>
+- content_for :javascripts do
+  = javascript_include_tag 'request_animation_frame_polyfill'
+  = javascript_include_tag 'cloud_parallax'

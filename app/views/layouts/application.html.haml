@@ -1,24 +1,33 @@
-!!! Strict
-%html
+!!!
+/
+  320 and Up boilerplate extension
+  Andy Clarke http://about.me/malarkey
+  Keith Clark http://twitter.com/keithclarkcouk
+  Version: 2
+  URL: http://stuffandnonsense.co.uk/projects/320andup/
+  License: http://creativecommons.org/licenses/MIT
+- conditional_html 'en-US' do
   %head
     %title
-      = yield :title
-    = render :partial => 'shared/meta'
-    = stylesheet_link_tag 'reset-min', 'screen'
-    = javascript_include_tag :ckeditor 
-    = auto_discovery_link_tag :atom, posts_path(:atom)
-    = yield :head_javascripts
-    = render :partial => 'shared/google_analytics_script'
-    = render :partial => 'shared/hit_tail_script'
-  %body.internal
-    #main-wrap
-      #header-internal
-        #title-bar-internal
-          = render :partial => "shared/header"
-      #content-wrap
-        #content
-          = render :partial => "shared/flashes"
-          = yield
-          %br.clear
-    = render :partial => "shared/footer"
-    = render :partial => 'shared/javascripts'
+      = content_for?(:title) ? yield(:title) : "isotope|eleven"
+    = render partial: 'layouts/responsive/meta'
+    = render partial: 'layouts/responsive/fonts'
+    = render partial: 'layouts/responsive/stylesheets'
+    / Yield any custom stylesheets
+    = yield :stylesheets
+
+    = render partial: 'layouts/responsive/shims'
+    = render partial: 'layouts/responsive/favicons'
+    = render partial: 'layouts/responsive/apple_config'
+
+    / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
+    %link{ rel: "canonical", href: "/" }
+
+  %body.clearfix
+    #parallax-bg1
+      - [11, 10, 7, 5, 4, 3, 2, 1].each do |i|
+        .cloud{ class: "cloud#{i}" }
+    = yield
+
+    = render partial: 'layouts/responsive/javascripts'
+    = yield :javascripts

@@ -144,7 +144,7 @@ __________________________________________________________ */
 }
 html {
   overflow-y: scroll;
-  background: #ffffff image-url('/assets/tmp/grid.png') repeat-y 50% 0;
+  //background: #ffffff image-url('/assets/tmp/grid.png') repeat-y 50% 0;
   font-size: 62.5%;
 }
 body {
@@ -514,97 +514,24 @@ p {
 }
 /* 17 TEMPLATE SPECIFICS ============================================================================= */
 body{
-  //width: 100%;
-  width: 320px;
+  width: 100%;
 }
 img {
   max-width: 100%;
 }
-header h1{
+header {
+  h1 {
   font-size: 2em;
+  margin: 0 0 0 2%;
+  }
 }
 header h1 a{
   text-decoration: none;
 }
 
-.mockup4{
-  font-family: 'Ubuntu', sans-serif;
-  background-color: #fafaf7;
-  header h1{
-    background-image: image-url('/assets/mockups/mockup4/logo.png');
-    background-repeat: no-repeat;
-    height: 101px;
-    z-index: 10;
-    position: relative;
-    margin-bottom: 0;
-  }
-  header h1 span{
-    display: none;
-  }
-  h2{
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    font-size: 1.4em;
-    &.continued{
-      margin-bottom: 0;
-    }
-  }
-  .medium{
-          color: #5b99ab;
-  }
-  .light{
-    color: #67b1c9;
-  }
-  .lighter{
-    color: #9dd7ea;
-  }
-  .topbar{
-    height: 4px;
-    background-image: image-url('/assets/mockups/mockup4/topbar.png');
-    .drop-shadow(0px, 3px, 3px, 0.1);
-    z-index: 100;
-    position: relative;
-  }
-  .bottombar{
-    height: 4px;
-    background-image: image-url('/assets/mockups/mockup4/bottombar.png');
-    .drop-shadow(0px, -3px, 3px, 0.1);
-    z-index: 100;
-    position: relative;
-  }
-  .portfolio{
-    padding-top: 1em;
-    border-top: 1px solid #5b99ab;
-    margin: 0 .5em;
-  }
-  #how-we-do-it{
-    ol{
-      list-style: decimal;
-      margin-left: 1em;
-      margin-right: 1em;
-      padding-left: 0;
-      li{
-        list-style: decimal;
-        display: block;
-        padding-top:4px;
-        padding-left: 2em;
-        background-image: image-url('/assets/mockups/mockup4/ordered-list-background.png');
-        background-repeat: no-repeat;
-        h4{
-          color: #5b99ab;
-        }
-        p{
-          font-size: .85em;
-          color: #999;
-        }
-      }
-    }
-  }
-}
-
-.mockup6 {
-  width: 320px;
+.content {
+  min-width: 320px;
+  width: 100%;
   margin: 0 auto;
   background-color: #f8f5f0;
   font-family: 'Cabin', sans-serif;
@@ -618,145 +545,149 @@ header h1 a{
       font-family: 'Vast Shadow', cursive;
     }
   }
-  #who-we-are{
-    // background-image: image-url('/assets/top_clouds_bg.jpg');
-    height: 183px;
-    hr{
-      border-color: white;
-      border-width: 1px;
-      .drop-shadow(0px, 0px, 5px, 0.8);
-      width: 86%;
-      margin: 0 auto;
-      z-index: 20;
-      position: relative;
-    }
-    h1{
-      position: relative;
-      z-index: 2;
-      height: 95px;
-      margin: 0;
-      background-image: image-url('/assets/isotope_logo.png');
-      background-position: 20px 0px;
-      background-repeat: no-repeat;
-      span{
-        display: none;
-      }
-    }
-    h2{
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      margin: 0 auto;
-      color: #4f7b94;
-      &.first{
-        margin-top: .25em;
-        text-transform: uppercase;
-        font-size: 2.2em;
-      }
-      &.second{
-        margin-top: -.4em;
-        text-transform: uppercase;
-        font-size: 1.6em;
-      }
-    }
+  .fixed_content {
+    width: 320px;
   }
-  #what-we-do{
+}
+#who-we-are{
+  // background-image: image-url('/assets/top_clouds_bg.jpg');
+  height: 183px;
+  hr{
+    border-color: white;
+    border-width: 1px;
+    .drop-shadow(0px, 0px, 5px, 0.8);
+    width: 86%;
+    margin: 0 auto;
     z-index: 20;
     position: relative;
-    .services-slider{
-      position: relative;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      background-color: #fefdff;
-      .drop-shadow(0px, 0px, 5px, 0.2);
-      .section{
-        font-family: 'Cabin', sans-serif;
-        position: absolute;
-        top: 1em;
-        left: 1em;
-        width: 50%;
-        h3{
-          font-family: 'Cabin', sans-serif;
-        }
-        p{
-        }
-      }
-    }
-    .bullets{
-      height: 28px;
-      width: 199px;
-      background-image: image-url('/assets/mockups/mockup6/bullets.jpg');
-      margin: .5em auto;
-    }
   }
-  #how-we-do-it{
-    z-index: 20;
+  h1{
     position: relative;
-    border-top: 4px solid #d4effa;
-    background-color: #4f7b94;
-    padding-top: 2em;
-    .section{
-      padding-left: 4em;
-      padding-right: 1em;
-      padding-bottom: 1.5em;
-      position: relative;
-      color: #fcfbf7;
-      h3{
-        color: #fcfbf7;
-        font-size: 1.4em;
-        margin-bottom: 0;
-        text-transform: uppercase;
-      }
-      h4{
-        font-weight: normal;
-        font-size: 1em;
-        font-family: 'Cabin', sans-serif;
-        margin-top: -.5em;
-        color: #aed2de;
-      }
-      h5{
-        color: #aed2de;
-        position: absolute;
-        left: .4em;
-        top: 0;
-        font-size: 2.8em;
-      }
-    }
-  }
-  footer{
-    height: 320px;
-    background-image: image-url('footer_map.jpg');
-    text-align: center;
-    padding-top: 1em;
-    .location{
-      margin: 4em auto 0;
-      padding-top: 42px;
-      background-image: image-url('location_bg.png');
-      width: 237px;
-      height: 111px;
-    }
-  }
-  .btn{
-    display: inline-block;
-    text-decoration: none;
-    .rounded(5px);
-    .gradient(#25a8d9, #2494be, #25a8d9);
-    color: #a1e5ff;
-    padding: 1em;
-    display: block;
-    margin: 0 1em;
-    padding: 1em;
+    z-index: 2;
+    height: 95px;
+    margin: 0;
+    background-image: image-url('/assets/isotope_logo.png');
+    background-position: 20px 0px;
+    background-repeat: no-repeat;
     span{
-      font-size: 2.5em;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-shadow: 0 0px 3px #666;
+      display: none;
     }
-    &:hover {
-      .gradient(#2494be, #2494be, #2494be);
+  }
+  h2{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin: 0 auto;
+    color: #4f7b94;
+    &.first{
+      margin-top: .25em;
+      text-transform: uppercase;
+      font-size: 2.2em;
+    }
+    &.second{
+      margin-top: -.4em;
+      text-transform: uppercase;
+      font-size: 1.6em;
     }
   }
 }
+#what-we-do{
+  z-index: 20;
+  position: relative;
+  .services-slider{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fefdff;
+    .drop-shadow(0px, 0px, 5px, 0.2);
+    .section{
+      font-family: 'Cabin', sans-serif;
+      position: absolute;
+      top: 1em;
+      left: 1em;
+      width: 50%;
+      h3{
+        font-family: 'Cabin', sans-serif;
+      }
+      p{
+      }
+    }
+  }
+  .bullets{
+    height: 28px;
+    width: 199px;
+    background-image: image-url('/assets/mockups/mockup6/bullets.jpg');
+    margin: .5em auto;
+  }
+}
+#how-we-do-it{
+  z-index: 20;
+  position: relative;
+  border-top: 4px solid #d4effa;
+  background-color: #4f7b94;
+  padding-top: 2em;
+  .section{
+    padding-left: 4em;
+    padding-right: 1em;
+    padding-bottom: 1.5em;
+    position: relative;
+    color: #fcfbf7;
+    h3{
+      color: #fcfbf7;
+      font-size: 1.4em;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+    h4{
+      font-weight: normal;
+      font-size: 1em;
+      font-family: 'Cabin', sans-serif;
+      margin-top: -.5em;
+      color: #aed2de;
+    }
+    h5{
+      color: #aed2de;
+      position: absolute;
+      left: .4em;
+      top: 0;
+      font-size: 2.8em;
+    }
+  }
+}
+footer{
+  height: 320px;
+  background-image: image-url('footer_map.jpg');
+  text-align: center;
+  padding-top: 1em;
+  .location{
+    margin: 4em auto 0;
+    padding-top: 42px;
+    background-image: image-url('location_bg.png');
+    width: 237px;
+    height: 111px;
+  }
+}
+.btn{
+  display: inline-block;
+  text-decoration: none;
+  .rounded(5px);
+  .gradient(#25a8d9, #2494be, #25a8d9);
+  color: #a1e5ff;
+  padding: 1em;
+  display: block;
+  margin: 0 1em;
+  padding: 1em;
+  span{
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0px 3px #666;
+  }
+  &:hover {
+    .gradient(#2494be, #2494be, #2494be);
+  }
+}
+
 
 #parallax-bg1{
   position: relative;
