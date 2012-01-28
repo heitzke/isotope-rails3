@@ -31,6 +31,11 @@
       %header{ role: "banner" }
         %h1
           %span= link_to 'isotope|eleven', root_path
+      %nav
+        %ul
+          %li= link_to 'About', about_index_path
+          %li= link_to 'Services', services_path
+          %li.last= link_to 'Contact', home_contact_path
       %hr
       %h2.first Software
       %h2.second Development

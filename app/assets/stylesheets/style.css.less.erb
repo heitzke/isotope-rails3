@@ -545,6 +545,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 #who-we-are{
+  z-index: 2;
+  position: relative;
+  nav{
+    display: none;
+    z-index: 3;
+  }
   height: 183px;
   hr{
     border-color: white;
@@ -564,7 +570,12 @@ h1, h2, h3, h4, h5, h6 {
     background-position: top center;
     background-repeat: no-repeat;
     span{
-      display: none;
+      a{
+        display: block;
+        text-indent: -9999em;
+        width: 276px;
+        height: 89px;
+      }
     }
   }
   h2{
