@@ -16,7 +16,7 @@ $(function(){
       'cloud11': 0.2
     }
     for(var i=1; i<=11; i++){
-      $('.cloud' + i).animate({backgroundPosition: '-=' + (base_distance * cloud_percentages['cloud' + i]) + ' -=0'}, 500);
+      $('.cloud' + i).animate({backgroundPosition: '-=' + (base_distance * cloud_percentages['cloud' + i]) + ' -=0'}, 500, 'linear');
     }
   }
 
