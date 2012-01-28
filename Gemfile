@@ -5,7 +5,7 @@ gem 'mysql2', '~> 0.3.0'
 gem 'rake', '0.9.2'
 
 gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
-#gem 'stylexicon', :path => '/home/jadams/rails/stylexicon'
+
 
 # Get static pages
 gem 'high_voltage'
