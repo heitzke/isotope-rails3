@@ -429,17 +429,18 @@
         
         //horizontal-slide
         if (this.options.animation == "horizontal-slide") {
+          console.log(this.$element.css('width'));
           if (slideDirection == "next") {
             this.$slides
               .eq(this.activeSlide)
-              .css({"left": this.orbitWidth, "z-index" : 3})
-              .animate({"left" : 0}, this.options.animationSpeed, this.resetAndUnlock);
+              .css({"left": this.$element.css('width'), "z-index" : 3})
+              .animate({"left" : '0'}, this.options.animationSpeed, this.resetAndUnlock);
           }
           if (slideDirection == "prev") {
             this.$slides
               .eq(this.activeSlide)
-              .css({"left": -this.orbitWidth, "z-index" : 3})
-              .animate({"left" : 0}, this.options.animationSpeed, this.resetAndUnlock);
+              .css({"left": -this.$element.css('width'), "z-index" : 3})
+              .animate({"left" : '0'}, this.options.animationSpeed, this.resetAndUnlock);
           }
         }
             
