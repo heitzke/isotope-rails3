@@ -1,7 +1,7 @@
 /*
  * jQuery Orbit Plugin 1.3.0
  * www.ZURB.com/playground
- * Copyright 2011, ZURB
+ * Copyright 2010, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
 */
@@ -27,6 +27,7 @@
       bulletThumbs: false,				// thumbnails for the bullets
       bulletThumbLocation: '',			// location from this file where thumbs will be
       afterSlideChange: $.noop,		// empty function 
+      fluid: false,             // true or ratio (ex: 4x3) to force an aspect ratio for content slides, only works from within a fluid layout
       centerBullets: true    // center bullet nav with js, turn this off if you want to position the bullet nav manually
  	  },
  	  
@@ -66,6 +67,10 @@
       this.$wrapper = this.$element.wrap(this.wrapperHTML).parent();
       this.$slides = this.$element.children('img, a, div');
       
+      if (this.options.fluid) {
+        this.$wrapper.addClass('fluid');
+      }
+      
       this.$element.bind('orbit.next', function () {
         self.shift('next');
       });
@@ -103,8 +108,9 @@
     loaded: function () {
       this.$element
         .addClass('orbit');
+        //.css({width: '1px', height: '1px'});
         
-      this.setDimensionsFromLargestSlide();
+      this.setDimentionsFromLargestSlide();
       this.updateOptionsIfOnlyOneSlide();
       this.setupFirstSlide();
       
@@ -131,9 +137,17 @@
       return this.$slides.eq(this.activeSlide);
     },
     
-    setDimensionsFromLargestSlide: function () {
+    setDimentionsFromLargestSlide: function () {
       //Collect all slides and set slider size of largest image
-      var self = this;
+      var self = this,
+          $fluidPlaceholder;
+          
+      self.$element.add(self.$wrapper);//.width(this.$slides.first().width());
+      self.$element.add(self.$wrapper).height(this.$slides.first().height());
+      self.orbitWidth = this.$slides.first().width();
+      self.orbitHeight = this.$slides.first().height();
+      $fluidPlaceholder = this.$slides.first().clone();
+      
       this.$slides.each(function () {
         var slide = $(this),
             slideWidth = slide.width(),
@@ -146,9 +160,27 @@
         if (slideHeight > self.$element.height()) {
           self.$element.add(self.$wrapper).height(slideHeight);
           self.orbitHeight = self.$element.height();
+          $fluidPlaceholder = $(this).clone();
 	      }
         self.numberSlides += 1;
       });
+      
+      if (this.options.fluid) {
+        
+        if (typeof this.options.fluid === "string") {
+          $fluidPlaceholder = $('<img src="http://placehold.it/' + this.options.fluid + '" />')
+        }
+        
+        self.$element.prepend($fluidPlaceholder);
+        $fluidPlaceholder.addClass('fluid-placeholder');
+        self.$element.add(self.$wrapper).css({width: 'inherit'});
+        self.$element.add(self.$wrapper).css({height: 'inherit'});
+        
+        $(window).bind('resize', function () {
+          self.orbitWidth = self.$element.width();
+          self.orbitHeight = self.$element.height();
+        });
+      }
     },
     
     //Animation locking functions
@@ -337,6 +369,7 @@
       this.$bullets = $(this.bulletHTML);
     	this.$wrapper.append(this.$bullets);
     	this.$slides.each(this.addBullet);
+    	this.$element.addClass('with-bullets');
     	if (this.options.centerBullets) this.$bullets.css('margin-left', -this.$bullets.width() / 2);
     },
     
@@ -432,14 +465,14 @@
           if (slideDirection == "next") {
             this.$slides
               .eq(this.activeSlide)
-              .css({"left": this.$element.css('width'), "z-index" : 3})
-              .animate({"left" : '0'}, this.options.animationSpeed, this.resetAndUnlock);
+              .css({"left": this.orbitWidth, "z-index" : 3})
+              .animate({"left" : 0}, this.options.animationSpeed, this.resetAndUnlock);
           }
           if (slideDirection == "prev") {
             this.$slides
               .eq(this.activeSlide)
-              .css({"left": -this.$element.css('width'), "z-index" : 3})
-              .animate({"left" : '0'}, this.options.animationSpeed, this.resetAndUnlock);
+              .css({"left": -this.orbitWidth, "z-index" : 3})
+              .animate({"left" : 0}, this.options.animationSpeed, this.resetAndUnlock);
           }
         }
             
