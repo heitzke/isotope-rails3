@@ -429,7 +429,6 @@
         
         //horizontal-slide
         if (this.options.animation == "horizontal-slide") {
-          console.log(this.$element.css('width'));
           if (slideDirection == "next") {
             this.$slides
               .eq(this.activeSlide)
