@@ -23,7 +23,7 @@
     / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
     %link{ rel: "canonical", href: "/" }
 
-  %body.clearfix
+  %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     #parallax-bg1
       - [11, 10, 7, 5, 4, 3, 2, 1].each do |i|
         .cloud{ class: "cloud#{i}" }
@@ -31,9 +31,21 @@
       %header{ role: "banner" }
         %h1
           %span= link_to 'isotope|eleven', root_path
+      %nav
+        %ul
+          %li= link_to 'About', about_index_path
+          %li= link_to 'Services', services_path
+          %li.last= link_to 'Contact', home_contact_path
       %hr
-      %h2.first Software
-      %h2.second Development
+      .byline-side
+        .line.first
+        .line.second
+      .byline
+        %h2.first Software
+        %h2.second Development
+      .byline-side
+        .line.first
+        .line.second
     = yield
 
     = render partial: 'layouts/responsive/javascripts'

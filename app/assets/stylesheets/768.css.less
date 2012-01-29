@@ -1,3 +1,4 @@
+@import "elements";
 /* _________________________________________________
 
 320 and Up boilerplate extension
@@ -29,16 +30,75 @@ COLOURS
 
 */
 body {
-  width: 100%;
   .fixed_content {
     width: 768px;
     margin: 0 auto;
   }
 }
+body.controller-home.action-index{
+  #who-we-are{
+    height: 283px;
+  }
+}
 #who-we-are{
-  height: 283px;
+  width: 768px;
+  margin: 0 auto;
+  nav{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    li{
+      text-transform: uppercase;
+      display: inline;
+      float: left;
+      padding: 0 15px 0 0;
+      &.last{
+        padding: 0;
+      }
+      a{
+        padding: 4px 0;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+        color: white;
+        text-decoration: none;
+        &:hover{
+          border-top: 140px solid white;
+        }
+      }
+    }
+  }
+  header{
+    width: 768px;
+    margin: 0 auto;
+    h1{
+      background-position: top left;
+    }
+  }
   hr{
     display: none;
+  }
+  .byline{
+    width: 80%;
+    padding: 0 0;
+    display: inline-block;
+  }
+  .byline-side{
+    display: inline-block;
+    width: 9%;
+    padding-bottom: 2em;
+    .line{
+      width: 100%;
+      background-color: #4f7b94;
+      &.first{
+        float: left;
+        height: 4px;
+        margin-bottom: 2px;
+      }
+      &.second{
+        float: right;
+        height: 1px;
+      }
+    }
   }
   h2{
     &.first{
@@ -66,7 +126,7 @@ body {
       font-size: 3.4em;
     }
     p {
-      font-size: 1.2em;
+      font-size: 1em;
       line-height: 1.4em;
     }
   }

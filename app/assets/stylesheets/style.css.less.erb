@@ -544,8 +544,20 @@ h1, h2, h3, h4, h5, h6 {
     width: 320px;
   }
 }
+body.controller-home.action-index{
+  #who-we-are{
+    height: 183px;
+  }
+}
 #who-we-are{
-  height: 183px;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  nav{
+    display: none;
+    z-index: 3;
+  }
+  height: 90px;
   hr{
     border-color: white;
     border-width: 1px;
@@ -564,7 +576,12 @@ h1, h2, h3, h4, h5, h6 {
     background-position: top center;
     background-repeat: no-repeat;
     span{
-      display: none;
+      a{
+        display: block;
+        text-indent: -9999em;
+        width: 276px;
+        height: 89px;
+      }
     }
   }
   h2{
@@ -589,27 +606,17 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 20;
   position: relative;
   .services-slider{
-    width: 780px;
+    width: 100%;
     margin: 0 auto;
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: #fefdff;
-    .drop-shadow(0px, 0px, 5px, 0.2);
+    .drop-shadow(0px, 0px, 5px, 0.8);
     .slide{
-      background-color: white;
-    }
-    .section{
-      font-family: 'Cabin', sans-serif;
-      position: absolute;
-      top: 1em;
-      left: 1em;
-      width: 50%;
-      h3{
-        font-family: 'Cabin', sans-serif;
-      }
-      p{
-      }
+      padding: 20px;
+      height: 200px;
+      .gradient(rgb(239, 196, 92), rgb(224, 240, 92), rgb(239, 196, 92));
     }
   }
   .bullets{
