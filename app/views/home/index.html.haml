@@ -1,10 +1,12 @@
 #what-we-do
-  .services-slider
-    #featured
+  .fixed_content
+    .services-slider
       .slide
-        = image_tag 'fader_slide1.png', width: 320, height: 148, class: 'booger'
+        %h3 E-Commerce
+        %p This is some ecommerce stuff guy.
       .slide
-        foo
+        %h3 Phase Zero
+        %p We totally do phase zeroes.
 #how-we-do-it
   .fixed_content
     .section.section0
@@ -71,7 +73,7 @@
 - content_for :javascripts do
   :javascript
     $(window).load(function() {
-      $('#featured').orbit({
+      $('.services-slider').orbit({
         animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
         animationSpeed: 800,                // how fast animtions are
         timer: true, 			 // true or false to have the timer

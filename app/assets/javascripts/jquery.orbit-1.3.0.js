@@ -102,9 +102,7 @@
     
     loaded: function () {
       this.$element
-        .addClass('orbit')
-        .width('320px')
-        .height('148px');
+        .addClass('orbit');
         
       this.setDimensionsFromLargestSlide();
       this.updateOptionsIfOnlyOneSlide();
