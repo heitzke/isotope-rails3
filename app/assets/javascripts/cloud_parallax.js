@@ -1,3 +1,5 @@
+jQuery.fx.interval = 30;
+
 $(function(){
   function cloud_animation(){
     var base_distance = 30;
@@ -16,12 +18,9 @@ $(function(){
       'cloud11': 0.2
     }
     for(var i=1; i<=11; i++){
-      $('.cloud' + i).animate({backgroundPosition: '-=' + (base_distance * cloud_percentages['cloud' + i]) + ' -=0'}, 500, 'linear');
+      $('.cloud' + i).animate({backgroundPosition: '-=' + (base_distance * cloud_percentages['cloud' + i]) + ' -=0'}, 500, 'linear', cloud_animation);
     }
   }
-
-  (function cloudloop(){
-    cloud_animation();
-    requestAnimationFrame(cloudloop);
-  })();
+  
+  cloud_animation();
 });
