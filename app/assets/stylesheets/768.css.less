@@ -120,31 +120,47 @@ body.controller-home.action-index{
 }
 
 #how-we-do-it{
-  .section1 {
-    padding-top: 2em;
-    h5 {
-      padding: .5em 0 0 0;
+  .fixed_content {
+    .section1 {
+      padding-top: 2em;
+      h5 {
+        padding: .5em 0 0 0;
+      }
+    }
+    .section0 {
+      .arrow {
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+    }
+    .section{
+      display: inline-block;
+      width: 35%;
+      margin-right: 3%;
+      vertical-align: top;
+      h3{
+        font-size: 1.8em;
+      }
+      h4{
+        font-size: 1.2em;
+      }
+      h5{
+        left: 0;
+        font-size: 3.4em;
+      }
+      p {
+        font-size: 1em;
+        line-height: 1.4em;
+      }
     }
   }
-  .section{
-    display: inline-block;
-    width: 35%;
-    margin-right: 3%;
-    vertical-align: top;
-    h3{
-      font-size: 1.8em;
-    }
-    h4{
-      font-size: 1.2em;
-    }
-    h5{
-      left: 0;
-      font-size: 3.4em;
-    }
-    p {
-      font-size: 1em;
-      line-height: 1.4em;
-    }
+}
+footer {
+  .fixed_content {
+    margin: 0 auto;
   }
 }
 
