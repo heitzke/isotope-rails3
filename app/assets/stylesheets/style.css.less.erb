@@ -534,15 +534,18 @@ h1, h2, h3, h4, h5, h6 {
   //font-family: 'Bree Serif', serif;
 }
 
+body .fixed_content {
+  z-index: 11;
+  position: relative;
+  width: 320px;
+}
+
 .content {
   min-width: 320px;
   width: 100%;
   margin: 0 auto;
   background-color: #f8f5f0;
   font-family: 'Cabin', sans-serif;
-  .fixed_content {
-    width: 320px;
-  }
 }
 body.controller-home.action-index{
   #who-we-are{
@@ -721,4 +724,16 @@ footer{
       opacity: 1;
     }
   }
+}
+
+div.interior{
+  background-color: white;
+  position: relative;
+  z-index: 20;
+}
+h2.interior{
+  color: #4f7b94;
+  margin: 0 auto .25em 0;
+  text-align: center;
+  text-transform: uppercase;
 }

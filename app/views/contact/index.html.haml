@@ -1,44 +1,49 @@
 - content_for :title do
   Contact &ndash; Isotope|eleven
-#internal-title
-.content-left
-  %p{:class => "contact-title"}
-    Isotope|eleven
-  %p
-    529 Beacon Pkwy W - Suite 105
-    %br
-    Birmingham, AL 35209
-    %br
-    p: 877.476.8671
-    %br
-    f: 205.943.5760
-    %br
-    e:
-    %a{:href => "mailto:info@isotope11.com"}
-      info@isotope11.com
 
-- unless current_user && current_user.admin?
-  %h2{:class => "typeface-js"}
-    Contact Us
-  %p  For business inquiries, please contact us directly or just fill out our simple contact form
-  %br
-  %br
+.fixed_content
+  %h2.interior Contact Us
 
-  = form_tag :action => 'create' do |f|
-    = render 'form'
+.interior
+  .fixed_content
+    .content-left
+      %p{:class => "contact-title"}
+        Isotope|eleven
+      %p
+        529 Beacon Pkwy W - Suite 105
+        %br
+        Birmingham, AL 35209
+        %br
+        p: 877.476.8671
+        %br
+        f: 205.943.5760
+        %br
+        e:
+        %a{:href => "mailto:info@isotope11.com"}
+          info@isotope11.com
 
-- if current_user && current_user.admin?
-  %table
-    %thead
-      %th Contact Name
-      %th Contact Email
-      %th Contact Company
-      %th Contact Note
-    - @contacts.each do |contact|
-      %tr
-        %td= link_to contact.nickname, contact_path(contact)
-        %td= contact.email
-        %td= contact.company
-        %td= contact.text
-    /- form_for contact do |f|
-    /  = render :partial => 'contact_form', :locals => { :f => f }
+    - unless current_user && current_user.admin?
+      %h2{:class => "typeface-js"}
+        Contact Us
+      %p  For business inquiries, please contact us directly or just fill out our simple contact form
+      %br
+      %br
+
+      = form_tag :action => 'create' do |f|
+        = render 'form'
+
+    - if current_user && current_user.admin?
+      %table
+        %thead
+          %th Contact Name
+          %th Contact Email
+          %th Contact Company
+          %th Contact Note
+        - @contacts.each do |contact|
+          %tr
+            %td= link_to contact.nickname, contact_path(contact)
+            %td= contact.email
+            %td= contact.company
+            %td= contact.text
+        /- form_for contact do |f|
+        /  = render :partial => 'contact_form', :locals => { :f => f }
