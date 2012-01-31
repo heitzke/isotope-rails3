@@ -24,6 +24,9 @@
     %link{ rel: "canonical", href: "/" }
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
+    #parallax-bg1
+      - [2, 1].each do |i|
+        .cloud{ class: "cloud#{i}" }
     #who-we-are
       %header{ role: "banner" }
         %h1
@@ -44,7 +47,19 @@
         .line.first
         .line.second
     = yield
-
+    %footer
+      //%iframe{ :width => "400px", :frameborder => "0", :scrolling => "no", :marginheight => "0", :marginwidth => "0", :height => "320px", :src => "http://maps.google.com/maps?q=529+Beacon+Parkway+West,+Birmingham,+AL&hl=en&ll=33.475357,-86.822355&spn=0.011849,0.019162&sll=37.0625,-95.677068&sspn=45.822921,78.486328&oq=529+Beacon+Parkwa&hnear=529+Beacon+Pkwy+W,+Birmingham,+Alabama+35209&t=h&z=16&iwloc=A"}  
+      .fixed_content
+        %a.btn.primary{ href: posts_path }
+          %span View Blog
+        .location
+          %strong Isotope11
+          %br
+          529 Beacon Parkway W
+          %br
+          Suite 105
+          %br
+          Birmingham, AL 35209
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
     = javascript_include_tag 'request_animation_frame_polyfill'

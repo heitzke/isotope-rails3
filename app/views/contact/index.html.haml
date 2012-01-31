@@ -6,21 +6,6 @@
 
 .interior
   .fixed_content
-    .content-left
-      %p{:class => "contact-title"}
-        Isotope|eleven
-      %p
-        529 Beacon Pkwy W - Suite 105
-        %br
-        Birmingham, AL 35209
-        %br
-        p: 877.476.8671
-        %br
-        f: 205.943.5760
-        %br
-        e:
-        %a{:href => "mailto:info@isotope11.com"}
-          info@isotope11.com
 
     - unless current_user && current_user.admin?
       %h2{:class => "typeface-js"}
