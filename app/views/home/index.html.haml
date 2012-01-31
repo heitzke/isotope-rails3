@@ -3,13 +3,17 @@
     .services-slider
       .slide
         .slide-content
-          %h3 E-Commerce
-          %p This is some ecommerce stuff guy.
-          = image_tag 'ecom_bag.png'
+          .text
+            %h3 E-Commerce
+            %p This is some ecommerce stuff guy.This is some ecommerce stuff guy.This is some ecommerce stuff guy.
+            %p This is some ecommerce stuff guy.
+          .img
+            = image_tag 'ecom_bag.png'
       .slide
         .slide-content
-          %h3 Phase Zero
-          %p We totally do phase zeroes.
+          .text
+            %h3 Phase Zero
+            %p We totally do phase zeroes.
 #how-we-do-it
   .texture
     .fixed_content
@@ -30,6 +34,10 @@
           Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
           durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
           Durpa Hurp da durpa durpa derrrr.
+        = image_tag 'step_one_shake.png', :class => 'shake'
+        = image_tag 'step_one_pour.png', :class => 'pour'
+        = image_tag 'step_one_arrow.png', :class => 'arrow'
+        
       .section.section2
         %h5 2
         %h3 Implement
@@ -38,6 +46,9 @@
           Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
           durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
           Durpa Hurp da durpa durpa derrrr.
+        = image_tag 'step_two_yellow.png', :class => 'yellow_tube'
+        = image_tag 'step_two_blue.png', :class => 'blue_tube'
+        = image_tag 'step_two_beaker.png', :class => 'beaker'
       .section.section3
         %h5 3
         %h3 Iterate
@@ -46,6 +57,7 @@
           Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
           durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
           Durpa Hurp da durpa durpa derrrr.
+        = image_tag 'step_three_beakers.png', :class => 'beakers'
       .section.section4
         %h5 4
         %h3 Ship It
@@ -54,6 +66,7 @@
           Herp de derp, derp derp, da derpa derpa.  Da derpa herp de
           durrrrrrrr derpa daaa derrr. Derp derp haha derp durrrr.  De derp?
           Durpa Hurp da durpa durpa derrrr.
+        = image_tag 'step_four_box.png', :class => 'ship_box'
       .section.section5
         %h5 5
         %h3 Tweak

@@ -613,12 +613,25 @@ body.controller-home.action-index{
   .services-slider{
     margin: 0 auto;
     background-color: #fefdff;
-    .drop-shadow(0px, 0px, 5px, 0.8);
+    .box-shadow(0px 0px 6px #bbb);
     .slide{
       height: 200px;
       .gradient(rgb(239, 196, 92), rgb(224, 240, 92), rgb(239, 196, 92));
       .slide-content{
         padding: 20px;
+        .text {
+          float:left;
+          width:65%;
+          h3 {
+            font-family: 'Cabin', sans-serif;
+            font-size: 2em;
+            margin: 0 0 10px 0;
+          }
+
+        }
+        img {
+          
+        }
       }
     }
   }
@@ -632,7 +645,7 @@ body.controller-home.action-index{
 #how-we-do-it{
   z-index: 20;
   position: relative;
-  border-top: 4px solid #d4effa;
+  border-top: 1px solid #d4effa;
   .gradient(#477a8c, #0b2a35, #477a8c);
   .texture {
     background: image-url('step_zero_texture.png') 50% 0 no-repeat;
@@ -659,6 +672,52 @@ body.controller-home.action-index{
       padding-top: 0;
       h5 {
         padding: 0;
+      }
+      .shake {
+        position: absolute;
+        top: 0;
+      }
+      .arrow {
+        position: absolute;
+        top: 211px;
+        left: 112px;
+      }
+      .pour {
+        position: absolute;
+        top: 163px;
+        left: -26px;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+      }
+    }
+    .section2 {
+      .blue_tube {
+        position: absolute;
+        top: 0;
+      }
+      .yellow_tube {
+        position: absolute;
+        top: 0;
+      }
+      .beaker {
+        position: absolute;
+        top: 0;
+      }
+    }
+    .section3 {
+      .beakers {
+        position: absolute;
+        top: 0;
+      }
+    }
+    .section4 {
+      .ship_box {
+        position: absolute;
+        top: 0;
       }
     }
     .section{
