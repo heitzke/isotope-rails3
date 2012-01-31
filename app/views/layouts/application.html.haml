@@ -24,9 +24,6 @@
     %link{ rel: "canonical", href: "/" }
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
-    #parallax-bg1
-      - [11, 10, 7, 5, 4, 3, 2, 1].each do |i|
-        .cloud{ class: "cloud#{i}" }
     #who-we-are
       %header{ role: "banner" }
         %h1
