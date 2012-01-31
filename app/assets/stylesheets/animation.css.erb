@@ -1,0 +1,57 @@
+#parallax-bg1{
+  position: relative;
+}
+#parallax-bg1 .cloud{
+  z-index: 1;
+  width: 100%;
+  height: 579px;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+<% [11, 10, 7, 5, 4, 3, 2, 1].each do |i| %>
+  #parallax-bg1 .cloud<%= i %>{
+    background: url(<%= asset_path("cloud/cloud_#{i}.png") %>);
+  }
+<% end %>
+
+/* ANIMATION =================================================================================== */
+
+<%
+  cloud_percentages = {
+    'cloud1' =>  0.8,
+    'cloud2' =>  0.2,
+    'cloud3' =>  0.3,
+    'cloud4' =>  0.4,
+    'cloud5' =>  0.5,
+    'cloud6' =>  0.6,
+    'cloud7' =>  0.7,
+    'cloud8' =>  0.8,
+    'cloud9' =>  0.9,
+    'cloud10' =>  0.1,
+    'cloud11' =>  0.2
+  }
+%>
+
+<%
+  prefixes = ["", "-moz-", "-webkit-", "-o-"]
+  prefixes.each do |prefix|
+%>
+  @<%=prefix%>keyframes cloud {
+    from { background-position: 0 0; }
+    to   { background-position: -2000px 0; }
+  }
+  <% [11, 10, 7, 5, 4, 3, 2, 1].each do |i| %>
+    #parallax-bg1 .cloud<%= i %>{
+      <%=prefix%>animation-timing-function: linear;
+      <%=prefix%>animation-name: cloud;
+      <%=prefix%>animation-duration: <%= 300 * cloud_percentages["cloud#{i}"] %>s;
+      <%=prefix%>animation-iteration-count: infinite;
+      <%=prefix%>animation-direction: normal;
+      <%=prefix%>animation-delay: 0;
+      <%=prefix%>animation-play-state: running;
+      <%=prefix%>animation-fill-mode: forwards;
+    }
+  <% end %>
+<% end %>
