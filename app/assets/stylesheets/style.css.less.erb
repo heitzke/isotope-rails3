@@ -696,9 +696,10 @@ body.controller-home.action-index{
       margin: 0 0 10px 0;
       a{
         color: white;
-        text-shadow: 0px 0px 1px #444;
+        background-color: black;
+        padding: .25em;
         &:hover {
-            text-decoration: underline;
+          text-decoration: underline;
         }
       }
     }
@@ -952,6 +953,14 @@ h2.interior{
   background-color:#d5dee5;
   position:absolute;
 }
+#swoosh {
+  background: url(/assets/isotope_orbit.png) 380px 60px no-repeat;
+  opacity: 0.2;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
 #clouds{
   //background: #ccc url(/assets/grey_bg.png) repeat;
   height: 500px;
@@ -962,7 +971,6 @@ h2.interior{
   z-index:0;
   //background:#748ca6;
   .lineargradient(#aabeca, #dee5ee 49%, #F8FAF0 100%);
-  
 }
 
 .blog_post{
