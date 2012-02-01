@@ -612,28 +612,30 @@ body.controller-home.action-index{
   }
   .services-slider{
     margin: 0 auto;
-    background-color: #fefdff;
     .box-shadow(0px 0px 6px #bbb);
     .slide1 {
-      background-image: linear-gradient(left , #E0EF5C 49%, #EFC35C 100%);
-      background-image: -o-linear-gradient(left , #E0EF5C 49%, #EFC35C 100%);
-      background-image: -moz-linear-gradient(left , #E0EF5C 49%, #EFC35C 100%);
-      background-image: -webkit-linear-gradient(left , #E0EF5C 49%, #EFC35C 100%);
-      background-image: -ms-linear-gradient(left , #E0EF5C 49%, #EFC35C 100%);      
+      .lineargradient(left, #e0ef5c, #e0ef5c 49%, #efc35c 100%);
     }
     .slide2 {
-      background-image: linear-gradient(left , #EFC35C 49%, #8ABA6A 100%);
-      background-image: -o-linear-gradient(left , #EFC35C 49%, #8ABA6A 100%);
-      background-image: -moz-linear-gradient(left , #EFC35C 49%, #8ABA6A 100%);
-      background-image: -webkit-linear-gradient(left , #EFC35C 49%, #8ABA6A 100%);
-      background-image: -ms-linear-gradient(left , #EFC35C 49%, #8ABA6A 100%);
+      .lineargradient(left, #efc35c, #efc35c 49%, #8aba6a 100%);
     }
     .slide3 {
-      background-image: linear-gradient(left , #8ABA6A 49%, #00C1DB 100%);
-      background-image: -o-linear-gradient(left , #8ABA6A 49%, #00C1DB 100%);
-      background-image: -moz-linear-gradient(left , #8ABA6A 49%, #00C1DB 100%);
-      background-image: -webkit-linear-gradient(left , #8ABA6A 49%, #00C1DB 100%);
-      background-image: -ms-linear-gradient(left , #8ABA6A 49%, #00C1DB 100%);
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+    }
+    .slide4 {
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+    }
+    .slide5 {
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+    }
+    .slide6 {
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+    }
+    .slide7 {
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+    }
+    .slide8 {
+      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
     }
     .slide{
       height: 200px;
@@ -647,9 +649,7 @@ body.controller-home.action-index{
             font-size: 1.9em;
             margin: 0 0 10px 0;
             text-shadow: 1px 0px 0 #aaa;
-            
           }
-
         }
         img {
           max-width: 50%;
@@ -861,7 +861,16 @@ h2.interior{
   text-transform: uppercase;
   position: relative;
   z-index: 2;
-  
+}
+
+#clouds{
+  background: #ccc url(/assets/cloud.jpg) top center no-repeat;
+  height: 579px;
+  min-height: 579px;
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:0;
 }
 
 

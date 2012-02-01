@@ -17,6 +17,11 @@ module ApplicationHelper
     true
   end
 
+  def render_slide(header, content, image, slide_class, url)
+    render :partial => 'home/slide', :locals => { slide_class: slide_class,
+      header: header, content: content, image: image, url: url }
+  end
+
   def coderay(text)
     text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
       lang = $2 || 'ruby'
