@@ -1,19 +1,17 @@
 class CommunityController < ApplicationController
-
   def index
-    tab :community
   end
 
-  def xrono 
-    tab :community
+  def xrono
   end
 
-  def rubyham 
-    tab :community
+  def rubyham
   end
 
-  def techbirmingham 
-    tab :community
+  def techbirmingham
   end
-
+  private
+  def set_tab
+    @tab = :community
+  end
 end

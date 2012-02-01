@@ -51,4 +51,8 @@ class ContactController < ApplicationController
     end
   end
 
+  private
+  def set_tab
+    @tab = :contact
+  end
 end

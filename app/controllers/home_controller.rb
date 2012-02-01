@@ -1,11 +1,10 @@
 class HomeController < ApplicationController
 
   def index
-    tab :home
   end
 
   def contact
-    tab :contact
+    @tab = :contact
     if request.post?
       if @contact_form = Contact.create(params[:user])
         ContactMailer.contact_email(@contact_form).deliver
@@ -17,14 +16,13 @@ class HomeController < ApplicationController
   end
 
   def payments
-    tab :payments
+    @tab = :payments
   end
 
   def services
-    tab :services
+    @tab = :services
   end
 
   def careers
   end
-
 end
