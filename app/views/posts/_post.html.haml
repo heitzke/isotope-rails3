@@ -11,7 +11,7 @@
             = link_to_unless_current post.user, about_path(post.user) 
           %p
             = post.created_at.to_formatted_s(:long_ordinal)
-      .clear
+      .clearfix
     - if local_assigns[:share]
       %span.share= share_this
     .blog_content
