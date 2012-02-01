@@ -52,21 +52,27 @@ body.controller-home.action-index{
       text-transform: uppercase;
       display: inline;
       float: left;
-      padding: 0 15px 0 0;
+      padding: 0 20px 0 0;
       &.last{
         padding: 0;
       }
       a{
         padding: 4px 0;
-        text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+        text-shadow: 1px 0 1px #ccc;
         color: white;
         text-decoration: none;
         &:hover{
-          border-top: 140px solid white;
+          //border-top: 140px solid white;
+          -webkit-transition: color 1s ease;
+          -moz-transition: color 1s ease;
+          -o-transition: color 1s ease;
+          transition: color 1s ease;
+          color: #6d95ac;
         }
       }
     }
   }
+
   header{
     width: 768px;
     margin: 0 auto;
@@ -92,7 +98,7 @@ body.controller-home.action-index{
     padding-bottom: 2em;
     .line{
       width: 100%;
-      background-color: #2a4357;
+      background-color: #527e97;
       &.first{
         float: left;
         height: 4px;
@@ -140,6 +146,14 @@ body.controller-home.action-index{
 
 #how-we-do-it{
   .fixed_content {
+    margin: 0 auto;
+    padding: 0 0 0 20px;
+    .section{
+      padding-left: 3em;
+      padding-right: 1em;
+      padding-bottom: 1.5em;
+      position: relative;
+    }
     .section1 {
       padding-top: 1.5em;
       h5 {
@@ -217,7 +231,7 @@ body.controller-home.action-index{
     }
     .section{
       display: inline-block;
-      width: 35%;
+      width: 38%;
       margin-right: 3%;
       vertical-align: top;
       h3{

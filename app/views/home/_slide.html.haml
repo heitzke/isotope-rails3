@@ -1,7 +1,7 @@
 %div{ class: "slide #{slide_class}" }
   .slide-content
+    %h3= link_to(header, url)
     .text
-      %h3= link_to(header, url)
       %p= link_to(content, url)
     .img
       = link_to image_tag(image), url
