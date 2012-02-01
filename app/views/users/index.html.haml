@@ -20,11 +20,11 @@
     %p
       Our clients range from small businesses to large financial firms, insurance companies as well as government agencies.  We strive to build long term relationships and to deliver software on time and on target.
 
-    %p= link_to "Isotope Eleven Alumni", about_alumni_path
-
     %h2
       Meet The Team
 
     - @users.each do |user|
       = render :partial => 'bio', :locals => {:user => user}
+
+    %p= link_to "Isotope Eleven Alumni", about_alumni_path
     .clearfix
