@@ -550,6 +550,7 @@ body.controller-home.action-index{
   }
 }
 #who-we-are{
+  padding: 10px 0 0 0;
   overflow: hidden;
   z-index: 2;
   position: relative;
@@ -589,7 +590,7 @@ body.controller-home.action-index{
     z-index: 2;
     text-align: center;
     margin: 0 auto;
-    color: #4f7b94;
+    color: #2a4357;
     &.first{
       margin-top: .25em;
       text-transform: uppercase;
@@ -889,15 +890,26 @@ h2.interior{
   position: relative;
   z-index: 2;
 }
-
+#top_bar {
+  background: url(/assets/top_bar.png) repeat-x;
+  display:block;
+  width:100%;
+  z-index:9999;
+  height:9px;
+  background-color:#d5dee5;
+  position:absolute;
+}
 #clouds{
-  background: #ccc url(/assets/cloud.jpg) top center no-repeat;
+  //background: #ccc url(/assets/grey_bg.png) repeat;
   height: 579px;
   min-height: 579px;
   position:absolute;
   top:0;
   width:100%;
   z-index:0;
+  //background:#748ca6;
+  .lineargradient(#7B868F, #e4e9ed 49%, #dee5ee 100%);
+  
 }
 
 .blog_post{
