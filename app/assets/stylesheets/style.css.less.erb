@@ -519,6 +519,9 @@ body{
 img {
   max-width: 100%;
 }
+a{
+  color: #83B0BE;
+}
 header {
   h1 {
   font-size: 2em;
@@ -530,8 +533,7 @@ header h1 a{
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Vast Shadow', cursive;
-  //font-family: 'Bree Serif', serif;
+  font-family: 'Vast Shadow', sans-serif;
 }
 
 
@@ -613,55 +615,55 @@ body.controller-home.action-index{
   .services-slider{
     margin: 0 auto;
     .box-shadow(0px 0px 6px #bbb);
-    .slide1 {
-      .lineargradient(left, #e0ef5c, #e0ef5c 49%, #efc35c 100%);
-    }
-    .slide2 {
-      .lineargradient(left, #efc35c, #efc35c 49%, #8aba6a 100%);
-    }
-    .slide3 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide4 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide5 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide6 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide7 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide8 {
-      .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
-    }
-    .slide{
-      height: 200px;
-      .slide-content{
-        padding: 20px;
-        .text {
-          float:left;
-          width:48%;
-          h3 {
-            font-family: 'Cabin', sans-serif;
-            font-size: 1.9em;
-            margin: 0 0 10px 0;
-            text-shadow: 1px 0px 0 #aaa;
-          }
-        }
-        img {
-          max-width: 50%;
-        }
-      }
-    }
   }
   .bullets{
     height: 28px;
     width: 199px;
     background-image: image-url('/assets/mockups/mockup6/bullets.jpg');
     margin: .5em auto;
+  }
+}
+.slide1 {
+  .lineargradient(left, #e0ef5c, #e0ef5c 49%, #efc35c 100%);
+}
+.slide2 {
+  .lineargradient(left, #efc35c, #efc35c 49%, #8aba6a 100%);
+}
+.slide3 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide4 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide5 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide6 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide7 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide8 {
+  .lineargradient(left, #8aba6a, #8aba6a 49%, #00c1db 100%);
+}
+.slide{
+  height: 200px;
+  .slide-content{
+    padding: 20px;
+    .text {
+      float:left;
+      width:48%;
+      h3 {
+        font-family: 'Cabin', sans-serif;
+        font-size: 1.9em;
+        margin: 0 0 10px 0;
+        text-shadow: 1px 0px 0 #aaa;
+      }
+    }
+    img {
+      max-width: 50%;
+    }
   }
 }
 #how-we-do-it{
@@ -863,6 +865,12 @@ div.interior{
   position: relative;
   z-index: 20;
   padding: 15px 0 15px 0;
+  p, li{
+    line-height: 1.2em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cabin', sans-serif;
+  }
 }
 h2.interior{
   color: #4f7b94;
@@ -883,6 +891,75 @@ h2.interior{
   z-index:0;
 }
 
+.blog_post{
+  margin-bottom: 4em;
+  .blog_info_top{
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 8px;
+    .author_image{
+      display: inline-block;
+      vertical-align: top;
+    }
+    .title{
+      display: inline-block;
+      vertical-align: top;
+      margin-top: -.4em;
+      h2{
+        width: 718px;
+        font-size: 2.6rem;
+        margin-bottom: 0;
+      }
+      h3{
+        float: left;
+        font-size: 1.6rem;
+        margin: 0 9px 0 1px;
+      }
+      a{
+        text-decoration: none;
+      }
+      .author{
+        p{
+          float: right;
+          color: #ccc;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.profile{
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 0 20px;
+  padding: 0;
+  width: 580px;
+  p{
+    margin-bottom: 0;
+  }
+  h3{
+    color: #666;
+    font-size: 2.8rem;
+    margin: 0;
+    padding: 0;
+    a{
+      text-decoration: none;
+    }
+  }
+  h5{
+    border-bottom: 1px solid #ccc;
+    color: #777;
+    font-size: 1.5rem;
+    margin: 0 0 5px;
+    padding: 0 0 3px;
+  }
+}
+.profile-pic{
+  display: inline-block;
+  vertical-align: top;
+  height: 200px;
+  margin: 10px 10px 0 0;
+}
 
 
 /* AMPERSAND FONTS ============================================================================= */

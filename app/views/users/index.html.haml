@@ -7,7 +7,7 @@
 .interior
   .fixed_content
     %p
-      Isotope|eleven is a software development firm which specializes in developing web based software applications. It was founded in 2005 and is primarily focused on developing software on Linux based platforms using Ruby on Rails (RoR). Our expert skill sets also include e-commerce, insurance and financial applications, social networking applications (Facebook), database architectures, graphic design, user interfaces and much more. 
+      Isotope|eleven is a software development firm which specializes in developing web based software applications. It was founded in 2005 and is primarily focused on developing software on Linux based platforms using Ruby on Rails (RoR). Our expert skill sets also include e-commerce, insurance and financial applications, social networking applications (Facebook), database architectures, graphic design, user interfaces and much more.
       = link_to 'Meet', '/about/alumni'
       some of the people who have helped us get to our current state.
     %p
@@ -19,3 +19,4 @@
 
     - @users.each do |user|
       = render :partial => 'bio', :locals => {:user => user}
+    .clearfix
