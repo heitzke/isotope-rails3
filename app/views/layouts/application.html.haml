@@ -25,14 +25,14 @@
     = yield :head_javascripts
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
-    #top_bar
+    //#top_bar
     #parallax-bg1
     #clouds
     #who-we-are
       %header{ role: "banner" }
         %h1
           %span= link_to 'isotope|eleven', root_path
-      %nav
+      %nav.short
         %ul
           = tab_for(:tablet, 'About', about_index_path, :about)
           = tab_for(:tablet, 'Services', services_path, :services)
@@ -40,6 +40,7 @@
           = tab_for(:desktop, 'Community', community_path, :community)
           = tab_for(:desktop, 'Payments', '/home/payments', :payments)
           = tab_for(:tablet, 'Contact', '/contact', :contact, 'last')
+
       %hr
       .byline-side
         .line.first
@@ -64,5 +65,10 @@
           Suite 105
           %br
           Birmingham, AL 35209
+    #bottom_info
+      %a{:title => "Click for the Business Review of Isotope11, Inc., a Computers - Sys Designers & Consult in Birmingham AL", :href => "http://www.bbb.org/central-alabama/business-reviews/software-development-and-consulting/isotope11-in-birmingham-al-90036746#sealclick"}
+        %img{:alt => "Isotope11, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
+      %a{:href => "http://www.dnb.com"}
+        = image_tag "duns_registered.png"
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
