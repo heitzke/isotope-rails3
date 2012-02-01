@@ -55,7 +55,11 @@ body.controller-home.action-index{
       padding: 0 20px 0 0;
       &.active{
         a{
-          border-top: 140px solid white;
+          -webkit-transition: color 1s ease;
+          -moz-transition: color 1s ease;
+          -o-transition: color 1s ease;
+          transition: color 1s ease;
+          color: #6d95ac;
         }
       }
       &.tablet{
@@ -70,7 +74,6 @@ body.controller-home.action-index{
         color: white;
         text-decoration: none;
         &:hover{
-          //border-top: 140px solid white;
           -webkit-transition: color 1s ease;
           -moz-transition: color 1s ease;
           -o-transition: color 1s ease;
