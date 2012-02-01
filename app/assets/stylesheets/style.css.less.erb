@@ -558,7 +558,6 @@ body.controller-home.action-index{
     z-index: 3;
     ul {
       li {
-        
       }
     }
   }
@@ -619,61 +618,6 @@ body.controller-home.action-index{
   .services-slider{
     margin: 0 auto;
     .box-shadow(0px 0px 6px #bbb);
-    .slide1 {
-      .lineargradient(#f2ff84, #f2ff84 49%, #e0ef5c 100%);
-    }
-    .slide2 {
-      .lineargradient(#f0b326, #efc35c 49%, #f0b326 100%);
-    }
-    .slide3 {
-      .lineargradient(#8aba6a, #8aba6a 49%, #64a538 100%);
-    }
-    .slide4 {
-      .lineargradient(#26e1fa, #26e1fa 49%, #00c1db 100%);
-    }
-    .slide5 {
-      .lineargradient(#2881bf, #0e5d94 49%, #0e5d94 100%);
-    }
-    .slide6 {
-      .lineargradient(#f2ff84, #f2ff84 49%, #e0ef5c 100%);
-    }
-    .slide7 {
-      .lineargradient(#8aba6a, #8aba6a 49%, #64a538 100%);
-    }
-    .slide8 {
-      .lineargradient(#2881bf, #0e5d94 49%, #0e5d94 100%);
-    }
-    .slide{
-      height: 200px;
-      .slide-content{
-        padding: 20px;
-        .text {
-          float:left;
-          width:48%;
-          h3 {
-            font-family: 'Cabin', sans-serif;
-            font-size: 1.9em;
-            margin: 0 0 10px 0;
-            text-shadow: 1px 0px 0 #aaa;
-            a {
-              text-decoration: none;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
-          p {
-            a {
-              text-decoration: none;
-              
-            }
-          }
-        }
-        img {
-          max-width: 50%;
-        }
-      }
-    }
   }
   .bullets{
     height: 28px;
@@ -691,6 +635,30 @@ body.controller-home.action-index{
   width: 70%;
 }
 
+.slide1 {
+  .lineargradient(#f2ff84, #f2ff84 49%, #e0ef5c 100%);
+}
+.slide2 {
+  .lineargradient(#f0b326, #efc35c 49%, #f0b326 100%);
+}
+.slide3 {
+  .lineargradient(#8aba6a, #8aba6a 49%, #64a538 100%);
+}
+.slide4 {
+  .lineargradient(#26e1fa, #26e1fa 49%, #00c1db 100%);
+}
+.slide5 {
+  .lineargradient(#2881bf, #0e5d94 49%, #0e5d94 100%);
+}
+.slide6 {
+  .lineargradient(#f2ff84, #f2ff84 49%, #e0ef5c 100%);
+}
+.slide7 {
+  .lineargradient(#8aba6a, #8aba6a 49%, #64a538 100%);
+}
+.slide8 {
+  .lineargradient(#2881bf, #0e5d94 49%, #0e5d94 100%);
+}
 .slide{
   height: 200px;
   .slide-content{
@@ -716,7 +684,7 @@ body.controller-home.action-index{
       width:48%;
       p {
         a{
-          color: #444;          
+          color: #444;
         }
       }
 
@@ -844,7 +812,6 @@ body.controller-home.action-index{
         margin-top: -.5em;
         color: #aed2de;
         z-index: 100;
-        
       }
       h5{
         color: #aed2de;
@@ -853,7 +820,6 @@ body.controller-home.action-index{
         top: 0;
         font-size: 2.8em;
         z-index: 100;
-        
       }
       img {
         z-index: 50;
@@ -866,6 +832,7 @@ footer{
   background: image-url('footer_map_mask.png') repeat-x;
   text-align: center;
   padding-top: 0;
+  position: relative;
   .fixed_content {
     padding: 10px 0 0 0;
     .location{
@@ -966,7 +933,8 @@ h2.interior{
   opacity: 0.2;
   position: absolute;
   z-index: 1;
-  height: 100%;
+  max-height: 500px;
+  height: 500px;
   width: 100%;
 }
 #clouds{
@@ -1075,7 +1043,6 @@ h2.interior{
 }
 
 .work_services_wrap{
-  background: url("/assets/work_section_bg.png") no-repeat scroll 0 0 transparent;
   display: inline-block;
   height: 140px;
   margin: 0 40px 0 0;
@@ -1091,7 +1058,7 @@ h2.interior{
   .work_services_img{
     float: left;
     height: 85px;
-    padding: 30px 15px 0;
+    padding: 15px 15px 0;
     width: 50px;
   }
   .work_services_text{
@@ -1104,7 +1071,7 @@ h2.interior{
       margin: 12px 0 0px;
       padding: 0;
       a{
-        color: #003366;
+        color: #83B0BE;
       }
     }
     a{
@@ -1113,6 +1080,29 @@ h2.interior{
       padding: 4px 0 0;
       text-decoration: none;
       width: 270px;
+    }
+  }
+}
+
+form {
+  blockquote {
+    color: #666;
+    input {
+      border-style: none none dashed;
+      margin: 0 0.5em;
+      border-color: #666;
+      background-color: transparent;
+      border-image: none;
+      border-width: 1px;
+    }
+    button{
+      background-color: #83b0be;
+      padding: .5em;
+      color: white;
+      text-transform: uppercase;
+      &:hover{
+        background-color: #4F7B94;
+      }
     }
   }
 }
