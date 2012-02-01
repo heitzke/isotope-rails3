@@ -762,6 +762,7 @@ body.controller-home.action-index{
         font-size: 1.4em;
         margin-bottom: 0;
         text-transform: uppercase;
+        z-index: 100;
       }
       h4{
         font-weight: normal;
@@ -769,6 +770,8 @@ body.controller-home.action-index{
         font-family: 'Cabin', sans-serif;
         margin-top: -.5em;
         color: #aed2de;
+        z-index: 100;
+        
       }
       h5{
         color: #aed2de;
@@ -776,22 +779,35 @@ body.controller-home.action-index{
         left: .4em;
         top: 0;
         font-size: 2.8em;
+        z-index: 100;
+        
+      }
+      img {
+        z-index: 50;
       }
     }
   }
 }
 footer{
   height: 320px;
-  background-image: image-url('footer_map.jpg');
+  background: image-url('footer_map_mask.png') repeat-x;
   text-align: center;
-  padding-top: 1em;
-  .location{
-    margin: 4em auto 0;
-    padding-top: 42px;
-    background-image: image-url('location_bg.png');
-    width: 237px;
-    height: 111px;
+  padding-top: 0;
+  .fixed_content {
+    padding: 10px 0 0 0;
+    .location{
+      margin: 4em auto 0;
+      padding-top: 42px;
+      background-image: image-url('location_bg.png');
+      width: 237px;
+      height: 111px;
+    }
   }
+ iframe {
+    z-index:-1000;
+    position:absolute;
+    left: 0;
+ }
 }
 .btn{
   display: inline-block;
