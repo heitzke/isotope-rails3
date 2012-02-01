@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   before_filter :authenticate_user!, :only => [:edit, :update]
   before_filter :require_admin, :only => [:new, :create]
 
-  tab :about
-
   def new
     @user = User.new
   end
@@ -79,6 +77,8 @@ class UsersController < ApplicationController
       render :action => :edit
     end
   end
-
-
+  private
+  def set_tab
+    @tab = :about
+  end
 end

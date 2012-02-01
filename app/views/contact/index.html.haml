@@ -6,29 +6,48 @@
 
 .interior
   .fixed_content
+    .content-left
+      - unless current_user && current_user.admin?
+        %p  For business inquiries, please contact us directly or just fill out our simple contact form
+        %br
+        %br
 
-    - unless current_user && current_user.admin?
-      %h2{:class => "typeface-js"}
-        Contact Us
-      %p  For business inquiries, please contact us directly or just fill out our simple contact form
-      %br
-      %br
+        = form_tag :action => 'create' do |f|
+          = render 'form'
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
 
-      = form_tag :action => 'create' do |f|
-        = render 'form'
-
-    - if current_user && current_user.admin?
-      %table
-        %thead
-          %th Contact Name
-          %th Contact Email
-          %th Contact Company
-          %th Contact Note
-        - @contacts.each do |contact|
-          %tr
-            %td= link_to contact.nickname, contact_path(contact)
-            %td= contact.email
-            %td= contact.company
-            %td= contact.text
-        /- form_for contact do |f|
-        /  = render :partial => 'contact_form', :locals => { :f => f }
+      - if current_user && current_user.admin?
+        %table
+          %thead
+            %th Contact Name
+            %th Contact Email
+            %th Contact Company
+            %th Contact Note
+          - @contacts.each do |contact|
+            %tr
+              %td= link_to contact.nickname, contact_path(contact)
+              %td= contact.email
+              %td= contact.company
+              %td= contact.text
+          /- form_for contact do |f|
+          /  = render :partial => 'contact_form', :locals => { :f => f }
+    .content-right
+      %h3 Isotope|eleven
+      %p
+        529 Beacon Pkwy W - Suite 105
+        %br 
+        Birmingham, AL 35209
+        %br
+        p: 877.476.8671
+        %br 
+        f: 205.943.5760
+        %br 
+        e:
+        = link_to 'info@isotope11.com', 'mailto:info@isotope11.com'
+    .clearfix

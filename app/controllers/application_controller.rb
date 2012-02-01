@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   layout 'application'
+  before_filter :set_tab
 
   #######################################################################
   private
@@ -19,5 +20,9 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You need to be an admin to do that."
       redirect_to root_path
     end
+  end
+
+  def set_tab
+    @tab = ''
   end
 end

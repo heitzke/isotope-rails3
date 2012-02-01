@@ -1,26 +1,28 @@
 - content_for :title do
   css3-progress-bar-rails &ndash; Community &ndash; Isotope|eleven
 
-#internal-title	
-  %h2{:class => "typeface-js"}
-    Community 
-.work_content_right
-  = image_tag '/images/phase_zero.png', :alt => 'progress bar img'
-  %h4 css3-progress-bar-rails
-  .clear
-  %ul 
-    %li
-      = link_to('RubyGem page', 'http://rubygems.org/gems/css3-progress-bar-rails')
-    %li 
-      = link_to('Github Repo', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
-    %li 
-      = link_to('Blog Post', 'http://isotope11.com/blog/css3-progress-bars-for-rails')
-.work_content_left
-  %h3{:class => "typeface-js"}
-    css3-progress-bar-rails
-  %p
-    = link_to('css3-progress-bar-rails', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
-    is a gem that generates progress bars in CSS3 via some custom Rails helper methods.
-  %p
-    = link_to 'Back to Community', '/community'
-.clear
+.fixed_content
+  %h2.interior css3-progress-bar-rails
+
+.interior
+  .fixed_content
+    .work_content_right
+      = image_tag 'phase_zero.png', :alt => 'progress bar img'
+      %h4 css3-progress-bar-rails
+      .clear
+      %ul
+        %li
+          = link_to('RubyGem page', 'http://rubygems.org/gems/css3-progress-bar-rails')
+        %li
+          = link_to('Github Repo', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
+        %li
+          = link_to('Blog Post', 'http://isotope11.com/blog/css3-progress-bars-for-rails')
+    .work_content_left
+      %h3{:class => "typeface-js"}
+        css3-progress-bar-rails
+      %p
+        = link_to('css3-progress-bar-rails', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
+        is a gem that generates progress bars in CSS3 via some custom Rails helper methods.
+      %p
+        = link_to 'Back to Community', '/community'
+    .clear

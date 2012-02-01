@@ -1,32 +1,32 @@
 - content_for :title do
   RubyHam &ndash; Community &ndash; Isotope|eleven
 
-#internal-title	
-  %h2{:class => "typeface-js"}
-    Community 
-.work_content_right
-  = image_tag '/images/rubyham.png', :alt => 'RubyHam Work Image'
-  %h4 RubyHam 
-  .clear
-  %ul 
-    %li
-      Monthly meetings (with pizza) sponsored by
-      = link_to 'Isotope|eleven', 'http://www.meetup.com/rubyham/', :target => '_blank'
-    %li 
-      Discussion group on 
-      = link_to 'Yahoo', 'http://tech.groups.yahoo.com/group/rubyham/', :target => '_blank'
-    %li
-      IRC Channel on Freenode #rubyham 
-    %li
-      Founded in 2005 
+.fixed_content
+  %h2.interior RubyHam
 
-.work_content_left
-  %h3{:class => "typeface-js"}
-    RubyHam 
-  %p
-    Hosted at the Isotope|eleven office, the monthly meeting (usually on the last Wednesday of each month) offers Birmingham area Ruby professionals and enthusiasts a chance to catch up with other like-minded individuals and also expand your skill set. Don't worry though, you don't need to be a Ruby master to be able to learn a little and get more familiarized with the language.  
-  %p
-    = link_to 'Back to Community', '/community'
-.clear
+.interior
+  .fixed_content
+    .work_content_right
+      = image_tag 'rubyham.png', :alt => 'RubyHam Work Image'
+      %h4 RubyHam
+      .clear
+      %ul
+        %li
+          Monthly meetings (with pizza) sponsored by
+          = link_to 'Isotope|eleven', 'http://www.meetup.com/rubyham/', :target => '_blank'
+        %li
+          Discussion group on
+          = link_to 'Yahoo', 'http://tech.groups.yahoo.com/group/rubyham/', :target => '_blank'
+        %li
+          IRC Channel on Freenode #rubyham
+        %li
+          Founded in 2005
 
-
+    .work_content_left
+      %h3{:class => "typeface-js"}
+        RubyHam 
+      %p
+        Hosted at the Isotope|eleven office, the monthly meeting (usually on the last Wednesday of each month) offers Birmingham area Ruby professionals and enthusiasts a chance to catch up with other like-minded individuals and also expand your skill set. Don't worry though, you don't need to be a Ruby master to be able to learn a little and get more familiarized with the language.  
+      %p
+        = link_to 'Back to Community', '/community'
+    .clear

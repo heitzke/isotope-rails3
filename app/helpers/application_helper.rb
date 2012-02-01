@@ -22,6 +22,17 @@ module ApplicationHelper
       header: header, content: content, image: image, url: url }
   end
 
+  def render_project(title, image, url, description)
+    render :partial => 'shared/project', :locals => { title: title, image: image, url: url, description: description }
+  end
+
+  def tab_for(type, name, link, key, extra_classes='')
+    state = @tab == key ? 'active' : ''
+    content_tag(:li, :class => [state, type, extra_classes].join(" ")) do
+      link_to name, link
+    end
+  end
+
   def coderay(text)
     text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
       lang = $2 || 'ruby'

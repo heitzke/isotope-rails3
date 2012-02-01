@@ -2,8 +2,6 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :authorized_user, :only => [:edit, :update, :destroy]
 
-  tab :blog
-
   def index
     @posts = Post.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
 
@@ -85,5 +83,7 @@ class PostsController < ApplicationController
     end
   end
 
+  def set_tab
+    @tab = :blog
+  end
 end
-

@@ -22,6 +22,7 @@
 
     / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
     %link{ rel: "canonical", href: "/" }
+    = yield :head_javascripts
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     //#top_bar
@@ -32,12 +33,13 @@
         %h1
           %span= link_to 'isotope|eleven', root_path
       %nav.short
-        %ul
-          %li= link_to 'About', about_index_path
-          %li= link_to 'Services', services_path
-          %li= link_to 'Community', community_path
-          %li.last= link_to 'Contact', home_contact_path
-  
+        %ul  
+          = tab_for(:tablet, 'About', about_index_path, :about)
+          = tab_for(:tablet, 'Services', services_path, :services)
+          = tab_for(:desktop, 'Blog', '/blog', :blog)
+          = tab_for(:desktop, 'Community', community_path, :community)
+          = tab_for(:desktop, 'Payments', '/home/payments', :payments)
+          = tab_for(:tablet, 'Contact', '/contact', :contact, 'last')
       %hr
       .byline-side
         .line.first

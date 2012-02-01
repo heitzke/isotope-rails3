@@ -49,10 +49,18 @@ body.controller-home.action-index{
     right: 0;
     top: 40px;
     li{
+      display: none;
       text-transform: uppercase;
-      display: inline;
       float: left;
       padding: 0 20px 0 0;
+      &.active{
+        a{
+          border-top: 140px solid white;
+        }
+      }
+      &.tablet{
+        display: inline;
+      }
       &.last{
         padding: 0;
       }
