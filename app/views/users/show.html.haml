@@ -1,10 +1,12 @@
-= render :partial => "bio", :locals => { :user => @user }
-- if current_user && (current_user == @user || current_user.admin?)
-  .clear
-  %p= link_to 'Edit User', edit_user_path
+.interior
+  .fixed_content
+    = render :partial => "bio", :locals => { :user => @user }
+    - if current_user && (current_user == @user || current_user.admin?)
+      .clear
+      %p= link_to 'Edit User', edit_user_path
 
-.clear
-- unless @posts.empty?
-  %h2 Blog Posts
-  = render @posts
-  = will_paginate @posts
+    .clear
+    - unless @posts.empty?
+      %h2 Blog Posts
+      = render @posts
+      = will_paginate @posts

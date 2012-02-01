@@ -519,7 +519,7 @@ body{
 img {
   max-width: 100%;
 }
-a{
+a, a:visited {
   color: #83B0BE;
 }
 header {
@@ -651,14 +651,20 @@ body.controller-home.action-index{
   height: 200px;
   .slide-content{
     padding: 20px;
+    a{
+      text-decoration: none;
+    }
+    h3 {
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.9em;
+      margin: 0 0 10px 0;
+      text-shadow: 1px 0px 0 #aaa;
+    }
     .text {
       float:left;
       width:48%;
-      h3 {
-        font-family: 'Cabin', sans-serif;
-        font-size: 1.9em;
-        margin: 0 0 10px 0;
-        text-shadow: 1px 0px 0 #aaa;
+      a{
+        color: black;
       }
     }
     img {
