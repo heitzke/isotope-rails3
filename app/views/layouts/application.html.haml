@@ -25,6 +25,7 @@
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     #parallax-bg1
+    #clouds
     #who-we-are
       %header{ role: "banner" }
         %h1
@@ -60,5 +61,3 @@
           Birmingham, AL 35209
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
-    = javascript_include_tag 'request_animation_frame_polyfill'
-    = javascript_include_tag 'cloud_parallax'

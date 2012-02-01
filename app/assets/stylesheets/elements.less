@@ -11,6 +11,14 @@
     More info at: http://lesselements.com
 -----------------------------------------------------*/
 
+.lineargradient(@dir: left, @color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: linear-gradient(@dir, @start, @stop);
+  background: -webkit-linear-gradient(@dir, @start, @stop);
+  background: -moz-linear-gradient(@dir, @start, @stop);
+  background: -o-linear-gradient(@dir, @start, @stop);
+  background: -ms-linear-gradient(@dir, @start, @stop);
+}
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
   background: @color;
   background: -webkit-gradient(linear,

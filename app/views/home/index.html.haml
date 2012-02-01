@@ -1,29 +1,15 @@
 #what-we-do
   .fixed_content
     .services-slider
-      .slide.slide1
-        .slide-content
-          .text
-            %h3 E-Commerce
-            %p Ready to get your business online, and move beyond a basic webpage?
-          .img
-            = image_tag 'ecom_bag.png'
-      .slide.slide2
-        .slide-content
-          .text
-            %h3 Phase Zero
-            %p Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project.
-          .img
-            = image_tag 'ecom_bag.png'
-              
-      .slide.slide3
-        .slide-content
-          .text
-            %h3 MLM
-            %p Need multi-level marketing? We have the complete solution.
-          .img
-            = image_tag 'ecom_bag.png'
-            
+      = render_slide("Phase Zero", "Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project.", "ecom_bag.png", "slide1", services_phasezero_path)
+      = render_slide("E-Commerce", "Ready to get your business online, and move beyond a basic webpage?", "ecom_bag.png", "slide2", services_ecommerce_path)
+      = render_slide("Social Media", "Social Media is all the buzz.  Work with a team that knows the ins and outs of the business.", "ecom_bag.png", "slide3", services_socialmedia_path)
+      = render_slide("MLM", "Need multi-level marketing?  We have the complete solution", "ecom_bag.png", "slide4", services_mlm_path)
+      = render_slide("Financial", "Isotope11 architected, developed, and maintained one of the larges Ruby-based financial applications in the world.", "ecom_bag.png", "slide5", services_financial_path)
+      = render_slide("Insurance", "We've built multiple insurance calculators that are in daily use writing thousands of policies.", "ecom_bag.png", "slide6", services_insurance_path)
+      = render_slide("Mobile", "Experience building mobile apps as well as mobile websites, and the APIs that power them", "ecom_bag.png", "slide7", services_mobile_path)
+      = render_slide("SaaS", "Software-as-a-service isn't just about recurring revenue.", "ecom_bag.png", "slide7", services_saas_path)
+
 #how-we-do-it
   .texture
     .fixed_content
@@ -37,7 +23,7 @@
         %p
           Our process starts with the phase zero.  This is a project specification session that involves a one to two day in-person client meeting to go over precisely what features the project will have at its completion.
         = image_tag 'step_zero_arrow.png', :class => 'arrow'
-        
+
       .section.section1
         %h5 1
         %h3 Wireframe
@@ -50,7 +36,7 @@
         = image_tag 'step_one_shake.png', :class => 'shake'
         = image_tag 'step_one_pour.png', :class => 'pour'
         = image_tag 'step_one_arrow.png', :class => 'arrow'
-        
+
       .section.section2
         %h5 2
         %h3 Implement
@@ -68,6 +54,7 @@
         %p
           At this point, we work alongside the customer to move the application from "a thing that works" to a product that they love.  Getting this right requires a period of near-constant contact.
         = image_tag 'step_three_beakers.png', :class => 'beakers'
+
       .section.section4
         %h5 4
         %h3 Ship It
@@ -77,7 +64,6 @@
           manage
         %p
           Now we get the current version of the product out the door and in the hands of the end-users.  As soon as users are involved, we can work with the client to not only build the product the client thought they were building, but also the product that their users want to use.
-          
         = image_tag 'step_four_box.png', :class => 'ship_box'
 
       .section.section5
@@ -92,7 +78,7 @@
   :javascript
     $(window).load(function() {
       $('.services-slider').orbit({
-        animation: 'horizontal-slide',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+        animation: 'horizontal-push',                  // fade, horizontal-slide, vertical-slide, horizontal-push
         animationSpeed: 800,                // how fast animtions are
         timer: true, 			 // true or false to have the timer
         advanceSpeed: 4000, 		 // if timer is enabled, time between transitions 
