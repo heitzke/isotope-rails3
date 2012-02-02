@@ -44,7 +44,7 @@
         %ul
           = tab_for(:tablet, 'About', about_index_path, :about)
           = tab_for(:tablet, 'Services', services_path, :services)
-          = tab_for(:desktop, 'Blog', '/blog', :blog)
+          = tab_for(:tablet, 'Blog', '/blog', :blog)
           = tab_for(:desktop, 'Community', community_path, :community)
           = tab_for(:tablet, 'Contact', '/contact', :contact, 'last')
       %hr
@@ -61,7 +61,7 @@
     %footer
       %iframe{:frameborder => "0", :height => "320px", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?q=529+Beacon+Parkway+West,+Birmingham,+AL&hl=en&sll=37.0625,-95.677068&sspn=45.822921,78.486328&oq=529+Beacon+Parkwa&hnear=529+Beacon+Pkwy+W,+Birmingham,+Alabama+35209&t=h&ie=UTF8&hq=&z=14&iwloc=A&ll=33.475357,-86.822355&output=embed", :width => "100%"}
       .fixed_content
-        %a.btn.primary{ href: posts_path }
+        %a.btn.blog.primary{ href: posts_path }
           %span View Blog
         .location
           %strong Isotope11
