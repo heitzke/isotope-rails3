@@ -15,4 +15,4 @@
     - if local_assigns[:share]
       %span.share= share_this
     .blog_content
-      = coderay(post.body.html_safe).html_safe
+      = coderay(post.body).html_safe
