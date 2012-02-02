@@ -10,6 +10,7 @@
   %head
     %title
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
+    %script{ src: "/assets/libs/modernizr-2.0.6.min.js" }
     = render partial: 'layouts/responsive/meta'
     = render partial: 'layouts/responsive/fonts'
     = render partial: 'layouts/responsive/stylesheets'
