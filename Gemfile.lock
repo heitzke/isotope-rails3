@@ -51,6 +51,9 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.2.3)
       ffi (~> 1.0.6)
+    ckeditor (3.6.3)
+      mime-types (~> 1.16)
+      orm_adapter (~> 0.0.5)
     cocaine (0.2.0)
     coderay (1.0.4)
     columnize (0.3.5)
@@ -196,6 +199,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  ckeditor
   coderay (~> 1.0.4)
   cucumber-rails
   devise (~> 1.4.9)
