@@ -903,6 +903,12 @@ div.interior{
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cabin', sans-serif;
   }
+  .fixed_content {
+    padding-left: 10px;
+    max-width: 95%;
+    p {
+    }
+  }
 }
 h2.interior{
   color: #4f7b94;
@@ -988,38 +994,40 @@ h2.interior{
     }
   }
 }
-
-.profile{
-  display: inline-block;
-  vertical-align: top;
-  margin: 10px 0 20px;
-  padding: 0;
-  width: 580px;
-  p{
-    margin-bottom: 0;
-  }
-  h3{
-    color: #666;
-    font-size: 2.8rem;
-    margin: 0;
+.profile {
+  .profile_info{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 0 20px;
     padding: 0;
-    a{
-      text-decoration: none;
+    max-width: 80%;
+    width: 100%;
+    p{
+      margin-bottom: 0;
+    }
+    h3{
+      color: #666;
+      font-size: 2.8rem;
+      margin: 0;
+      padding: 0;
+      a{
+        text-decoration: none;
+      }
+    }
+    h5{
+      border-bottom: 1px solid #ccc;
+      color: #777;
+      font-size: 1.5rem;
+      margin: 0 0 5px;
+      padding: 0 0 3px;
     }
   }
-  h5{
-    border-bottom: 1px solid #ccc;
-    color: #777;
-    font-size: 1.5rem;
-    margin: 0 0 5px;
-    padding: 0 0 3px;
+  .profile-pic{
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px 5px 0 0;
+    width: 17%;
   }
-}
-.profile-pic{
-  display: inline-block;
-  vertical-align: top;
-  height: 200px;
-  margin: 10px 10px 0 0;
 }
 
 .content-left{
