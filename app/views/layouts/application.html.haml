@@ -23,6 +23,8 @@
     / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
     %link{ rel: "canonical", href: "/" }
     = yield :head_javascripts
+    = render :partial => 'shared/google_analytics_script'
+    = render :partial => 'shared/hit_tail_script'
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     //#top_bar
