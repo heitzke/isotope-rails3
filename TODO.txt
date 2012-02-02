@@ -26,3 +26,4 @@
   header area
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
+- blog needs more work
