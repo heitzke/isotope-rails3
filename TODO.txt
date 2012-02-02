@@ -13,3 +13,4 @@
 - Make map bubble in footer clickable
 - Map controls showing up on iphone
 - Slider looks a little funky on the iphone
+- Contact form is awful
