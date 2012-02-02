@@ -20,7 +20,6 @@
 - review examples in general
 - services subpages need navigation to see other services
 - need login link
-- login is broken
 - need client resources link
 - blog index needs to lose 'double blog header' and rss icon should go in blue
   header area
