@@ -17,9 +17,6 @@
 - add mobile examples
 - review examples in general
 - services subpages need navigation to see other services
-- need client resources link (? Didn't see this on old site anywhere)
-- blog index needs to lose 'double blog header' and rss icon should go in blue
-  header area
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
 - blog needs more work
