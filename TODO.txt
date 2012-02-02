@@ -7,7 +7,6 @@
   currently.
 - Tweak kerning on 'software development' header.  'A' is very separated from
   surrounding chars.
-- Maybe tweak active/hover on menu?
 - line breaks in contact form
 - Make map bubble in footer clickable
 - Map controls showing up on iphone
