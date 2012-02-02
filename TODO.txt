@@ -1,13 +1,12 @@
+# Most Important or Low Hanging
 - Backpage background also could use some interesting element...maybe a coffee
   stain.  Something to liven it up.  The rest of the site's interesting, don't
   want to bore people there.  Could be different element on different pages
   even.
 - line breaks in contact form
 - Make map bubble in footer clickable
-- Contact form is awful
 - services subpages need navigation to see other services
-- consider rewriting some content from POV of customer rather than dev.  Focus
-  more on quality, delivery, track record than ruby, tech, niftiness
+- community subpages need navigation to see other siblings
 - blog needs more work
 - Make homepage fast.  It's 1.5MB, geezus
 - load footer map iframe via js after load, so orbit doesn't take forever to
@@ -21,6 +20,7 @@
   we're listing.
 - Map transition is again too over the top, and perhaps occludes the map a bit
   too much.
+- Contact form is awful
 
 # Content
 - add mobile examples
@@ -29,6 +29,8 @@
 - get marketing guy to review content?
 - Don't just tell people what we do (software development) but how we'll solve
   their problems.  Worry-free software development?  Something.
+- consider rewriting some content from POV of customer rather than dev.  Focus
+  more on quality, delivery, track record than ruby, tech, niftiness
 
 # Unfeasible
 - Tweak kerning on 'software development' header.  'A' is very separated from
