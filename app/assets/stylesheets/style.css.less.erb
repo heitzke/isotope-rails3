@@ -759,7 +759,7 @@ body.controller-home.action-index{
         top: 92px;
         left: 117px;
         z-index: -1000;
-        opacity: 0.4;
+        .opacity(0.4);
         
       }
     }
@@ -767,7 +767,7 @@ body.controller-home.action-index{
       .beakers {
         position: absolute;
         top: 97px;
-        opacity: 0.3;
+        .opacity(0.3);
         z-index: -1000;
         
       }
@@ -777,7 +777,7 @@ body.controller-home.action-index{
         position: absolute;
         top: 136px;
         left: 79px;
-        opacity: .4;
+        .opacity(.4);
         z-index: -1000;
         
       }
@@ -882,12 +882,12 @@ footer{
 
 .orbit-wrapper{
   div.slider-nav span{
-    opacity: 0;
+    .opacity(0);
     -moz-transition: opacity 1s ease;
   }
   &:hover{
     div.slider-nav span{
-      opacity: 1;
+      .opacity(1);
     }
   }
 }
@@ -923,7 +923,7 @@ h2.interior{
 }
 #swoosh {
   background: url(/assets/isotope_orbit.png) 380px 60px no-repeat;
-  opacity: 0.2;
+  .opacity(0.2);
   position: absolute;
   z-index: 1;
   max-height: 500px;
@@ -1095,6 +1095,22 @@ form {
       text-transform: uppercase;
       &:hover{
         background-color: #4F7B94;
+      }
+    }
+  }
+}
+
+ul.foot{
+  display: inline-block;
+  list-style-type: none;
+  li{
+    display: inline-block;
+    a{
+      display: inline-block;
+      text-decoration: none;
+      padding: 10px;
+      &:hover{
+        color: white;
       }
     }
   }

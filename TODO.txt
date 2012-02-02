@@ -1,4 +1,3 @@
-- Update 'years experience' in bios in db
 - Backpage background needs some kind of subtle texture
 - Backpage background also could use some interesting element...maybe a coffee
   stain.  Something to liven it up.  The rest of the site's interesting, don't
@@ -12,18 +11,12 @@
 - line breaks in contact form
 - Make map bubble in footer clickable
 - Map controls showing up on iphone
-- Slider looks a little funky on the iphone
 - Contact form is awful
 - 500 is broken
 - 404 is broken
 - add mobile examples
 - review examples in general
 - services subpages need navigation to see other services
-- need login link
-- login is broken
-- need client resources link
-- blog index needs to lose 'double blog header' and rss icon should go in blue
-  header area
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
 - blog needs more work
