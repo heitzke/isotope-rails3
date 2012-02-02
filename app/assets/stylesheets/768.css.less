@@ -55,11 +55,7 @@ body.controller-home.action-index{
       padding: 0 20px 0 0;
       &.active{
         a{
-          -webkit-transition: color .2s ease;
-          -moz-transition: color .2s ease;
-          -o-transition: color .2s ease;
-          transition: color .2s ease;
-          color: #6d95ac;
+          background-color: #6d95ac;
         }
       }
       &.tablet{
@@ -69,16 +65,17 @@ body.controller-home.action-index{
         padding: 0;
       }
       a{
-        padding: 4px 0;
+        display: block;
+        padding: .25em;
         text-shadow: 1px 0 1px #ccc;
         color: white;
         text-decoration: none;
         &:hover{
-          -webkit-transition: color 1s ease;
-          -moz-transition: color 1s ease;
-          -o-transition: color 1s ease;
-          transition: color 1s ease;
-          color: #6d95ac;
+          -webkit-transition: background-color .5s ease;
+          -moz-transition: background-color .5s ease;
+          -o-transition: background-color .5s ease;
+          transition: background-color .5s ease;
+          background-color: #6d95ac;
         }
       }
     }
@@ -276,6 +273,7 @@ body.controller-home.action-index{
   }
 }
 footer {
+  height: 260px;
   .fixed_content {
     margin: 0 auto;
   }
