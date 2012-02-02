@@ -29,3 +29,5 @@
 - blog needs more work
 - add content re: experience with high availability, scalability
 - get marketing guy to review content?
+- check out code styles on blog, are lame
+- Make homepage fast.  It's 1.5MB, geezus
