@@ -24,3 +24,5 @@
 - get marketing guy to review content?
 - check out code styles on blog, are lame
 - Make homepage fast.  It's 1.5MB, geezus
+- load footer map iframe via js after load, so orbit doesn't take forever to
+  launch
