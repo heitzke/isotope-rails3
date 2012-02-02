@@ -147,6 +147,8 @@ html {
   //background: #ffffff image-url('/assets/tmp/grid.png') repeat-y 50% 0;
   font-size: 62.5%;
 }
+
+
 body {
   margin: 0 auto;
   padding: 0;
@@ -893,6 +895,11 @@ footer{
 }
 
 div.interior{
+  -moz-box-shadow: inset 0 1px 1px #bbb;
+  -webkit-box-shadow: inset 0 1px 1px #bbb;
+  box-shadow: inset 0 1px 1px #bbb;
+  
+  background: url(/assets/grey_bg.png ) repeat;
   background-color: white;
   position: relative;
   z-index: 20;
@@ -935,6 +942,7 @@ h2.interior{
   max-height: 500px;
   height: 500px;
   width: 100%;
+	
 }
 #clouds{
   //background: #ccc url(/assets/grey_bg.png) repeat;
@@ -945,7 +953,6 @@ h2.interior{
   width:100%;
   z-index:0;
   .lineargradient(top, #AABECA , #F8FAF0 );
-  
 }
 
 .blog_post{
@@ -1134,4 +1141,15 @@ h4 span.amp{
   margin-right: -.2em;
   line-height: .8em;
   font-family: 'Alice', serif;
+}
+
+html.ie6, html.ie7 {
+  #clouds {
+      filter:  progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#aabeca', endColorstr='#f8faf0'); /* IE6 & IE7 */
+  }
+}
+html.ie8 {
+  #clouds {
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#aabeca', endColorstr='#f8faf0')"; /* IE8 */
+  }
 }
