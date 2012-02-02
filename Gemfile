@@ -16,7 +16,7 @@ gem 'paperclip', '~> 2.3.11'
 
 gem 'haml', '~> 3.1.3'
 gem 'will_paginate', '~> 3.0.2'
-gem 'coderay', '~> 1.0.4'
+gem 'coderay', '~> 0.9.7'
 gem 'stringex'
 gem 'rdiscount'
 gem 'less-rails'

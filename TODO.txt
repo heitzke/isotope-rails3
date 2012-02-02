@@ -26,3 +26,20 @@
 - Make homepage fast.  It's 1.5MB, geezus
 - load footer map iframe via js after load, so orbit doesn't take forever to
   launch
+- The blog button needs to go into the header and disappear at large sizes.
+- Don't just tell people what we do (software development) but how we'll solve
+  their problems.  Worry-free software development?  Something.
+- menu hover effects need to change, and any animations need to be fast.  200ms
+  is the boundary at which point we're shitty
+- Yet another person badmouthed our carousel.
+- Transition to the 'how we do it' section too abrupt?  Desaturate a bit to
+  reduce the contrast?
+- 'How We Do It' section needs some context - explain to people what it is that
+  we're listing.
+- Fix line height in 'how we do it' section on headlines, it's wonky at some
+  sizes.
+- Map transition is again too over the top, and perhaps occludes the map a bit
+  too much.
+- Make sure header links are in the footer too.
+- Can we re-use the divider bars elsewhere (that we use beside the headline)?
+  We put a stake in the ground and then never re-use them.
