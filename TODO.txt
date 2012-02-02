@@ -2,32 +2,33 @@
   stain.  Something to liven it up.  The rest of the site's interesting, don't
   want to bore people there.  Could be different element on different pages
   even.
-- Blog button could use a 'shiny' look perhaps, the split button.  Is too plain
-  currently.
 - line breaks in contact form
 - Make map bubble in footer clickable
 - Contact form is awful
-- add mobile examples
-- review examples in general
 - services subpages need navigation to see other services
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
 - blog needs more work
-- add content re: experience with high availability, scalability
-- get marketing guy to review content?
 - Make homepage fast.  It's 1.5MB, geezus
 - load footer map iframe via js after load, so orbit doesn't take forever to
   launch
-- Don't just tell people what we do (software development) but how we'll solve
-  their problems.  Worry-free software development?  Something.
-- Yet another person badmouthed our carousel.
+- Footer map looks wonky when blog button's missing now, my fault
+
+# Bigger Design tweaks
 - Transition to the 'how we do it' section too abrupt?  Desaturate a bit to
   reduce the contrast?
 - 'How We Do It' section needs some context - explain to people what it is that
   we're listing.
 - Map transition is again too over the top, and perhaps occludes the map a bit
   too much.
-- Make sure header links are in the footer too.
+
+# Content
+- add mobile examples
+- review examples in general
+- add content re: experience with high availability, scalability
+- get marketing guy to review content?
+- Don't just tell people what we do (software development) but how we'll solve
+  their problems.  Worry-free software development?  Something.
 
 # Unfeasible
 - Tweak kerning on 'software development' header.  'A' is very separated from
