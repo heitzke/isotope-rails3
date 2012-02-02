@@ -6,6 +6,7 @@ gem 'rake', '0.9.2'
 
 gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
 
+gem 'ckeditor'
 
 # Get static pages
 gem 'high_voltage'
