@@ -80,10 +80,12 @@
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
 }
 .opacity(@opacity: 0.5) {
+  @ie-opacity: @opacity * 100;
   -moz-opacity: @opacity;
   -khtml-opacity: @opacity;
   -webkit-opacity: @opacity;
   opacity: @opacity;
+  filter: alpha(opacity=@ie-opacity);
 }
 .transition-duration(@duration: 0.2s) {
   -moz-transition-duration: @duration;
