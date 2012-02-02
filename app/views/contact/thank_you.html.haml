@@ -1,4 +1,10 @@
-%p Thank you for contacting us. We will contact you back shortly.
+.fixed_content
+  %h2.interior Contact Us
+
+.interior
+  .fixed_content
+    %p Thank you for contacting us. We will contact you back shortly.
+
 - content_for :javascripts do
   :javascript
     _gaq.push(['_trackEvent', 'contact', 'submitted']);
