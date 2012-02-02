@@ -1,0 +1,15 @@
+- Update 'years experience' in bios in db
+- Backpage background needs some kind of subtle texture
+- Backpage background also could use some interesting element...maybe a coffee
+  stain.  Something to liven it up.  The rest of the site's interesting, don't
+  want to bore people there.  Could be different element on different pages
+  even.
+- Blog button could use a 'shiny' look perhaps, the split button.  Is too plain
+  currently.
+- Tweak kerning on 'software development' header.  'A' is very separated from
+  surrounding chars.
+- Maybe tweak active/hover on menu?
+- line breaks in contact form
+- Make map bubble in footer clickable
+- Map controls showing up on iphone
+- Slider looks a little funky on the iphone
