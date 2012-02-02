@@ -34,7 +34,7 @@ module ApplicationHelper
   end
 
   def coderay(text)
-    text.gsub(/\<pre\>.*\<code( lang="(.+?)")?\>(.+?)\<\/code\>\<\/pre\>/m) do
+    text.gsub(/\<code( lang="(.+?)")?\>(.+?)\<\/code\>/m) do
       lang = $2 || 'ruby'
       CodeRay.scan($3, lang).div(:css => :class)
     end
