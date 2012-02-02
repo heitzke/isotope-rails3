@@ -1,18 +1,12 @@
-- Backpage background needs some kind of subtle texture
 - Backpage background also could use some interesting element...maybe a coffee
   stain.  Something to liven it up.  The rest of the site's interesting, don't
   want to bore people there.  Could be different element on different pages
   even.
 - Blog button could use a 'shiny' look perhaps, the split button.  Is too plain
   currently.
-- Tweak kerning on 'software development' header.  'A' is very separated from
-  surrounding chars.
 - line breaks in contact form
 - Make map bubble in footer clickable
-- Map controls showing up on iphone
 - Contact form is awful
-- 500 is broken
-- 404 is broken
 - add mobile examples
 - review examples in general
 - services subpages need navigation to see other services
@@ -26,8 +20,6 @@
   launch
 - Don't just tell people what we do (software development) but how we'll solve
   their problems.  Worry-free software development?  Something.
-- menu hover effects need to change, and any animations need to be fast.  200ms
-  is the boundary at which point we're shitty
 - Yet another person badmouthed our carousel.
 - Transition to the 'how we do it' section too abrupt?  Desaturate a bit to
   reduce the contrast?
@@ -36,5 +28,12 @@
 - Map transition is again too over the top, and perhaps occludes the map a bit
   too much.
 - Make sure header links are in the footer too.
-- Can we re-use the divider bars elsewhere (that we use beside the headline)?
-  We put a stake in the ground and then never re-use them.
+
+# Unfeasible
+- Tweak kerning on 'software development' header.  'A' is very separated from
+  surrounding chars.
+
+# Later
+- Map controls showing up on iphone
+- 500 is broken
+- 404 is broken
