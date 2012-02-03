@@ -1,11 +1,11 @@
 # Most Important or Low Hanging
 - line breaks in contact form
-- services subpages need navigation to see other services
-- community subpages need navigation to see other siblings
 - blog needs more work
 - Make homepage fast.  It's 1.5MB, geezus
 - Footer map looks wonky when blog button's missing now, my fault
 - Re-work z-index stuff, make header on top but hide the orbit, etc. in it with overflow:hidden.
+- Need a call to action in the 'how we do it' section on the homepage getting people to get in touch.
+- Need 'thumbs' for each service that slide the slider on the homepage at 992px wide.
 
 # Bigger Design tweaks
 - Backpage background also could use some interesting element...maybe a coffee
