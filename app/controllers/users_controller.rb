@@ -18,9 +18,9 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.unlocked
+    @users = User.unlocked.order("list_position")
   end
-  
+
   def alumni
     @alumni = User.find_all_by_alumni(true)
   end
