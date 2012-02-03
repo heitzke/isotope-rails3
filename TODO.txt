@@ -26,10 +26,10 @@
 - review examples in general
 - add content re: experience with high availability, scalability
 - get marketing guy to review content?
-- Don't just tell people what we do (software development) but how we'll solve
-  their problems.  Worry-free software development?  Something.
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
+- Don't just tell people what we do (software development) but how we'll solve
+  their problems.  Worry-free software development?  Something.
 
 # Later
 - Map controls showing up on iphone
