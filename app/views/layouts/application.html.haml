@@ -74,6 +74,7 @@
     #bottom_info
       .fixed_content
         %ul.foot
+          %li= link_to 'Home', root_path
           %li= link_to 'Resources', '/home/resources'
           %li= link_to 'Careers', '/home/careers'
           %li= link_to 'About', about_index_path
@@ -82,14 +83,14 @@
           %li= link_to 'Community', community_path
           %li= link_to 'Contact', '/contact'
           %li= link_to 'Payments', '/home/payments'
-          - unless current_user
-            %li= link_to "Site Login", new_user_session_path
-        - if current_user
-          .clearfix
-          %ul.foot
+        .clearfix
+        %ul.foot
+          - if current_user
             %li= link_to 'New Blog Post', new_post_path
             %li= link_to 'Edit Profile', edit_user_path(current_user)
             %li= link_to 'Logout', destroy_user_session_path
+          - else
+            %li= link_to "Site Login", new_user_session_path
         %a{:title => "Click for the Business Review of isotope|eleven, Inc., a Computers - Sys Designers & Consult in Birmingham AL", :href => "http://www.bbb.org/central-alabama/business-reviews/software-development-and-consulting/isotope11-in-birmingham-al-90036746#sealclick"}
           %img{:alt => "isotope|eleven, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
         %a{:href => "http://www.dnb.com"}
