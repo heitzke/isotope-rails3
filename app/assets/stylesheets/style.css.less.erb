@@ -831,6 +831,39 @@ body.controller-home.action-index{
     }
   }
 }
+.fixed_content {
+  #byline-title {
+    text-align:center;
+    .byline {
+      display:inline-block;
+    }
+    .byline-title-side{
+      display: inline-block;
+      width: 3%;
+      padding-bottom: .3em;
+      position: relative;
+      z-index: 2;
+      .line{
+        width: 100%;
+        background-color: #527e97;
+        &.first{
+          float: left;
+          height: 3px;
+          margin-bottom: 2px;
+          position: relative;
+          z-index: 2;
+        }
+        &.second{
+          float: right;
+          height: 1px;
+          position: relative;
+          z-index: 2;
+        }
+      }
+    }
+  }
+}
+
 footer{
   height: 320px;
   background: image-url('footer_map_mask.png') repeat-x;
@@ -930,6 +963,7 @@ div.interior{
   position: relative;
   z-index: 20;
   padding: 15px 0 15px 0;
+  min-height: 300px;
   p, li{
     line-height: 1.2em;
   }
