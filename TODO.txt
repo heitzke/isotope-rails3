@@ -1,6 +1,5 @@
 # Most Important or Low Hanging
 - line breaks in contact form
-- Make map bubble in footer clickable
 - services subpages need navigation to see other services
 - community subpages need navigation to see other siblings
 - blog needs more work
