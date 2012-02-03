@@ -1,8 +1,4 @@
 # Most Important or Low Hanging
-- Backpage background also could use some interesting element...maybe a coffee
-  stain.  Something to liven it up.  The rest of the site's interesting, don't
-  want to bore people there.  Could be different element on different pages
-  even.
 - line breaks in contact form
 - Make map bubble in footer clickable
 - services subpages need navigation to see other services
@@ -14,6 +10,10 @@
 - Footer map looks wonky when blog button's missing now, my fault
 
 # Bigger Design tweaks
+- Backpage background also could use some interesting element...maybe a coffee
+  stain.  Something to liven it up.  The rest of the site's interesting, don't
+  want to bore people there.  Could be different element on different pages
+  even.
 - Transition to the 'how we do it' section too abrupt?  Desaturate a bit to
   reduce the contrast?
 - 'How We Do It' section needs some context - explain to people what it is that
