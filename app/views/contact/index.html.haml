@@ -5,21 +5,12 @@
 
 .interior
   .fixed_content
-    .content-left
+    .content-left.contact
       - unless current_user && current_user.admin?
         %p  For business inquiries, please contact us directly or just fill out our simple contact form
-        %br
-        %br
 
         = form_tag :action => 'create' do |f|
           = render 'form'
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
-        %br
 
       - if current_user && current_user.admin?
         %table
@@ -36,7 +27,7 @@
               %td= contact.text
           /- form_for contact do |f|
           /  = render :partial => 'contact_form', :locals => { :f => f }
-    .content-right
+    .content-right.contact
       %h3 isotope|eleven
       %p
         529 Beacon Pkwy W - Suite 105

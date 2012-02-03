@@ -240,7 +240,7 @@ dt {
 blockquote {
   margin: 0 0 1.5em -24px;
   padding-left: 24px;
-  border-left: 1px solid #bfbfbf;
+  border-left: 1px solid #ddd;
   font-style: italic;
 }
 blockquote:before,
@@ -942,7 +942,7 @@ footer{
 }
 
 div.interior{
-  .inner-shadow(2px, 0, 10px, 0.8);
+  .inner-shadow(0px, 1px, 1px, 0.3);
   background: url(/assets/content_bg.png ) repeat;
   background-color: white;
   position: relative;
@@ -1093,6 +1093,14 @@ h2.interior{
   vertical-align: top;
   width: 25%;
 }
+.content-right.contact{
+  display: block;
+  vertical-align: top;
+  width: auto;
+}
+.content-left.contact {
+  width: 95%;
+}
 
 .work_services_wrap{
   display: inline-block;
@@ -1186,6 +1194,75 @@ blockquote.aside{
     float: left;
   }
 }
+.contact_form {
+  button {
+    float:left;
+    margin: 12px 0 10px 0;
+    width: 100%;
+    height: 50px;
+    font-size:1.3em;
+    text-transform: uppercase;
+    .gradient(#20b6ef, #2494be, #25a8d9);
+    .rounded;
+    color:#fff;
+    font-weight:bold;
+    border:1px solid #20b6ef;
+    &:hover {
+      .gradient(#2494be, #2494be, #2494be);
+    }
+  }
+  .fieldset_bottom {
+    width:100%;
+    label {
+      display:block;
+      margin: 0 0 6px 0;
+    }
+    .input_wrap {
+      .rounded;
+      padding: 4px 4px 4px 4px;
+      border:1px solid #dfe0e1;
+      .lineargradient( top, #e6e7e9, #d3d5d9);
+      textarea {
+        .rounded;
+        border:none;
+        border:none;
+        padding: 5px;
+        width: 98%;
+        height: 75px;
+        resize: none;
+        border:1px solid #c2c3c5;
+      }
+    }
+  }
+  .fieldset {
+    display:inline-block;
+    width: 100%;
+    margin: 0 5px 10px 0;
+    label {
+      margin: 0 0 6px 0;
+      display:block;
+    }
+    .input_wrap {
+      .rounded;
+      background:#ccc;
+      padding: 4px 4px 4px 4px;
+      border:1px solid #dfe0e1;
+      .lineargradient( top, #e6e7e9, #d3d5d9);
+      input {
+        .rounded;
+        border:none;
+        height: 25px;
+        border:none;
+        padding: 0 0 0 5px;
+        width: 98%;
+        border:1px solid #c2c3c5;
+        
+      }
+    }
+  }
+}
+
+
 
 ul.sibling_nav{
   li{
