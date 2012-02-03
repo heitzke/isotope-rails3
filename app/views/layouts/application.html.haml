@@ -92,5 +92,12 @@
           %img{:alt => "Isotope11, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
         %a{:href => "http://www.dnb.com"}
           = image_tag "duns_registered.png"
+        .clearfix
+          .contact_details
+            .phone p: 877.476.8671
+            .fax f: 205.943.5760
+            .email
+              e:
+              = link_to 'info@isotope11.com', 'mailto:info@isotope11.com' 
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
