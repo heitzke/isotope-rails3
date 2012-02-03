@@ -1,5 +1,5 @@
 - content_for :title do 
-  About &ndash; Isotope|eleven
+  About &ndash; isotope|eleven
 
 = interior_header "About Us"
 
@@ -27,5 +27,5 @@
     - @users.each do |user|
       = render :partial => 'bio', :locals => {:user => user}
 
-    %p= link_to "Isotope Eleven Alumni", about_alumni_path
+    %p= link_to "isotope|eleven Alumni", about_alumni_path
     .clearfix
