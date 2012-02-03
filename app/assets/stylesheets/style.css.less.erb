@@ -521,7 +521,7 @@ img {
   max-width: 100%;
 }
 a, a:visited {
-  color: #83B0BE;
+  color: #4F7B94;
 }
 header {
   h1 {
@@ -655,6 +655,15 @@ body.controller-home.action-index{
 }
 .slide{
   height: 200px;
+  position: relative;
+  a.cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 200px;
+    width: 100%;
+  }
   .slide-content{
     padding: 20px;
     a{
@@ -864,6 +873,15 @@ footer{
   .fixed_content {
     padding: 10px 0 0 0;
     .location{
+      position: relative;
+      a{
+        display: block;
+        width: 237px;
+        height: 111px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
       margin: 4em auto 0;
       padding-top: 42px;
       background-image: image-url('location_bg.png');
@@ -880,11 +898,22 @@ footer{
 #bottom_info {
   display:block;
   width: 100%;
-  height: 65px;
+  min-height: 65px;
   background: #0B2A35;
   img {
     float:right;
     padding: 10px 10px 0 0;
+  }
+  .contact_details{
+    color: white;
+    padding-bottom: 1em;
+    .phone, .fax, .email{
+      display: inline-block;
+      padding: 0 .75em;
+    }
+    a:hover{
+      color: white;
+    }
   }
 }
 
@@ -975,7 +1004,6 @@ h2.interior{
   max-height: 500px;
   height: 500px;
   width: 100%;
-	
 }
 #clouds{
   //background: #ccc url(/assets/grey_bg.png) repeat;
