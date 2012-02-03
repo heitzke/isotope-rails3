@@ -1,5 +1,4 @@
 # Most Important or Low Hanging
-- line breaks in contact form
 - blog needs more work
 - Make homepage fast.  It's 1.5MB, geezus
 - Footer map looks wonky when blog button's missing now, my fault
@@ -18,7 +17,6 @@
   we're listing.
 - Map transition is again too over the top, and perhaps occludes the map a bit
   too much.
-- Contact form is awful
 
 # Content
 - add mobile examples
