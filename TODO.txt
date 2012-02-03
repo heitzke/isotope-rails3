@@ -32,10 +32,6 @@
 - consider rewriting some content from POV of customer rather than dev.  Focus
   more on quality, delivery, track record than ruby, tech, niftiness
 
-# Unfeasible
-- Tweak kerning on 'software development' header.  'A' is very separated from
-  surrounding chars.
-
 # Later
 - Map controls showing up on iphone
 - 500 is broken
