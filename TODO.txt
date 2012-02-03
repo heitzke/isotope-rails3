@@ -4,8 +4,6 @@
 - community subpages need navigation to see other siblings
 - blog needs more work
 - Make homepage fast.  It's 1.5MB, geezus
-- load footer map iframe via js after load, so orbit doesn't take forever to
-  launch
 - Footer map looks wonky when blog button's missing now, my fault
 
 # Bigger Design tweaks

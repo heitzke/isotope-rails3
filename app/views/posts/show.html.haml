@@ -1,17 +1,7 @@
 - content_for(:title, "#{@post.title} &ndash; Blog &ndash; Isotope|eleven".html_safe)
 
-.fixed_content
-  #byline-title
-    .byline-title-side
-      .line.first
-      .line.second
-    .byline
-      %h2.interior 
-        Blog
-        %span#rss_link= link_to (image_tag 'feed-icon-28x28.png'), posts_path(:atom)
-    .byline-title-side
-      .line.first
-      .line.second
+= interior_header("Blog<span id='rss_link'>#{link_to(image_tag('feed-icon-28x28.png'), posts_path(:atom))}</span>".html_safe)
+
 .interior
   .fixed_content
     = render :partial => @post, :locals => { :share => true }

@@ -18,12 +18,16 @@ module ApplicationHelper
   end
 
   def render_slide(header, content, image, slide_class, url)
-    render :partial => 'home/slide', :locals => { slide_class: slide_class,
+    render partial: 'home/slide', locals: { slide_class: slide_class,
       header: header, content: content, image: image, url: url }
   end
 
   def render_project(title, image, url, description)
-    render :partial => 'shared/project', :locals => { title: title, image: image, url: url, description: description }
+    render partial: 'shared/project', locals: { title: title, image: image, url: url, description: description }
+  end
+
+  def interior_header(text)
+    render partial: 'shared/interior_header', :locals => { text: text }
   end
 
   def tab_for(type, name, link, key, extra_classes='')
