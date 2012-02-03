@@ -161,7 +161,27 @@ body.controller-home.action-index {
     margin: 0 auto;
   }
 }
-
+.fixed_content {
+  #byline-title {
+    text-align:center;
+    .byline {
+      display:inline-block;
+      padding: 0 8px;
+    }
+    .byline-title-side{
+      display: inline-block;
+      width: 3%;
+      padding-bottom: .3em;
+      position: relative;
+      z-index: 2;
+      .line{
+        &.first{
+          height: 3px;
+        }
+      }
+    }
+  }
+}
 footer {
   .fixed_content {
     margin: 0 auto;

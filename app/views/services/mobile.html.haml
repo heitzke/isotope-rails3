@@ -2,10 +2,19 @@
   Mobile &ndash; Services &ndash; Isotope|eleven
 
 .fixed_content
-  %h2.interior Mobile
+  #byline-title
+    .byline-title-side
+      .line.first
+      .line.second
+    .byline
+      %h2.interior Services
+    .byline-title-side
+      .line.first
+      .line.second
 
 .interior
   .fixed_content
+    %h3 Mobile
     .work_content_right
       = image_tag 'mobile.png', :alt => 'Mobile Image'
       %ul
@@ -20,10 +29,4 @@
         Good mobile applications are much more than a basic iPhone app. They need integration with the cloud so that users may share their location, and interact in real time with other users of the platform. Writing web services that will be compatible across all clients including iPhone, Android, Blackberry, and HTML5 based mobile clients is important, so that your users are not locked into a single platform as the mobile landscape evolves.
       %p
         = link_to 'Back to Services', '/services'
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
+
