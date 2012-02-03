@@ -20,7 +20,6 @@
   too much.
 
 # Content
-- add mobile examples
 - review examples in general
 - add content re: experience with high availability, scalability
 - get marketing guy to review content?
