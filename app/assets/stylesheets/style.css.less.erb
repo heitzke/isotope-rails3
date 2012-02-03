@@ -1184,6 +1184,28 @@ blockquote.aside{
   margin-bottom: 1em;
 }
 
+ul.sibling_nav{
+  li{
+    display: inline-block;
+    margin: .25em;
+    background-color: #ddd;
+    a{
+      display: inline-block;
+      padding: .25em;
+      text-decoration: none;
+    }
+    &.active{
+      background-color: #6d95ac;
+      a{
+        color: white;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
+
 /* AMPERSAND FONTS ============================================================================= */
 h4 span.amp{
   font-size: 150%;

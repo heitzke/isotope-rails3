@@ -30,6 +30,32 @@ module ApplicationHelper
     render partial: 'shared/interior_header', :locals => { text: text }
   end
 
+  def render_sibling_nav_for(subsection)
+    page_arr = []
+    case subsection
+    when :services
+      page_arr << ["Financial", services_financial_path]
+      page_arr << ["Phase Zero", services_phasezero_path]
+      page_arr << ["E-Commerce", services_ecommerce_path]
+      page_arr << ["Social Media", services_socialmedia_path]
+      page_arr << ["Insurance", services_insurance_path]
+      page_arr << ["Mobile", services_mobile_path]
+      page_arr << ["SaaS", services_saas_path]
+      page_arr << ["MLM", services_mlm_path]
+    when :community
+      page_arr << ["Xrono", '/community/xrono']
+      page_arr << ['RubyHam', '/community/rubyham']
+      page_arr << ['state_machine_audits', '/community/state_machine_audits']
+      page_arr << ['TechBirmingham', '/community/techbirmingham']
+      page_arr << ['contract_acceptance_framework', '/community/contract_acceptance_framework']
+      page_arr << ['bootstrap-will_paginate', '/community/bootstrap_will_paginate']
+      page_arr << ['css3_progress_bar_rails', '/community/css3_progress_bar_rails']
+      page_arr << ['isotope_contacts', '/community/isotope_contacts']
+    end
+    return '' if page_arr.empty?
+    render partial: 'shared/sibling_nav', locals: { pages: page_arr }
+  end
+
   def tab_for(type, name, link, key, extra_classes='')
     state = @tab == key ? 'active' : ''
     content_tag(:li, :class => [state, type, extra_classes].join(" ")) do
