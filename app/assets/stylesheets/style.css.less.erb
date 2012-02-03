@@ -1118,31 +1118,36 @@ h2.interior{
 
 .work_services_wrap{
   display: inline-block;
+  vertical-align: top;
   height: 140px;
   margin: 0 40px 40px 0;
   padding: 0;
-  width: 45%;
+  width: 100%;
   background-color: #eee;
+  position: relative;
   &:hover{
     background-color: #ddd;
   }
   .services_link{
+    position: absolute;
+    top: 0;
+    left: 0;
     display: block;
-    height: 125px;
     position: absolute;
     text-indent: -9999em;
-    width: 380px;
+    height: 100%;
+    width: 100%;
   }
   .work_services_img{
-    float: left;
-    height: 85px;
-    padding: 15px 15px 0;
-    width: 50px;
+    vertical-align: top;
+    display: inline-block;
+    padding: 10px 15px 0;
+    width: 11%;
   }
   .work_services_text{
-    float: left;
-    height: 120px;
-    width: 280px;
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
     h4{
       font-size: 1.3em;
       height: 32px;
