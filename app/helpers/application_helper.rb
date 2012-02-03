@@ -18,7 +18,7 @@ module ApplicationHelper
   end
 
   def render_slide(header, content, image, slide_class, url)
-    render partial: 'home/slide', locals: { slide_class: slide_class,
+    render partial: 'shared/slide', locals: { slide_class: slide_class,
       header: header, content: content, image: image, url: url }
   end
 
