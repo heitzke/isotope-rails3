@@ -80,6 +80,7 @@
           %li= link_to 'Blog', '/blog'
           %li= link_to 'Community', community_path
           %li= link_to 'Contact', '/contact'
+          %li= link_to 'Payments', '/home/payments'
           - unless current_user
             %li= link_to "Site Login", new_user_session_path
         - if current_user
