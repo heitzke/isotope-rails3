@@ -6,7 +6,11 @@
   Version: 2
   URL: http://stuffandnonsense.co.uk/projects/320andup/
   License: http://creativecommons.org/licenses/MIT
+
 - conditional_html 'en-US' do
+  <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+  <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+  <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->  
   %head
     %title
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
@@ -23,12 +27,13 @@
     / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
     %link{ rel: "canonical", href: "/" }
     = yield :head_javascripts
+    = render :partial => 'shared/google_analytics_script'
+    = render :partial => 'shared/hit_tail_script'
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     //#top_bar
-    #parallax-bg1
     #swoosh
-    #clouds
+    #clouds.gradient
     #who-we-are
       %header{ role: "banner" }
         %h1
@@ -37,9 +42,8 @@
         %ul
           = tab_for(:tablet, 'About', about_index_path, :about)
           = tab_for(:tablet, 'Services', services_path, :services)
-          = tab_for(:desktop, 'Blog', '/blog', :blog)
+          = tab_for(:tablet, 'Blog', '/blog', :blog)
           = tab_for(:desktop, 'Community', community_path, :community)
-          = tab_for(:desktop, 'Payments', '/home/payments', :payments)
           = tab_for(:tablet, 'Contact', '/contact', :contact, 'last')
       %hr
       .byline-side
@@ -55,7 +59,7 @@
     %footer
       %iframe{:frameborder => "0", :height => "320px", :marginheight => "0", :marginwidth => "0", :scrolling => "no", :src => "http://maps.google.com/maps?q=529+Beacon+Parkway+West,+Birmingham,+AL&hl=en&sll=37.0625,-95.677068&sspn=45.822921,78.486328&oq=529+Beacon+Parkwa&hnear=529+Beacon+Pkwy+W,+Birmingham,+Alabama+35209&t=h&ie=UTF8&hq=&z=14&iwloc=A&ll=33.475357,-86.822355&output=embed", :width => "100%"}
       .fixed_content
-        %a.btn.primary{ href: posts_path }
+        %a.btn.blog.primary{ href: posts_path }
           %span View Blog
         .location
           %strong Isotope11
@@ -66,9 +70,26 @@
           %br
           Birmingham, AL 35209
     #bottom_info
-      %a{:title => "Click for the Business Review of Isotope11, Inc., a Computers - Sys Designers & Consult in Birmingham AL", :href => "http://www.bbb.org/central-alabama/business-reviews/software-development-and-consulting/isotope11-in-birmingham-al-90036746#sealclick"}
-        %img{:alt => "Isotope11, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
-      %a{:href => "http://www.dnb.com"}
-        = image_tag "duns_registered.png"
+      .fixed_content
+        %ul.foot
+          %li= link_to 'Resources', '/home/resources'
+          %li= link_to 'Careers', '/home/careers'
+          %li= link_to 'About', about_index_path
+          %li= link_to 'Services', services_path
+          %li= link_to 'Blog', '/blog'
+          %li= link_to 'Community', community_path
+          %li= link_to 'Contact', '/contact'
+          - unless current_user
+            %li= link_to "Site Login", new_user_session_path
+        - if current_user
+          .clearfix
+          %ul.foot
+            %li= link_to 'New Blog Post', new_post_path
+            %li= link_to 'Edit Profile', edit_user_path(current_user)
+            %li= link_to 'Logout', destroy_user_session_path
+        %a{:title => "Click for the Business Review of Isotope11, Inc., a Computers - Sys Designers & Consult in Birmingham AL", :href => "http://www.bbb.org/central-alabama/business-reviews/software-development-and-consulting/isotope11-in-birmingham-al-90036746#sealclick"}
+          %img{:alt => "Isotope11, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
+        %a{:href => "http://www.dnb.com"}
+          = image_tag "duns_registered.png"
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts

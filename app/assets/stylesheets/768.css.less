@@ -55,11 +55,7 @@ body.controller-home.action-index{
       padding: 0 20px 0 0;
       &.active{
         a{
-          -webkit-transition: color 1s ease;
-          -moz-transition: color 1s ease;
-          -o-transition: color 1s ease;
-          transition: color 1s ease;
-          color: #6d95ac;
+          background-color: #6d95ac;
         }
       }
       &.tablet{
@@ -69,16 +65,18 @@ body.controller-home.action-index{
         padding: 0;
       }
       a{
-        padding: 4px 0;
+        display: block;
+        padding: 3em .25em .25em .25em;
+        margin-top: -3em;
         text-shadow: 1px 0 1px #ccc;
         color: white;
         text-decoration: none;
         &:hover{
-          -webkit-transition: color 1s ease;
-          -moz-transition: color 1s ease;
-          -o-transition: color 1s ease;
-          transition: color 1s ease;
-          color: #6d95ac;
+          -webkit-transition: background-color .5s ease;
+          -moz-transition: background-color .5s ease;
+          -o-transition: background-color .5s ease;
+          transition: background-color .5s ease;
+          background-color: #6d95ac;
         }
       }
     }
@@ -254,24 +252,20 @@ body.controller-home.action-index{
       h3{
         font-size: 1.8em;
         z-index: 100;
-        
       }
       h4{
         font-size: 1.2em;
         z-index: 100;
-        
       }
       h5{
         left: 0;
         font-size: 3.4em;
         z-index: 100;
-        
       }
       p {
         font-size: 1em;
         line-height: 1.4em;
         z-index: 100;
-        
       }
       img {
         z-index: 50;
@@ -280,11 +274,16 @@ body.controller-home.action-index{
   }
 }
 footer {
+  height: 260px;
   .fixed_content {
     margin: 0 auto;
+  }
+  a.blog{
+    display: none;
   }
 }
 
 h2.interior{
-  font-size: 4em;
+  font-size: 3.5em;
+  margin: 10px 0 0 0;
 }

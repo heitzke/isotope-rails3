@@ -1,5 +1,7 @@
-%h2= "Editing #{@user}"
+.interior
+  .fixed_content
+    %h2= "Editing #{@user}"
 
-= render 'form'
+    = render 'form'
 
-= link_to "Back to Profile", @user
+    = link_to "Back to Profile", @user

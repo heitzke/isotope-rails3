@@ -1,33 +1,42 @@
-- Update 'years experience' in bios in db
-- Backpage background needs some kind of subtle texture
+# Most Important or Low Hanging
 - Backpage background also could use some interesting element...maybe a coffee
   stain.  Something to liven it up.  The rest of the site's interesting, don't
   want to bore people there.  Could be different element on different pages
   even.
-- Blog button could use a 'shiny' look perhaps, the split button.  Is too plain
-  currently.
-- Tweak kerning on 'software development' header.  'A' is very separated from
-  surrounding chars.
-- Maybe tweak active/hover on menu?
 - line breaks in contact form
 - Make map bubble in footer clickable
-- Map controls showing up on iphone
-- Slider looks a little funky on the iphone
+- services subpages need navigation to see other services
+- community subpages need navigation to see other siblings
+- blog needs more work
+- Make homepage fast.  It's 1.5MB, geezus
+- load footer map iframe via js after load, so orbit doesn't take forever to
+  launch
+- Footer map looks wonky when blog button's missing now, my fault
+
+# Bigger Design tweaks
+- Transition to the 'how we do it' section too abrupt?  Desaturate a bit to
+  reduce the contrast?
+- 'How We Do It' section needs some context - explain to people what it is that
+  we're listing.
+- Map transition is again too over the top, and perhaps occludes the map a bit
+  too much.
 - Contact form is awful
-- 500 is broken
-- 404 is broken
+
+# Content
 - add mobile examples
 - review examples in general
-- services subpages need navigation to see other services
-- need login link
-- login is broken
-- need client resources link
-- blog index needs to lose 'double blog header' and rss icon should go in blue
-  header area
-- consider rewriting some content from POV of customer rather than dev.  Focus
-  more on quality, delivery, track record than ruby, tech, niftiness
-- blog needs more work
 - add content re: experience with high availability, scalability
 - get marketing guy to review content?
-- check out code styles on blog, are lame
-- Make homepage fast.  It's 1.5MB, geezus
+- Don't just tell people what we do (software development) but how we'll solve
+  their problems.  Worry-free software development?  Something.
+- consider rewriting some content from POV of customer rather than dev.  Focus
+  more on quality, delivery, track record than ruby, tech, niftiness
+
+# Unfeasible
+- Tweak kerning on 'software development' header.  'A' is very separated from
+  surrounding chars.
+
+# Later
+- Map controls showing up on iphone
+- 500 is broken
+- 404 is broken
