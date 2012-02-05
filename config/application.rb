@@ -46,3 +46,5 @@ module IsotopeRails3
     config.assets.version = '1.0'
   end
 end
+
+Haml::Template.options[:format] = :html5
