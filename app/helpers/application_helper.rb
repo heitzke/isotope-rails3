@@ -2,6 +2,7 @@ module ApplicationHelper
   def conditional_html(lang = "en", &block)
     # see http://gf3.ca/2011/02/12/conditional-html-tag-haml for technique used
     header = <<-"HTML"
+<html>
 <!--[if IEMobile 7]><html class="no-js iem7 oldie"><![endif]-->
 <!--[if lt IE 7]><html class="no-js ie6 oldie" lang="en"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js ie7 oldie" lang="en"><![endif]-->
