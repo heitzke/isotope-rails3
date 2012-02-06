@@ -7,6 +7,7 @@
 - Need 'thumbs' for each service that slide the slider on the homepage at 992px wide.
 - blog margin on left is too big on phone.
 - links in footer look dumb on phones, need to make them big ol' touch-friendly links in that case.  Also, phone numbers should go above those links in the footer I think in that case.
+- add RSS auto discovery tag back to layout
 
 # Bigger Design tweaks
 - Backpage background also could use some interesting element...maybe a coffee
