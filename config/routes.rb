@@ -37,11 +37,12 @@ IsotopeRails3::Application.routes.draw do
   match '/community/bootstrap_will_paginate' => 'community#bootstrap_will_paginate'
   match '/community/css3_progress_bar_rails' => 'community#css3_progress_bar_rails'
   match '/community/isotope_contacts' => 'community#isotope_contacts'
-  
+  match '/community/spree_suppliers_extension' => 'community#spree_suppliers_extension'
+
   match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
   match '/home/resources' => 'home#resources'
-  
+
   match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:
