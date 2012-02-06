@@ -8,9 +8,6 @@
   License: http://creativecommons.org/licenses/MIT
 
 - conditional_html 'en-US' do
-  <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-  <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-  <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->  
   %head
     %title
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
@@ -83,8 +80,6 @@
           %li= link_to 'Community', community_path
           %li= link_to 'Contact', '/contact'
           %li= link_to 'Payments', '/home/payments'
-        .clearfix
-        %ul.foot
           - if current_user
             %li= link_to 'New Blog Post', new_post_path
             %li= link_to 'Edit Profile', edit_user_path(current_user)
