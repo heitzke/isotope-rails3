@@ -44,13 +44,14 @@ module ApplicationHelper
       page_arr << ["MLM", services_mlm_path]
     when :community
       page_arr << ["Xrono", '/community/xrono']
-      page_arr << ['RubyHam', '/community/rubyham']
-      page_arr << ['state_machine_audits', '/community/state_machine_audits']
-      page_arr << ['TechBirmingham', '/community/techbirmingham']
-      page_arr << ['contract_acceptance_framework', '/community/contract_acceptance_framework']
+      page_arr << ['isotope_contacts', '/community/isotope_contacts']
       page_arr << ['bootstrap-will_paginate', '/community/bootstrap_will_paginate']
       page_arr << ['css3_progress_bar_rails', '/community/css3_progress_bar_rails']
-      page_arr << ['isotope_contacts', '/community/isotope_contacts']
+      page_arr << ['contract_acceptance_framework', '/community/contract_acceptance_framework']
+      page_arr << ['RubyHam', '/community/rubyham']
+      page_arr << ['TechBirmingham', '/community/techbirmingham']
+      page_arr << ['state_machine_audits', '/community/state_machine_audits']
+      page_arr << ['spree_suppliers_extension', '/community/spree_suppliers_extension']
     end
     return '' if page_arr.empty?
     render partial: 'shared/sibling_nav', locals: { pages: page_arr }
