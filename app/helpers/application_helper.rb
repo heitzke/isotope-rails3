@@ -30,6 +30,12 @@ module ApplicationHelper
     render partial: 'shared/interior_header', :locals => { text: text }
   end
 
+  def phone_number_link(text)
+    sets_of_numbers = text.scan(/[0-9]+/)
+    number = "+1-#{sets_of_numbers.join('-')}"
+    link_to text, "tel:#{number}"
+  end
+
   def render_sibling_nav_for(subsection)
     page_arr = []
     case subsection
