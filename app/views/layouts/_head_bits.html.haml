@@ -1,0 +1,15 @@
+= render partial: 'layouts/responsive/meta'
+= render partial: 'layouts/responsive/fonts'
+= render partial: 'layouts/responsive/stylesheets'
+/ Yield any custom stylesheets
+= yield :stylesheets
+
+= render partial: 'layouts/responsive/shims'
+= render partial: 'layouts/responsive/favicons'
+= render partial: 'layouts/responsive/apple_config'
+
+/ http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
+%link{ rel: "canonical", href: "/" }
+= yield :head_javascripts
+= render :partial => 'shared/google_analytics_script'
+= render :partial => 'shared/hit_tail_script'

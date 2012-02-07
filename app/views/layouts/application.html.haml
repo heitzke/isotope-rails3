@@ -11,92 +11,18 @@
   %head
     %title
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
-    = render partial: 'layouts/responsive/meta'
-    = render partial: 'layouts/responsive/fonts'
-    = render partial: 'layouts/responsive/stylesheets'
-    / Yield any custom stylesheets
-    = yield :stylesheets
-
-    = render partial: 'layouts/responsive/shims'
-    = render partial: 'layouts/responsive/favicons'
-    = render partial: 'layouts/responsive/apple_config'
-
-    / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
-    %link{ rel: "canonical", href: "/" }
-    = yield :head_javascripts
-    = render :partial => 'shared/google_analytics_script'
-    = render :partial => 'shared/hit_tail_script'
+    = render partial: 'layouts/head_bits'
 
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
-    //#top_bar
-    #swoosh
-    #clouds.gradient
-    #who-we-are
-      %header{ role: "banner" }
-        %h1
-          %span= link_to 'isotope|eleven', root_path
-      %nav.short
-        %ul
-          = tab_for(:desktop, 'Home', root_path, :home)
-          = tab_for(:tablet, 'About', about_index_path, :about)
-          = tab_for(:tablet, 'Services', services_path, :services)
-          = tab_for(:tablet, 'Blog', '/blog', :blog)
-          = tab_for(:desktop, 'Community', community_path, :community)
-          = tab_for(:tablet, 'Contact', '/contact', :contact, 'last')
-      %hr
-      .byline-side
-        .line.first
-        .line.second
-      .byline
-        %h2.first Software
-        %h2.second Development
-      .byline-side
-        .line.first
-        .line.second
+    #top_area
+      #swoosh
+      #clouds.gradient
+      = render partial: 'layouts/who_we_are'
+      = yield :top_area
+
     = yield
-    %footer
-      #map_frame
-      .fixed_content
-        %a.btn.blog.primary{ href: posts_path }
-          %span View Blog
-        .location
-          %a{ href: "http://maps.google.com/maps/place?cid=2350088701559850974&q=isotope11&hl=en&ie=UTF8&ll=33.529375,-86.991119&spn=0.000286,0.000343&t=m&z=12&vpsrc=0" }
-          %strong isotope|eleven
-          %br
-          529 Beacon Parkway W
-          %br
-          Suite 105
-          %br
-          Birmingham, AL 35209
-    #bottom_info
-      .fixed_content
-        %ul.foot
-          %li= link_to 'Home', root_path
-          %li= link_to 'Resources', '/home/resources'
-          %li= link_to 'Careers', '/home/careers'
-          %li= link_to 'About', about_index_path
-          %li= link_to 'Services', services_path
-          %li= link_to 'Blog', '/blog'
-          %li= link_to 'Community', community_path
-          %li= link_to 'Contact', '/contact'
-          %li= link_to 'Payments', '/home/payments'
-          - if current_user
-            %li= link_to 'New Blog Post', new_post_path
-            %li= link_to 'Edit Profile', edit_user_path(current_user)
-            %li= link_to 'Logout', destroy_user_session_path
-          - else
-            %li= link_to "Site Login", new_user_session_path
-        %a{:title => "Click for the Business Review of isotope|eleven, Inc., a Computers - Sys Designers & Consult in Birmingham AL", :href => "http://www.bbb.org/central-alabama/business-reviews/software-development-and-consulting/isotope11-in-birmingham-al-90036746#sealclick"}
-          %img{:alt => "isotope|eleven, Inc. is a BBB Accredited Business. Click for the BBB Business Review of this Computers - Sys Designers & Consult in Birmingham AL", :style => "border: 0;", :src => "http://seal-centralalabama.bbb.org/seals/blue-seal-96-50-isotope11inc-90036746.png"}
-        %a{:href => "http://www.dnb.com"}
-          = image_tag "duns_registered.png"
-        .clearfix
-          .contact_details
-            .phone p: 877.476.8671
-            .fax f: 205.943.5760
-            .email
-              e:
-              = link_to 'info@isotope11.com', 'mailto:info@isotope11.com' 
+
+    = render partial: 'layouts/footer'
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
     :javascript

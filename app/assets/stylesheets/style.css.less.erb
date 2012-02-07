@@ -722,7 +722,7 @@ body.controller-home.action-index{
 }
 #how-we-do-it{
   overflow-x: hidden;
-  z-index: 20;
+  z-index: 10;
   position: relative;
   border-top: 1px solid #d4effa;
   .gradient(#477a8c, #0b2a35, #477a8c);
@@ -979,7 +979,6 @@ footer{
 }
 
 div.interior{
-  .inner-shadow(0px, 1px, 1px, 0.3);
   background: url(/assets/content_bg.png ) repeat;
   background-color: white;
   position: relative;
@@ -1328,6 +1327,13 @@ ul.sibling_nav{
       }
     }
   }
+}
+
+#top_area{
+  position: relative;
+  overflow: hidden;
+  z-index: 30;
+  .drop-shadow(0, 0, 10px, 0.6);
 }
 
 /* AMPERSAND FONTS ============================================================================= */

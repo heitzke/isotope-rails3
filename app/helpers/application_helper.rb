@@ -27,7 +27,9 @@ module ApplicationHelper
   end
 
   def interior_header(text)
-    render partial: 'shared/interior_header', :locals => { text: text }
+    content_for :top_area do
+      render partial: 'shared/interior_header', :locals => { text: text }
+    end
   end
 
   def community_list_items
