@@ -1,0 +1,28 @@
+- content_for :title do
+  data_science_theater_3000 &ndash; Community &ndash; isotope|eleven
+
+= interior_header 'Community'
+
+.interior
+  .fixed_content
+    = render_sibling_nav_for(:community)
+    .work_content_right
+      = link_to(image_tag('ruby.png', :size => "64x64",:alt => 'data_science_theater_3000_image'), 'http://rubygems.org/gems/data_science_theater_3000')
+      =# image_tag 'ruby.png', :alt => 'data_science_theater_3000 image'
+      %ul
+        %li
+          = link_to('RubyGem page', 'http://rubygems.org/gems/data_science_theater_3000')
+        %li
+          = link_to('Github Repo', 'http://github.com/isotope11/data_science_theater_3000')
+    .work_content_left
+      %h3 data_science_theater_3000
+      %p
+        = link_to('dst3k', 'http://github.com/isotope11/data_science_theater_3000')
+        provides a clean interface for issuing API calls to
+        = link_to('DataScienceToolkit.', 'http://www.datasciencetoolkit.org')
+
+      %p
+        = link_to 'Back to Community', '/community'
+
+
+    .clear
