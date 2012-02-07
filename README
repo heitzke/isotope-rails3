@@ -10,4 +10,4 @@ To get started:
 
 To run the tests:
   rake db:create db:migrate db:test:clone
-  cucumber
+  spinach

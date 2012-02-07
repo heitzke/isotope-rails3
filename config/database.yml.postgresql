@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: isotope_rails3_development
+
+test:
+  adapter: postgresql
+  database: isotope_rails3_test
