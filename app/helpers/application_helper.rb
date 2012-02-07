@@ -32,17 +32,57 @@ module ApplicationHelper
 
   def community_list_items
     cli = ActiveSupport::OrderedHash.new
-    cli.merge!("Xrono" => { :path => '/community/xrono', :image => 'feature_xrono.png', :description => "Track your company's time and profitability with our open source project, Xrono" })
-    cli.merge!("RubyHam" => { :path => 'community/rubyham', :image => 'feature_xrono.png', :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."})
-    cli.merge!("isotope_contacts" => { :path => '/community/isotope_contacts', :image => 'ruby.png', :description => "is a gem that provides drop-in contact management for your rails app" })
-    cli.merge!("bootstrap-will_paginate" => { :path => '/community/bootstrap_will_paginate', :image => 'ruby.png', :description => "is a gem that works with the Twitter Bootstrap and Will Paginate libraries." })
-    cli.merge!("css3_progress_bar_rails" => { :path => '/community/css3_progress_bar_rails', :image => 'ruby.png', :description => "is a gem that generates progress bars in css" })
-    cli.merge!("contract_acceptance_framework" => { :path => '/community/contract_acceptance_framework', :image => 'ruby.png', :description => "is a gem that allows rails objects to agree to versioned contracts." })
-    cli.merge!("TechBirmingham" => { :path => '/community/techbirmingham', :image => 'feature_xrono.png', :description => "isotope|eleven is a silver sponsor for TechBirmingham..." })
-    cli.merge!("state_machine_audits" => { :path => '/community/state_machine_audits', :image => 'ruby.png', :description => "is a gem intended to be used in conjunction with the state_machine gem..." })
-    cli.merge!("spree_suppliers_extension" => {:path => '/community/spree_suppliers_extension', :image => 'ruby.png', :description => 'is a ruby gem and "extension" for the popular ruby on rails ecommerce engine, Spree.' })
-    cli.merge!("data_science_theater_3000" => {:path => '/community/data_science_theater_3000', :image => 'ruby.png', :description => "is a gem for interacting with the APIs in the DataScienceToolkit" })
-    cli
+    cli.merge!({
+      "Xrono" => {
+        :path => '/community/xrono',
+        :image => 'feature_xrono.png',
+        :description => "Track your company's time and profitability with our open source project, Xrono"
+        },
+      "RubyHam" =>  {
+        :path => 'community/rubyham',
+        :image => 'feature_xrono.png',
+        :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."
+        },
+      "isotope_contacts" => {
+        :path => '/community/isotope_contacts',
+        :image => 'ruby.png',
+        :description => "is a gem that provides drop-in contact management for your rails app"
+        },
+      "bootstrap-will_paginate" => {
+        :path => '/community/bootstrap_will_paginate',
+        :image => 'ruby.png',
+        :description => "is a gem that works with the Twitter Bootstrap and Will Paginate libraries."
+        },
+      "css3_progress_bar_rails" => {
+        :path => '/community/css3_progress_bar_rails',
+        :image => 'ruby.png',
+        :description => "is a gem that generates progress bars in css"
+        },
+      "contract_acceptance_framework" => {
+        :path => '/community/contract_acceptance_framework', 
+        :image => 'ruby.png',
+        :description => "is a gem that allows rails objects to agree to versioned contracts." 
+        },
+      "TechBirmingham" => {
+        :path => '/community/techbirmingham', 
+        :image => 'feature_xrono.png',
+        :description => "isotope|eleven is a silver sponsor for TechBirmingham..."
+        },
+      "state_machine_audits" => {
+        :path => '/community/state_machine_audits',
+        :image => 'ruby.png',
+        :description => "is a gem intended to be used in conjunction with the state_machine gem..."
+        },
+      "spree_suppliers_extension" => {
+        :path => '/community/spree_suppliers_extension',
+        :image => 'ruby.png',
+        :description => 'is a ruby gem and "extension" for the popular ruby on rails ecommerce engine, Spree.' },
+      "data_science_theater_3000" => {
+        :path => '/community/data_science_theater_3000', 
+        :image => 'ruby.png',
+        :description => "is a gem for interacting with the APIs in the DataScienceToolkit"
+      }
+    })
   end
 
   def render_sibling_nav_for(subsection)
