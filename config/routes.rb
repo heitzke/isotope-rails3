@@ -38,7 +38,6 @@ IsotopeRails3::Application.routes.draw do
   match '/community/css3_progress_bar_rails' => 'community#css3_progress_bar_rails'
   match '/community/isotope_contacts' => 'community#isotope_contacts'
   match '/community/spree_suppliers_extension' => 'community#spree_suppliers_extension'
-
   match '/community/data_science_theater_3000' => 'community#data_science_theater_3000'
   
   match '/home/contact' => 'home#contact'
