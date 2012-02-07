@@ -10,6 +10,7 @@
 - add RSS auto discovery tag back to layout
 - fix rel canonical links
 - change 'how we do it' bg images to be actual bgs rather than img tags?  Fixes scrolling problem on iphone....
+- switch syntax highlighting to use http://softwaremaniacs.org/soft/highlight/en/
 
 # Bigger Design tweaks
 - Backpage background also could use some interesting element...maybe a coffee
