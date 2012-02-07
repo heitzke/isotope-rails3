@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.1.0'
 gem 'mysql2', '~> 0.3.0'
+gem 'pg'
 gem 'rake', '0.9.2'
 
 gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
