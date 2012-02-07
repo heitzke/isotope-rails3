@@ -7,7 +7,8 @@
   .fixed_content
     = render_sibling_nav_for(:community)
     .work_content_right
-      = image_tag 'spree.jpg', :alt => 'spree_suppliers image'
+      = link_to(image_tag('ruby.png', :size => "64x64",:alt => 'spree_suppliers image'), 'http://rubygems.org/gems/spree_suppliers')
+      =# image_tag 'spree.jpg', :alt => 'spree_suppliers image'
       %ul
         %li
           = link_to('Github Repo', 'http://github.com/johndavid400/spree_suppliers')
