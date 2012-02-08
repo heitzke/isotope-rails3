@@ -1,0 +1,26 @@
+%ul.foot
+  %li.first
+    = link_to 'Home', root_path
+  %li &#150;
+  %li= link_to 'Resources', '/home/resources'
+  %li &#150;
+  %li= link_to 'Careers', '/home/careers'
+  %li &#150;
+  %li= link_to 'About', about_index_path
+  %li &#150;
+  %li= link_to 'Services', services_path
+  %li &#150;
+  %li= link_to 'Blog', '/blog'
+  %li &#150;
+  %li= link_to 'Community', community_path
+  %li &#150;
+  %li= link_to 'Contact', '/contact'
+  %li &#150;
+  %li= link_to 'Payments', '/home/payments'
+  %li &#150;
+  - if current_user
+    %li= link_to 'New Blog Post', new_post_path
+    %li= link_to 'Edit Profile', edit_user_path(current_user)
+    %li= link_to 'Logout', destroy_user_session_path
+  - else
+    %li= link_to "Site Login", new_user_session_path

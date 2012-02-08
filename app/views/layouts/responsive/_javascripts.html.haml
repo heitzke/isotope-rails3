@@ -1,11 +1,13 @@
 / Scripts
 %script{ src: "/assets/libs/jquery-1.6.2.min.js" }
+%script{ src: "/assets/application.js" }
 %script{ src: "/assets/plugins.js" }
 %script{ src: "/assets/script.js" }
 %script{ src: "/assets/mylibs/helper.js" }
 = javascript_include_tag 'jquery.backgroundpos.js'
 = javascript_include_tag 'jquery.orbit-1.3.0.js'
 = javascript_include_tag 'libs/kerning.js'
+= javascript_include_tag 'libs/highlight.js'
 
 /[if (lt IE 9) & (!IEMobile)]
   %script{ src: "/assets/libs/imgsizer.js" }

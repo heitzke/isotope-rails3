@@ -2,7 +2,9 @@ source 'http://rubygems.org'
 
 gem 'rails', '~> 3.1.0'
 gem 'mysql2', '~> 0.3.0'
+gem 'pg'
 gem 'rake', '0.9.2'
+gem 'highlight_js-rails'
 
 gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
 
@@ -27,13 +29,14 @@ group :development do
 end
 
 group :test do
-  gem 'cucumber-rails'
+  gem 'spinach-rails'
+  gem 'minitest-rails'
   gem 'capybara'
+  gem 'capybara_minitest_spec'
   # gem 'database_cleaner', '~> 0.5.2'
   gem 'faker'
   gem 'forgery'
   gem 'launchy'
   gem 'machinist'
   gem 'pickle'
-  gem 'rspec-rails'
 end

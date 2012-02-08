@@ -1,12 +1,8 @@
 Feature: Services
+  In order to see information about isotope|eleven
   As a visitor
-  I should see the services page
-  In order to get info about services
+  I want to view the services they offer
 
-  Scenario: The page exists
+  Scenario: Viewing services page
     When I am on the services page
-    Then I should see "Services"
-
-  Scenario: The image is there
-    When I am on the services page
-    Then I should see the alt text "services"
+    Then I should see a basic page

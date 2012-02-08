@@ -27,7 +27,9 @@ module ApplicationHelper
   end
 
   def interior_header(text)
-    render partial: 'shared/interior_header', :locals => { text: text }
+    content_for :top_area do
+      render partial: 'shared/interior_header', :locals => { text: text }
+    end
   end
 
   def community_list_items
@@ -37,11 +39,6 @@ module ApplicationHelper
         :path => '/community/xrono',
         :image => 'feature_xrono.png',
         :description => "Track your company's time and profitability with our open source project, Xrono"
-        },
-      "RubyHam" =>  {
-        :path => 'community/rubyham',
-        :image => 'feature_xrono.png',
-        :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."
         },
       "isotope_contacts" => {
         :path => '/community/isotope_contacts',
@@ -59,12 +56,17 @@ module ApplicationHelper
         :description => "is a gem that generates progress bars in css"
         },
       "contract_acceptance_framework" => {
-        :path => '/community/contract_acceptance_framework', 
+        :path => '/community/contract_acceptance_framework',
         :image => 'ruby.png',
-        :description => "is a gem that allows rails objects to agree to versioned contracts." 
+        :description => "is a gem that allows rails objects to agree to versioned contracts."
+        },
+      "RubyHam" =>  {
+        :path => 'community/rubyham',
+        :image => 'feature_xrono.png',
+        :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."
         },
       "TechBirmingham" => {
-        :path => '/community/techbirmingham', 
+        :path => '/community/techbirmingham',
         :image => 'feature_xrono.png',
         :description => "isotope|eleven is a silver sponsor for TechBirmingham..."
         },
@@ -78,7 +80,7 @@ module ApplicationHelper
         :image => 'ruby.png',
         :description => 'is a ruby gem and "extension" for the popular ruby on rails ecommerce engine, Spree.' },
       "data_science_theater_3000" => {
-        :path => '/community/data_science_theater_3000', 
+        :path => '/community/data_science_theater_3000',
         :image => 'ruby.png',
         :description => "is a gem for interacting with the APIs in the DataScienceToolkit"
       }
