@@ -145,14 +145,8 @@ module ApplicationHelper
     page_arr = []
     case subsection
     when :services
-      page_arr << ["Financial", services_financial_path]
-      page_arr << ["Phase Zero", services_phasezero_path]
-      page_arr << ["E-Commerce", services_ecommerce_path]
-      page_arr << ["Social Media", services_socialmedia_path]
-      page_arr << ["Insurance", services_insurance_path]
-      page_arr << ["Mobile", services_mobile_path]
-      page_arr << ["SaaS", services_saas_path]
-      page_arr << ["MLM", services_mlm_path]
+      services = services_list_items
+      services.each_key { |k| page_arr << [k, services[k][:path]] }
     when :community
       community_projects = community_list_items
       community_projects.each_key { |k| page_arr << [k, community_projects[k][:path]] }
