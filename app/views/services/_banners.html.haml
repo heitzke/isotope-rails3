@@ -1,8 +1,2 @@
-= render_slide("Financial", "We architected, developed, and maintained one of the largest Ruby-based financial applications in the world.", "ecom_bag.png", "slide5", services_financial_path)
-= render_slide("Phase Zero", "Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project.", "ecom_bag.png", "slide1", services_phasezero_path)
-= render_slide("E-Commerce", "Are you ready to move beyond a basic webpage?  Let us help you get your store online.", "ecom_bag.png", "slide2", services_ecommerce_path)
-= render_slide("Social Media", "Social Media is about more than just buzz.  Work with a team that knows the ins and outs of the business.", "ecom_bag.png", "slide3", services_socialmedia_path)
-= render_slide("Insurance", "We've built multiple insurance calculators that are in daily use writing thousands of policies.", "ecom_bag.png", "slide6", services_insurance_path)
-= render_slide("Mobile", "We have experience building mobile apps and mobile websites, as well as the APIs that power them.", "ecom_bag.png", "slide2", services_mobile_path)
-= render_slide("SaaS", "Software-as-a-service isn't just about recurring revenue.  Let us help you with your subscription model.", "ecom_bag.png", "slide7", services_saas_path)
-= render_slide("MLM", "Need multi-level marketing?  We have the complete solution, and plenty of experience.", "ecom_bag.png", "slide4", services_mlm_path)
+- services_list_items.keys.each do |k| 
+  = render_slide(k, services_list_items[k][:description], services_list_items[k][:image], services_list_items[k][:css_class], services_list_items[k][:path]) 
