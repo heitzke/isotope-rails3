@@ -85,6 +85,60 @@ module ApplicationHelper
     })
   end
 
+  def services_list_items
+    cli = ActiveSupport::OrderedHash.new
+    cli.merge!({
+      "Financial" => {
+        :description => "We architected, developed, and maintained one of the largest Ruby-based financial applications in the world.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide5",
+        :path        => services_financial_path
+      },
+      "Phase Zero" => {
+        :description => "Where do you start? Just as an architect creates a blueprint before building a house, we do the same for your software project.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide1",
+        :path        => services_phasezero_path
+      },
+      "E-Commerce" => {
+        :description => "Are you ready to move beyond a basic webpage?  Let us help you get your store online.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide2",
+        :path        => services_ecommerce_path
+      },
+      "Social Media" => {
+        :description => "Social Media is about more than just buzz.  Work with a team that knows the ins and outs of the business.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide3",
+        :path        => services_socialmedia_path
+      },
+      "Insurance" => {
+        :description => "We've built multiple insurance calculators that are in daily use writing thousands of policies.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide6",
+        :path        => services_insurance_path
+      },
+      "Mobile" => {
+        :description => "We have experience building mobile apps and mobile websites, as well as the APIs that power them.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide2",
+        :path        => services_mobile_path
+      },
+      "SaaS" => {
+        :description => "Software-as-a-service isn't just about recurring revenue.  Let us help you with your subscription model.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide7",
+        :path        => services_saas_path
+      },
+      "MLM" => {
+        :description => "Need multi-level marketing?  We have the complete solution, and plenty of experience.",
+        :image       => "ecom_bag.png",
+        :css_class   => "slide4",
+        :path        => services_mlm_path
+      }
+    })
+  end
+
   def render_sibling_nav_for(subsection)
     page_arr = []
     case subsection
