@@ -14,5 +14,8 @@
       .clearfix
     - if local_assigns[:share]
       %span.share= share_this
-    .blog_content
-      = coderay(post.body).html_safe
+    .blog_content= post.body.html_safe
+
+- content_for :javascripts do
+  :javascript
+    hljs.initHighlightingOnLoad();
