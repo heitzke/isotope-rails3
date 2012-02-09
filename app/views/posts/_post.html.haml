@@ -2,9 +2,9 @@
   .blog_post
     .blog_info_top
       .author_image
-        = image_tag post.user.avatar.url(:thumb)
+        = post.avatar
       .title
-        %h2= link_to_unless_current h(post.title), post
+        %h2= post.title_link(show_disqus_comment_counts)
         .author
           %h3
             by:
@@ -29,6 +29,3 @@
             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
-- content_for :javascripts do
-  :javascript
-    hljs.initHighlightingOnLoad();

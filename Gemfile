@@ -10,6 +10,9 @@ gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
 
 gem 'ckeditor'
 
+# Decorators
+gem 'draper'
+
 # Get static pages
 gem 'high_voltage'
 
