@@ -15,7 +15,7 @@
     - if local_assigns[:share]
       %span.share= share_this
     .blog_content= post.body.html_safe
-    = link_to_unless_current "", "#{url_for(post)}#disqus_thread", "data-disqus-identifier" => post.slug
+    = link_to_unless_current "", "#{url_for(post)}?disqus=true#disqus_thread", "data-disqus-identifier" => post.slug if show_disqus == false
     -if show_disqus && params["disqus"] == "true"
       #disqus_thread
       :javascript
