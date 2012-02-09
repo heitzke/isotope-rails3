@@ -27,7 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_slug(params[:id])
-    @posts = Post.for_user(@user).paginate :page => params[:page], :order => 'created_at DESC', :per_page => 5
+    @posts = PostDecorator.decorate(Post.for_user(@user).paginate :page => params[:page], :order => 'created_at DESC', :per_page => 5)
   end
 
   def edit
