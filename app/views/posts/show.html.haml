@@ -4,7 +4,7 @@
 
 .interior
   .fixed_content
-    = render :partial => @post, :locals => { :share => true }
+    = render :partial => @post, :locals => { :share => true, :show_disqus => true }
     %p
       = link_to "View All Posts", posts_path
     - if current_user && (current_user == @post.user || current_user.admin?)
