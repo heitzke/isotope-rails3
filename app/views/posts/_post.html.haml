@@ -8,14 +8,13 @@
         .author
           %h3
             by:
-            = link_to_unless_current post.user, about_path(post.user) 
-          %p
-            = post.created_at.to_formatted_s(:long_ordinal)
+            = post.author_link
+          %p= post.created_at
       .clearfix
     - if local_assigns[:share]
       %span.share= share_this
-    .blog_content= RDiscount.new(post.body).to_html.html_safe
-    = link_to_unless_current "", "#{url_for(post)}?disqus=true#disqus_thread", "data-disqus-identifier" => post.slug if show_disqus == false
+    .blog_content= post.body
+    = link_to_unless_current "", "#{url_for(post)}?disqus=true#disqus_thread", "data-disqus-identifier" => post.slug unless show_disqus
     - if show_disqus
       #disqus_thread
       :javascript

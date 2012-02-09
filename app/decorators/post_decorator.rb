@@ -10,6 +10,14 @@ class PostDecorator < ApplicationDecorator
     h.link_to_unless_current(post.title, post, "data-disqus-identifier" => post.slug)
   end
 
+  def author_link
+    h.link_to(post.user, h.about_path(post.user))
+  end
+
+  def body
+    RDiscount.new(post.body).to_html.html_safe
+  end
+
   # Accessing Helpers
   #   You can access any helper via a proxy
   #
