@@ -61,7 +61,7 @@ module ApplicationHelper
         :description => "is a gem that allows rails objects to agree to versioned contracts."
         },
       "RubyHam" =>  {
-        :path => 'community/rubyham',
+        :path => '/community/rubyham',
         :image => 'feature_xrono.png',
         :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."
         },
