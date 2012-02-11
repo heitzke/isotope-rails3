@@ -38,7 +38,7 @@ class IncomingMailsController < ApplicationController
   end
 
   def blog_post_body
-    RDiscount.new(@message.parts.first.body.to_s).to_html
+    @message.parts.first.body.to_s
   end
 
   def blog_post_identification_regex

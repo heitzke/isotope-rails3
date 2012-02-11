@@ -8,7 +8,7 @@
     .clear
     - unless @posts.empty?
       %h2 Blog Posts
-      = render @posts
+      = render @posts, { show_disqus: false, show_disqus_comment_counts: true }
       = will_paginate @posts
     %br
     %br

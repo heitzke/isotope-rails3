@@ -10,6 +10,9 @@ gem 'stylexicon', :git => 'http://github.com/isotope11/stylexicon.git'
 
 gem 'ckeditor'
 
+# Decorators
+gem 'draper'
+
 # Get static pages
 gem 'high_voltage'
 
@@ -33,10 +36,6 @@ group :test do
   gem 'minitest-rails'
   gem 'capybara'
   gem 'capybara_minitest_spec'
-  # gem 'database_cleaner', '~> 0.5.2'
-  gem 'faker'
-  gem 'forgery'
-  gem 'launchy'
-  gem 'machinist'
-  gem 'pickle'
+  gem 'factory_girl'
+  gem 'database_cleaner'
 end

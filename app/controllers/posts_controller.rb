@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_filter :authorized_user, :only => [:edit, :update, :destroy]
 
   def index
-    @posts = Post.paginate :page => params[:page], :order => 'created_at DESC', :per_page => 10
+    @posts = PostDecorator.decorate(Post.paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 10))
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_slug(params[:id])
+    @post = PostDecorator.decorate(Post.find_by_slug(params[:id]))
 
     respond_to do |format|
       format.html # show.html.erb

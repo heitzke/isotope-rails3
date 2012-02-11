@@ -2,20 +2,29 @@
   .blog_post
     .blog_info_top
       .author_image
-        = image_tag post.user.avatar.url(:thumb)
+        = post.avatar
       .title
-        %h2= link_to_unless_current h(post.title), post
+        %h2= post.title_link(show_disqus_comment_counts)
         .author
           %h3
             by:
-            = link_to_unless_current post.user, about_path(post.user) 
-          %p
-            = post.created_at.to_formatted_s(:long_ordinal)
+            = post.author_link
+          %p= post.created_at
       .clearfix
     - if local_assigns[:share]
       %span.share= share_this
-    .blog_content= post.body.html_safe
+    .blog_content= post.body
+    = link_to_unless_current "", "#{url_for(post)}?disqus=true#disqus_thread", "data-disqus-identifier" => post.slug unless show_disqus
+    - if show_disqus
+      #disqus_thread
+      :javascript
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'isotope11'; // required: replace example with your forum shortname
+        var disqus_identifier = '#{post.slug}';
 
-- content_for :javascripts do
-  :javascript
-    hljs.initHighlightingOnLoad();
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
