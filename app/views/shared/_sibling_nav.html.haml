@@ -1,5 +1,6 @@
 %ul.sibling_nav
   - pages.each do |page|
     - state = current_page?(page[1]) ? 'active' : ''
-    %li{ class: state }= link_to page[0], page[1]
+    %li{ class: state }
+      %a{:class => "sibling_nav_link", :href => page[1]}= page[0]
 .clearfix
