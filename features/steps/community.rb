@@ -1,6 +1,6 @@
 class Community < Spinach::FeatureSteps
   feature 'Community'
-
+  include ApplicationHelper
   include BasicIsotopeSteps
 
   When 'I am on the community page' do
@@ -8,14 +8,18 @@ class Community < Spinach::FeatureSteps
   end
 
   Then 'I should be able to view each community project page successfully' do
-    page.all(:xpath, "//a[@class='services_link']").each do |comm_proj|
+    community_projects = page.all(:xpath, "//a[@class='services_link']")
+    assert_equal(community_list_items.keys.count, community_projects.count)
+    community_projects.each do |comm_proj|
       comm_proj.click
       %Q{ Then I should see a basic page }
     end
   end
 
   Then 'each community page should be linked' do
-    page.all(:xpath, "//a[@class='sibling_nav_link']").each do |nav_linked_comm_proj|
+    nav_linked_community_projects = page.all(:xpath, "//a[@class='sibling_nav_link']")
+    assert_equal(community_list_items.keys.count, nav_linked_community_projects.count)
+    nav_linked_community_projects.each do |nav_linked_comm_proj|
       nav_linked_comm_proj.click
       %Q{ Then I should see a basic page }
     end
