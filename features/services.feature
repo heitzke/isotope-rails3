@@ -6,3 +6,9 @@ Feature: Services
   Scenario: Viewing services page
     When I am on the services page
     Then I should see a basic page
+    And  I should be able to view each service page successfully
+
+
+  Scenario: Viewing community page
+    When I am on a service page
+    Then each service page should be linked

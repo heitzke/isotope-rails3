@@ -6,7 +6,7 @@ Feature: Community
   Scenario: Viewing community page
     When I am on the community page
     Then I should see a basic page
-    Then I should be able to view each community project page successfully
+    And  I should be able to view each community project page successfully
 
 
   Scenario: Viewing community page
