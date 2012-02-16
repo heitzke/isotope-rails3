@@ -40,10 +40,8 @@ IsotopeRails3::Application.routes.draw do
   match '/community/spree_suppliers_extension' => 'community#spree_suppliers_extension'
   match '/community/data_science_theater_3000' => 'community#data_science_theater_3000'
   
-  match '/home/contact' => 'home#contact'
   match '/home/payments' => 'home#payments'
   match '/home/resources' => 'home#resources'
-
   match '/home/careers' => 'home#careers'
 
   # The priority is based upon order of creation:

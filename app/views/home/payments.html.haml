@@ -1,8 +1,7 @@
 - content_for :title do 
   Payments &ndash; isotope|eleven
 
-.fixed_content
-  %h2.interior Payments
+= interior_header 'Payments' 
 
 .interior
   .fixed_content
@@ -13,18 +12,7 @@
         Please note that you do not need a paypal account to make a payment.
       %p
         If you'd like to use a credit card, simply follow the link and use the instructions on the left hand side of the payment screen.
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
+
     .content-right
       %form{ :action => "https://www.paypal.com/cgi-bin/webscr", :method => "post"}
         .paypal_form
