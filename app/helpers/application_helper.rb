@@ -55,6 +55,11 @@ module ApplicationHelper
         :image => 'ruby.png',
         :description => "is a gem that generates progress bars in css"
         },
+      "quote_app" => {
+        :path => '/community/quote_app',
+        :image => 'ruby.png',
+        :description => "is a rails app for estimating software projects and exporting PDFs."
+        },
       "contract_acceptance_framework" => {
         :path => '/community/contract_acceptance_framework',
         :image => 'ruby.png',
