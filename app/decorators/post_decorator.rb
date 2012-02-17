@@ -2,7 +2,7 @@ class PostDecorator < ApplicationDecorator
   decorates :post
 
   def avatar
-    h.image_tag post.user.avatar.url(:thumb)
+    h.link_to(h.image_tag(post.user.avatar.url(:thumb)), h.about_path(post.user))
   end
 
   def title_link(show_comment_links=false)
