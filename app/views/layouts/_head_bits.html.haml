@@ -9,7 +9,7 @@
 = render partial: 'layouts/responsive/apple_config'
 
 / http://googlewebmastercentral.blogspot.com/2009/02/specify-your-canonical.html
-%link{ rel: "canonical", href: "/" }
+= yield :canonical_link
 = yield :head_javascripts
 = render :partial => 'shared/google_analytics_script'
 = render :partial => 'shared/hit_tail_script'
