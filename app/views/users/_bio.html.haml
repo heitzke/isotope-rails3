@@ -1,6 +1,6 @@
 .profile
   .profile-pic
-    = image_tag user.avatar.url
+    = link_to(image_tag(user.avatar.url), about_path(user))
   .profile_info
     %h3= link_to_unless_current user, about_path(user)
     %h5= user.position
