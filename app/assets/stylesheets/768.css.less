@@ -84,6 +84,14 @@ body.controller-home.action-index{
       background-color: none;
       a {
         background: none;
+        &:hover {
+          -webkit-transition: background-color .5s ease;
+          -moz-transition: background-color .5s ease;
+          -o-transition: background-color .5s ease;
+          transition: background-color .5s ease;
+          background-color: #8199A7;
+
+        }
       }
     }
   }
@@ -133,6 +141,26 @@ body.controller-home.action-index{
       font-size: 3.1em;
     }
   }
+}
+.work_content_right{
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  padding-left: 15px;
+  ul{
+    li{
+      display: block;
+      list-style-type: none;
+      padding: .5em;
+      background-color: #eee;
+      margin-bottom: .5em;
+    }
+  }
+}
+.work_content_left{
+  width: 72%;
+  display: inline-block;
+  vertical-align: top;
 }
 .fixed_content {
   #byline-title {

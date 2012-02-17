@@ -6,16 +6,6 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:services)
-    .work_content_right
-      = image_tag 'financial.png', :alt => 'Financial Image'
-      %ul
-        %li APIs that operate well under heavy load
-        %li PCI and regulatory compliance
-        %li Experience with ISO8583 Messages
-        %li Applications handling over a billion dollars of transactions
-        %li Credit and Overdraft Protection products built from scratch
-        %li Experience with ACH / NACHA
-        %li Automated Trading Platforms and Algorithms
     .work_content_left
       %h3 Financial
       %p
@@ -28,8 +18,14 @@
           %h3 Finn Co.
           %p
             Finn Co. is a leading provider of financial solutions for the millions of overlooked consumers who lack a traditional bank account. It provides consumers with a broad spectrum of products and services that address the reality of their financial lives. The company’s financial literacy tools equip cardholders to successfully manage money while empowering them to take control of their financial lives.
-      %br
-      %br
-      %br
-      %br
-      %br
+    
+    .work_content_right
+      = image_tag 'financial.png', :alt => 'Financial Image'
+      %ul
+        %li APIs that operate well under heavy load
+        %li PCI and regulatory compliance
+        %li Experience with ISO8583 Messages
+        %li Applications handling over a billion dollars of transactions
+        %li Credit and Overdraft Protection products built from scratch
+        %li Experience with ACH / NACHA
+        %li Automated Trading Platforms and Algorithms

@@ -4,13 +4,22 @@
 
 .interior
   .fixed_content
-    = render :partial => @post, :locals => { share: true, show_disqus: true, show_disqus_comment_counts: false}
-    %p
-      = link_to "View All Posts", posts_path
-    - if current_user && (current_user == @post.user || current_user.admin?)
-      %p= link_to 'Edit', edit_post_path(@post)
-    - if current_user && current_user.admin?
-      %p= button_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?"
+    .work_content_left
+      = render :partial => @post, :locals => { share: true, show_disqus: true, show_disqus_comment_counts: false}
+      %p
+        = link_to "View All Posts", posts_path
+      - if current_user && (current_user == @post.user || current_user.admin?)
+        %p= link_to 'Edit', edit_post_path(@post)
+      - if current_user && current_user.admin?
+        %p= button_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?"
+    .work_content_right
+      .recent_posts
+        %h3
+          Recent Posts
+        %ul
+          -@recent_posts.each do |recent_post|
+            %li= recent_post.title_link
+
 
 - content_for :javascripts do
   :javascript
