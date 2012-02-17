@@ -6,9 +6,7 @@
 - add RSS auto discovery tag back to layout
 - fix rel canonical links
 - change 'how we do it' bg images to be actual bgs rather than img tags?  Fixes scrolling problem on iphone....
-- 'about us' images should link to user show pages
 - 'calls to action' throughout the site.  Services pages and community pages should have them.  How we do it should figure out a way to work them in.  Perhaps one pre-footer on each page.  On a service show page, the only link in the top (and it's ugly) is 'back to services'.  Why would that be?  It should say 'Get in touch with us about your project!' or something and link to our contaact page WAY before it says back to services...
-- RSS icon on blog header needs spacing fixed
 
 # Bigger Design tweaks
 - Backpage background also could use some interesting element...maybe a coffee
