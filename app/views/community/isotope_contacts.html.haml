@@ -6,13 +6,6 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:community)
-    .work_content_right
-      = image_tag 'phase_zero.png', :alt => 'isotope_contacts image'
-      %ul
-        %li
-          = link_to('Github Repo', 'http://github.com/isotope11/isotope_contacts')
-        %li
-          = link_to('Blog Post', 'http://isotope11.com/blog/drop-in-contact-management-for-your-rails-app')
     .work_content_left
       %h3 isotope_contacts
       %p
@@ -20,4 +13,10 @@
         is a drop-in contact management engine for your rails app.
       %p
         = link_to 'Back to Community', '/community'
-
+    .work_content_right
+      = image_tag 'phase_zero.png', :alt => 'isotope_contacts image'
+      %ul
+        %li
+          = link_to('Github Repo', 'http://github.com/isotope11/isotope_contacts')
+        %li
+          = link_to('Blog Post', 'http://isotope11.com/blog/drop-in-contact-management-for-your-rails-app')

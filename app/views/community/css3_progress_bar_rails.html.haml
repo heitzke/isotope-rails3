@@ -6,15 +6,6 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:community)
-    .work_content_right
-      = image_tag 'phase_zero.png', :alt => 'progress bar img'
-      %ul
-        %li
-          = link_to('RubyGem page', 'http://rubygems.org/gems/css3-progress-bar-rails')
-        %li
-          = link_to('Github Repo', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
-        %li
-          = link_to('Blog Post', 'http://isotope11.com/blog/css3-progress-bars-for-rails')
     .work_content_left
       %h3 css_progress_bar_rails
       %p
@@ -31,5 +22,14 @@
       %br
       %br
       %br
+    .work_content_right
+      = image_tag 'phase_zero.png', :alt => 'progress bar img'
+      %ul
+        %li
+          = link_to('RubyGem page', 'http://rubygems.org/gems/css3-progress-bar-rails')
+        %li
+          = link_to('Github Repo', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
+        %li
+          = link_to('Blog Post', 'http://isotope11.com/blog/css3-progress-bars-for-rails')
 
     .clear

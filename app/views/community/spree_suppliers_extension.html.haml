@@ -6,6 +6,14 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:community)
+    .work_content_left
+      %h3 spree_suppliers
+      %p
+        = link_to('spree_suppliers', 'http://github.com/johndavid400/spree_suppliers')
+        is a ruby gem and "extension" for the popular ruby on rails ecommerce engine, Spree.
+      %p
+        = link_to 'Back to Community', '/community'
+
     .work_content_right
       = link_to(image_tag('ruby.png', :size => "64x64",:alt => 'spree_suppliers image'), 'http://rubygems.org/gems/spree_suppliers')
       %ul
@@ -15,11 +23,3 @@
           = link_to('RubyGem page', 'https://rubygems.org/gems/spree_suppliers')
         %li
           = link_to('Spree Extension Registry', 'http://spreecommerce.com/extensions/205-spree_suppliers')
-    .work_content_left
-      %h3 spree_suppliers
-      %p
-        = link_to('spree_suppliers', 'http://github.com/johndavid400/spree_suppliers')
-        is a ruby gem and "extension" for the popular ruby on rails ecommerce engine, Spree.
-      %p
-        = link_to 'Back to Community', '/community'
-

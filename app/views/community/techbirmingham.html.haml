@@ -6,8 +6,6 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:community)
-    .work_content_right
-      = image_tag 'techbirmingham_community.png', :alt => 'TechBirmingham'
     .work_content_left
       %h3 TechBirmingham
       %p
@@ -15,5 +13,5 @@
         is a local group that brings together the tech community to inspire and encourage the expansion of technology businesses in the Birmingham area. The goals are to help establish Birmingham as a central hub for technology and business here in the southeast of the nation.
       %p
         = link_to 'Back to Community', '/community'
-
-    .clearfix
+    .work_content_right
+      = image_tag 'techbirmingham_community.png', :alt => 'TechBirmingham'
