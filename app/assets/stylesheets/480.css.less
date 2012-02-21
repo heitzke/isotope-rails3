@@ -84,6 +84,13 @@ COLOURS
     margin: 0 auto;
   }
 }
+blockquote.aside{
+  font-size: 2em;
+  color: #AABECA;
+  margin-bottom: 1em;
+  clear: right;
+  display:block;
+}
 footer {
   .fixed_content {
     margin: 0 auto;
@@ -146,14 +153,25 @@ ul.foot{
     }
   }
 }
+
 .blog_post{
   .blog_content{
-    margin: 0 0 0 23px;
+    margin: 0 0 0 0;
     padding: 3px 0 15px;
   }
   .blog_info_top{
     .author_image{
-      display:block;
+      display:none;
+    }
+    .title {
+      .author {
+        p{
+          float: right;
+          width: auto;
+          font-size:1em;
+          
+        }
+      }
     }
   }
 }
@@ -163,7 +181,10 @@ div.slide div.slide-content h3 {
   }
   margin-bottom: 10px;
 }
-
+.work_content_right.recent {
+  width: 50%;
+  padding-left: 15px;
+}
 .work_content_right{
   display: inline-block;
   vertical-align: top;
