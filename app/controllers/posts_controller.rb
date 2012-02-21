@@ -16,7 +16,7 @@ class PostsController < ApplicationController
     @post = PostDecorator.decorate(Post.find_by_slug(params[:id]))
     @recent_posts = PostDecorator.decorate(Post.where("slug != ?",params[:id]).order("created_at DESC, title ASC").select("slug, title").limit(10))
     respond_to do |format|
-      
+
       format.html # show.html.erb
       format.xml  { render :xml => @post }
     end
