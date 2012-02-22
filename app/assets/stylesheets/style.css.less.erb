@@ -605,15 +605,18 @@ body.controller-home.action-index{
     margin: .5em auto;
   }
 }
-
+.work_content_right.recent {
+  width: 98%;
+  display:block;
+  padding-left: 0;
+}
 .work_content_right{
-  display: inline-block;
+  display: none;
   vertical-align: top;
   width: 65%;
   padding-left: 0;
   .recent_posts {
     .lineargradient(top, #f6f6f6, #eee );
-    
     border:1px solid #e4e4e4;
     h3 {
       padding: 3px 0 5px 10px;
@@ -626,15 +629,16 @@ body.controller-home.action-index{
       margin: 0 0 0 0;
       padding: 0 0 0 0;
       li {
-        padding: 6px 0 6px 11px;
+        padding: 0 5px 0 0;
         margin: 0;
         background:none;
         border-bottom:1px solid #e4e4e4;
         a {
           font-size: .9em;
           text-decoration:none;
-          width:100%;
+          width:97%;
           display:block;
+          padding: 6px 0 6px 11px;
         }
         &:hover {
           background:#e4e4e4;
@@ -659,7 +663,18 @@ body.controller-home.action-index{
   width: 90%;
   display: inline-block;
   vertical-align: top;
-  
+}
+.work_content_left.blog_show {
+  .blog_post {
+    .blog_info_top {
+      .author_image {
+        display:none;
+      }
+    }
+    .blog_content {
+      margin: 0 0 0 45px;
+    }
+  }
 }
 
 .work_examples {
@@ -795,7 +810,7 @@ body.controller-home.action-index{
 }
 
 .slide{
-  height: 200px;
+  height: auto;
   position: relative;
   a.cover{
     position: absolute;
@@ -812,7 +827,7 @@ body.controller-home.action-index{
     }
     h3 {
       font-family: 'Cabin', sans-serif;
-      font-size: 1.8em;
+      font-size: 1.5em;
       margin: 0 0 15px -20px;
       float:left;
       a{
@@ -828,7 +843,7 @@ body.controller-home.action-index{
       float:left;
       width:100%;
       p {
-        font-size: 1.3em;
+        font-size: 1.1em;
         a{
           color: #333;
         }
@@ -1205,7 +1220,8 @@ h2.interior{
     .title{
       float:left;
       margin-top: -.4em;
-      width: 95%;
+      width: 94%;
+      padding: 0 0 0 5px;
       h2{
         font-size: 2.6rem;
         margin-bottom: 0;
@@ -1222,9 +1238,11 @@ h2.interior{
       }
       .author{
         p{
-          float: right;
+          float: left;
           color: #ccc;
           margin-bottom: 0;
+          width:100%;
+          font-size:.9em;
         }
       }
     }
@@ -1450,6 +1468,7 @@ blockquote.aside{
   color: #AABECA;
   margin-bottom: 1em;
   clear: right;
+  display:none;
 }
 
 .contact_form {
@@ -1546,7 +1565,10 @@ ul.sibling_nav{
     }
   }
 }
-
+.pagination {
+  border-top:1px solid #ddd;
+  padding: 10px 0;
+}
 #top_area{
   position: relative;
   overflow: hidden;

@@ -13,165 +13,227 @@
         font-weight: normal
       }
 
+    
+      html {
+        overflow-y: scroll;
+        background: #4D879C;
+        font-size: 62.5%;
+      }
       body {
-        height:auto; 
-        width:auto; 
-        font: 62.5% Verdana, Arial, Helvetica, sans-serif; 
-        background:url(../images/body-bg.jpg) repeat-x; 
-        background-color:#ececec; 
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        font-size: 16px;
+        font-size: 1.6rem;
+        font-family: 'Cabin', sans-serif;
+        color: #282828;
+        background-color: transparent;
+      }
+      .content-wrap {
+        width:90%;
         margin: 0 auto;
       }
-
-      a {
-        border:none; 
-        outline:none;
+      #clouds {
+        height: 500px;
+        min-height: auto;
+        position:absolute;
+        top:0;
+        width:100%;
+        z-index:0;
+        background: #aabeca;
+        background: -moz-linear-gradient(top, #aabeca 0%, #f8faf0 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#aabeca), color-stop(100%,#f8faf0));
+        background: -webkit-linear-gradient(top, #aabeca 0%,#f8faf0 100%);
+        background: -o-linear-gradient(top, #aabeca 0%,#f8faf0 100%);
+        background: -ms-linear-gradient(top, #aabeca 0%,#f8faf0 100%);
+        background: linear-gradient(top, #aabeca 0%,#f8faf0 100%);
       }
-
-      body.internal {
-        background:url(../images/body-bg-internal.png) repeat-x;  
-        background-color:#ececec;
-      }
-
-      #main-wrap {
-        width:1200px; 
+      #who-we-are {
+        height: 90px;
+        position: relative;
+        z-index: 2;
+        padding: 10px 0 0 0;
+        width: 90%;
         margin: 0 auto;
       }
+      #who-we-are h1 {
+        background:url('/assets/isotope_logo.png') 0 0 no-repeat;
+        text-indent:-9999em;
+        display:block;
+        width:276px;
+        height:85px;
+      }
 
-      #header-internal {
-        background:url(../images/header-bg.jpg) repeat-y; 
-        background-color:#15334d; 
-        height:125px; 
-        width:auto; 
+      #byline-title {
+        text-align: center;
+      }
+      #byline-title .byline {
+        display: inline-block;
+        padding: 0 10px;
+      }
+      #byline-title .byline h2 {
+        color:#4F7B94;
+        position:relative;
+        z-index: 2;
+        text-transform: uppercase;
+        font-size: 3.5em;
+        font-family: 'Vast Shadow', sans-serif;
+        
+      }
+      #byline-title .byline-title-side {
+        display: inline-block;
+        width: 3%;
+        padding-bottom: .3em;
+        position: relative;
+        z-index: 2;
+      }
+      #byline-title .byline-title-side .line {
+        width: 100%;
+        background-color: #527e97;
+      }
+      #byline-title .byline-title-side .line.first {
+        float: left;
+        height: 3px;
+        margin-bottom: 2px;
+        position: relative;
+        z-index: 2;
+      }
+      #byline-title .byline-title-side .line.second {
+        float: right;
+        height: 1px;
+        position: relative;
+        z-index: 2;
+      }
+      #swoosh {
+        background:url('/assets/isotope_orbit.png') no-repeat scroll 380px 30px transparent;
+        height: 500px;
+        z-index:1;
+        position: absolute;
+        opacity: .2;
+        width: 100%;
+      }
+        
+      #top_area {
+        background:#000;
+      }
+      .interior {
+        background:url("../app/assets/images/content_bg.png") repeat scroll 0 0 white;
+        min-height: 335px;
+        z-index: 30;
+        position: relative;
+        background-color:#fff;
+        padding: 20px 0;
+      }
+      .interior h3 {
+        color:#4F7B94;
+        font-size:2em;
+        margin: 0 0 10px 0;
+      }
+      .interior a {
+        color:#4F7B94;
+        
+      }
+      footer{
+        height: auto;
+        padding-top: 0;
+        position: relative;
+        background: #3f6774;
+        background: -moz-linear-gradient(top, #3f6774 0%, #4d879c 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3f6774), color-stop(100%,#4d879c));
+        background: -webkit-linear-gradient(top, #3f6774 0%,#4d879c 100%);
+        background: -o-linear-gradient(top, #3f6774 0%,#4d879c 100%);
+        background: -ms-linear-gradient(top, #3f6774 0%,#4d879c 100%);
+        background: linear-gradient(top, #3f6774 0%,#4d879c 100%);
+        width:100%;
+        padding: 0 0 35px 0;
+      }
+        
+      footer #top_bar {
+          background: url('/assets/footer_bar_bg.png') repeat-x;
+          height: 49px;
+          width: 100%;
+          display: block;
+          margin: 0 0 10px 0;
+        }
+      footer .left_contact {
+        width: 90%;
         margin: 0 auto;
-        padding: 0; 
       }
-
-      #internal-title {
-        width:962px; 
-        margin:14px auto; 
-        font-family:'greyscalebasic', arial, sans serif;
+      footer .left_contact ul.foot.contact.top{
+        margin: -14px 0 4px 0;
       }
-
-    #top-bar {
-      width:960px; 
-      height:150px; 
-      margin: 0 auto;
-      padding:0;
-    }
-
-    h1 a {
-      background:url(../images/logo.png) 0 0 no-repeat; 
-      width:262px; height:126px; 
-      display:block; 
-      text-indent:-9999em; 
-      margin: 0; 
-      padding: 0; 
-      float:left;
-    }
-    h1 a:hover {
-      background:url(../images/logo.png) 0 -126px no-repeat; 
-      width:262px; 
-      height:126px; 
-      display:block; 
-      text-indent:-9999em; 
-      margin:0; 
-      padding:0; 
-      float:left; 
-    }
-    #content-wrap {
-      width:1200px; 
-      margin:0 auto;
-    }
-    #content {
-      margin: 0 auto 25px 130px; 
-      width:962px; 
-      height:auto;
-    }
-    #content a {
-      color:#3d606f;
-    }
-    #content a:hover {
-      color:#000066;
-    }
-    #content p {
-      font-size:1.3em; 
-      margin: 0 0 13px 0; 
-      line-height:1.6em;
-    }
-    #content h3 {
-      font-size:2.7em; 
-      margin: 3px 0 7px 0; 
-      font-weight:normal; 
-      font-family: 'greyscalebasic', arial, serif;
-    }
-    #footer {
-      width:100%; 
-      background:url(../images/footer-bg.png) repeat-x; 
-      height:94px;
-    }
-    #footer-content-wrap {
-      width:1200px; 
-      margin: 0 auto; 
-      display:block; 
-      height:94px;
-    }
-    #footer-content-wrap ul.footer-content {
-      float:left; 
-      margin: 0 0 15px 131px; 
-      padding: 25px 0 0 0; 
-      color:#3d606f; 
-      font-size:1.1em;
-      width:180px;
-      height:auto;
-    }
-    #footer .footer-content li {
-      padding: 0 5px 3px 0;
-    }
-    #footer .footer-content li a {
-      color:#3d606f;
-    }
-    #footer .footer-content li a:hover {
-      color:#000066;
-    }
+      footer .left_contact ul.foot.contact.top li {
+        display:inline-block;
+        padding: 0 15px 0 0;
+        color:#A6DBEF;
+      }
+      footer .left_contact ul.foot li {
+        display:inline-block;
+        padding: 0 15px 0 0;
+        color:#A6DBEF;
+      }
+      footer .left_contact ul.foot li a{
+        color:#A6DBEF;
+      }
     </style>
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
   </head>
-  <body class="internal">
-    <div id="main-wrap">
-      <div id="header-internal">
-      <div id="title-bar-internal">
-          <div id="top-bar">
+  <body>
+    <div id="top_area">
+      <div id="swoosh">
+      </div>
+      <div id="clouds">
+      </div>
+      <div id="who-we-are">  
         <h1><a href="/">Isotope11</a></h1>
+      </div>
+      <div class="fixed_content">
+        <div id="byline-title">
+          <div class="byline-title-side">
+            <div class="line first"></div>
+            <div class="line second"></div>
           </div>
+          <div class="byline">
+            <h2 class="title">
+              404
+            </div>
+            <div class="byline-title-side">
+              <div class="line first"></div>
+              <div class="line second"></div>
+            </div>
           </div>
-        </div>    
-    </div>
-    </div>
-    <div id="content-wrap">
-      <div id="content">
-        <div id="internal-title"> 
-        <h3>404 Error</h3>
+          
         </div>
+      </div>
+    </div>   
+    
+     
+      <div class="interior">
+        <div class="content-wrap">
+        
+        <h3>404 Error</h3>
         <p>Sorry, the page you're looking for has been moved or no longer exists. Please <a href="http://www.isotope11.com">return home</a>. 
          </p>   
-    <br/>
+      </div>
     </div>
-    </div>
-    <div id="footer">
-        <div id="footer-content-wrap">
-          <ul class="footer-content">
-            <li>Isotope 11</li>
-            <li>529 Beacon Pkwy W</li>
-            <li>Suite 105</li>
-            <li>Birmingham, AL 35209</li>
-            <li>p: 877.476.8671</li>
-            <li>f: 205.943.5760</li>
-            <li>e: <a href="mailto:info@isotope11.com">info@isotope11.com</a></li>
+    <footer>
+        <div id="top_bar"></div>
+          <div class="left_contact">
+            <img src="/assets/footer_logo.png" />
+            <ul class="foot contact top">
+              <li>529 Beacon Parkway W</li>
+              <li>Suite 105</li>
+              <li>Birmingham, AL 35209</li>
+            </ul>
+            <ul class="foot">
+              <li>p: 877.476.8671</li>
+              <li>f: 205.943.5760</li>
+              <li><a href="mailto:info@isotope11.com">info@isotope11.com</a></li>
             </ul>
           </div>
-        </div>
+        </footer>
   </body>
 </html>
 
