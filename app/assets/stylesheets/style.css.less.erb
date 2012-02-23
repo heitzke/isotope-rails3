@@ -524,7 +524,39 @@ h1, h2, h3, h4, h5, h6 {
 
 body.controller-home.action-index{
   #who-we-are{
-    height: 183px;
+    height: 186px;
+    #top_contact {
+      display:none;
+      text-align: center;
+      background:#51c9ca;
+      padding: 14px 0;
+      margin: 15px 0 0 0;
+      .triangle-right {
+        border-color: transparent transparent transparent #fff;
+        border-style: solid;
+        border-width: 17px;
+        width: 0;
+        height: 0;
+        display:inline-block;
+        vertical-align: middle;
+        
+      }
+      a {
+        margin: 0 auto;
+        display:inline-block;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color:#fff;
+        padding: 0 10px 0 0;
+        font-family: 'Vast Shadow', sans-serif;
+        font-size: 1.3em;
+        width: 300px;
+        text-decoration:none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 #who-we-are{
@@ -1179,7 +1211,7 @@ h2.interior{
   position:absolute;
 }
 #swoosh {
-  background: url(/assets/isotope_orbit.png) 380px 60px no-repeat;
+  background: url(/assets/isotope_orbit.png) 80% 60px no-repeat;
   .opacity(0.2);
   position: absolute;
   z-index: 1;
