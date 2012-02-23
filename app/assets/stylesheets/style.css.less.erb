@@ -1206,7 +1206,7 @@ h2.interior{
   background: url(/assets/top_bar.png) repeat-x;
   display:block;
   width:100%;
-  z-index:9999;
+  z-index:19;
   height:9px;
   background-color:#d5dee5;
   position:absolute;
@@ -1608,7 +1608,48 @@ ul.sibling_nav{
   z-index: 30;
   .drop-shadow(0, 0, 10px, 0.6);
 }
-
+.edit_post, .edit_user {
+  width:100%;
+  .field {
+    margin: 0 0 15px 0;
+    label {
+      display:inline-block;
+      width:9%; 
+    }
+    input {
+      display:inline-block;
+      width: 88%;
+    }
+    textarea {
+      display:inline-block;
+      width: 88%;
+      height: 250px;
+    }
+  }
+  .actions {
+    input {
+      float:right;
+    }
+  }
+}
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+  background:#eee;
+  width:100px;
+  margin: 0;
+  padding: 0;  
+  li {
+    list-style:none;
+    border-bottom:1px solid #ddd;
+    margin: 0;    
+    a {
+      display:block;
+      padding: 5px 0 5px 10px;
+      &:hover {
+        background:#dedede;
+      }
+    }
+  }
+}
 /* AMPERSAND FONTS ============================================================================= */
 h4 span.amp{
   font-size: 150%;
