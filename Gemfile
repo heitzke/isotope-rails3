@@ -18,6 +18,7 @@ gem 'high_voltage'
 
 gem 'devise', '~> 1.4.9'
 gem 'paperclip', '~> 2.3.11'
+gem 'acts-as-taggable-on', '~> 2.2.2'
 
 gem 'haml', '~> 3.1.3'
 gem 'will_paginate', '~> 3.0.2'
