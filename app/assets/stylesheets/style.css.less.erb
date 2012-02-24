@@ -1574,26 +1574,29 @@ blockquote.aside{
 
 
 ul.sibling_nav{
-
+  border-bottom:1px solid #eee;
+  padding-bottom: 10px;
   li{
     display: inline-block;
     margin: .25em;
-    background-color: #ddd;
-    &:hover{
-      background-color: #ccc;
+    &:hover{      
     }
     a{
+      .lineargradient(top, #f8f8f6, #f1f1f1 );
+      border:1px solid #d4d4d4;
+      .rounded;
+      padding: 5px 8px;
       display: inline-block;
-      padding: .25em;
       text-decoration: none;
+      &:hover {
+        .lineargradient(top, #fff, #f8f8f6 );
+        border:1px solid #ddd;
+      }
     }
     &.active{
-      background-color: #6d95ac;
       a{
-        color: white;
-        &:hover{
-          color: white;
-        }
+        color: #333;
+        .lineargradient(top, #fff, #f8f8f6 );
       }
     }
   }
