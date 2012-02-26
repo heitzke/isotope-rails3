@@ -7,10 +7,8 @@
   .fixed_content
     = render_sibling_nav_for(:community)
     .work_content_left
-      %h3 isotope_contacts
-      %p
-        = link_to('isotope_contacts', 'http://github.com/isotope11/isotope_contacts')
-        is a drop-in contact management engine for your rails app.
+      #github-readme
+        Loading...
       %p
         = link_to 'Back to Community', '/community'
     .work_content_right
@@ -20,3 +18,8 @@
           = link_to('Github Repo', 'http://github.com/isotope11/isotope_contacts')
         %li
           = link_to('Blog Post', 'http://isotope11.com/blog/drop-in-contact-management-for-your-rails-app')
+- content_for :javascripts do
+  :javascript
+    $(function(){
+      $('#github-readme').load('/community/get_github_project?project=isotope11/isotope_contacts #readme article');
+    });
