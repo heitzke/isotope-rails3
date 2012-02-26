@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   acts_as_url :title, :url_attribute => :slug
+  acts_as_taggable
 
   validates_presence_of :title, :body, :user_id, :slug
   validates_uniqueness_of :slug

@@ -6,3 +6,8 @@ Feature: Blog
   Scenario: Viewing blog
     When I am on the blog
     Then I should see a basic page
+
+  Scenario: Viewing blog feed
+    Given there is a blog post
+    When I am on the blog feed
+    Then I should see a basic page

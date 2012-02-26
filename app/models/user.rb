@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :slug, :first_name, :middle_initial, :last_name, :bio, :position, :remember_me, :avatar
 
+  # Acts as Taggable On
+  acts_as_tagger
+
   # Paperclip
   has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "50x50>" }
 
@@ -41,7 +44,5 @@ class User < ActiveRecord::Base
   def make_admin!
     self.update_attribute(:admin, true)
   end
-  
-  
 
 end

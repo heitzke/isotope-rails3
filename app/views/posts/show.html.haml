@@ -4,7 +4,8 @@
 
 .interior
   .fixed_content
-    .work_content_left
+    .work_content_left.blog_show
+      
       = render :partial => @post, :locals => { share: true, show_disqus: true, show_disqus_comment_counts: false}
       %p
         = link_to "View All Posts", posts_path
@@ -12,7 +13,13 @@
         %p= link_to 'Edit', edit_post_path(@post)
       - if current_user && current_user.admin?
         %p= button_to 'Destroy', @post, :method => :delete, :confirm => "Are you sure?"
-    .work_content_right
+      -if @post.tag_list.any?
+        %span.tags
+          Tags:
+        %ul.tags
+          - @post.tag_list.each do |tag|
+            %li= tag
+    .work_content_right.recent
       .recent_posts
         %h3
           Recent Posts

@@ -524,7 +524,39 @@ h1, h2, h3, h4, h5, h6 {
 
 body.controller-home.action-index{
   #who-we-are{
-    height: 183px;
+    height: 186px;
+    #top_contact {
+      display:none;
+      text-align: center;
+      background:#51c9ca;
+      padding: 14px 0;
+      margin: 15px 0 0 0;
+      .triangle-right {
+        border-color: transparent transparent transparent #fff;
+        border-style: solid;
+        border-width: 17px;
+        width: 0;
+        height: 0;
+        display:inline-block;
+        vertical-align: middle;
+        
+      }
+      a {
+        margin: 0 auto;
+        display:inline-block;
+        text-transform: uppercase;
+        vertical-align: middle;
+        color:#fff;
+        padding: 0 10px 0 0;
+        font-family: 'Vast Shadow', sans-serif;
+        font-size: 1.3em;
+        width: 300px;
+        text-decoration:none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 #who-we-are{
@@ -605,15 +637,18 @@ body.controller-home.action-index{
     margin: .5em auto;
   }
 }
-
+.work_content_right.recent {
+  width: 98%;
+  display:block;
+  padding-left: 0;
+}
 .work_content_right{
-  display: inline-block;
+  display: none;
   vertical-align: top;
   width: 65%;
   padding-left: 0;
   .recent_posts {
     .lineargradient(top, #f6f6f6, #eee );
-    
     border:1px solid #e4e4e4;
     h3 {
       padding: 3px 0 5px 10px;
@@ -626,15 +661,16 @@ body.controller-home.action-index{
       margin: 0 0 0 0;
       padding: 0 0 0 0;
       li {
-        padding: 6px 0 6px 11px;
+        padding: 0 5px 0 0;
         margin: 0;
         background:none;
         border-bottom:1px solid #e4e4e4;
         a {
           font-size: .9em;
           text-decoration:none;
-          width:100%;
+          width:97%;
           display:block;
+          padding: 6px 0 6px 11px;
         }
         &:hover {
           background:#e4e4e4;
@@ -659,7 +695,18 @@ body.controller-home.action-index{
   width: 90%;
   display: inline-block;
   vertical-align: top;
-  
+}
+.work_content_left.blog_show {
+  .blog_post {
+    .blog_info_top {
+      .author_image {
+        display:none;
+      }
+    }
+    .blog_content {
+      margin: 0 0 0 45px;
+    }
+  }
 }
 
 .work_examples {
@@ -670,6 +717,7 @@ body.controller-home.action-index{
   .work_examples_content {
     width: 100%;
     vertical-align:top;
+    display:inline-block;
   }
 }
 
@@ -795,7 +843,7 @@ body.controller-home.action-index{
 }
 
 .slide{
-  height: 200px;
+  height: auto;
   position: relative;
   a.cover{
     position: absolute;
@@ -812,7 +860,7 @@ body.controller-home.action-index{
     }
     h3 {
       font-family: 'Cabin', sans-serif;
-      font-size: 1.8em;
+      font-size: 1.5em;
       margin: 0 0 15px -20px;
       float:left;
       a{
@@ -828,7 +876,7 @@ body.controller-home.action-index{
       float:left;
       width:100%;
       p {
-        font-size: 1.3em;
+        font-size: 1.1em;
         a{
           color: #333;
         }
@@ -1158,13 +1206,13 @@ h2.interior{
   background: url(/assets/top_bar.png) repeat-x;
   display:block;
   width:100%;
-  z-index:9999;
+  z-index:19;
   height:9px;
   background-color:#d5dee5;
   position:absolute;
 }
 #swoosh {
-  background: url(/assets/isotope_orbit.png) 380px 60px no-repeat;
+  background: url(/assets/isotope_orbit.png) 80% 60px no-repeat;
   .opacity(0.2);
   position: absolute;
   z-index: 1;
@@ -1205,7 +1253,8 @@ h2.interior{
     .title{
       float:left;
       margin-top: -.4em;
-      width: 95%;
+      width: 94%;
+      padding: 0 0 0 5px;
       h2{
         font-size: 2.6rem;
         margin-bottom: 0;
@@ -1222,9 +1271,11 @@ h2.interior{
       }
       .author{
         p{
-          float: right;
+          float: left;
           color: #ccc;
           margin-bottom: 0;
+          width:100%;
+          font-size:.9em;
         }
       }
     }
@@ -1450,6 +1501,7 @@ blockquote.aside{
   color: #AABECA;
   margin-bottom: 1em;
   clear: right;
+  display:none;
 }
 
 .contact_form {
@@ -1522,38 +1574,120 @@ blockquote.aside{
 
 
 ul.sibling_nav{
-
+  border-bottom:1px solid #eee;
+  padding-bottom: 10px;
   li{
     display: inline-block;
     margin: .25em;
-    background-color: #ddd;
-    &:hover{
-      background-color: #ccc;
+    &:hover{      
     }
     a{
+      .lineargradient(top, #f8f8f6, #f1f1f1 );
+      border:1px solid #d4d4d4;
+      .rounded;
+      padding: 5px 8px;
       display: inline-block;
-      padding: .25em;
       text-decoration: none;
+      &:hover {
+        .lineargradient(top, #fff, #f8f8f6 );
+        border:1px solid #ddd;
+      }
     }
     &.active{
-      background-color: #6d95ac;
       a{
-        color: white;
-        &:hover{
-          color: white;
-        }
+        color: #333;
+        .lineargradient(top, #fff, #f8f8f6 );
       }
     }
   }
 }
-
+.pagination {
+  border-top:1px solid #ddd;
+  padding: 10px 0;
+}
 #top_area{
   position: relative;
   overflow: hidden;
   z-index: 30;
   .drop-shadow(0, 0, 10px, 0.6);
 }
-
+.edit_post, .edit_user {
+  width:100%;
+  .field {
+    margin: 0 0 15px 0;
+    label {
+      display:inline-block;
+      width:9%; 
+    }
+    input {
+      display:inline-block;
+      width: 88%;
+    }
+    textarea {
+      display:inline-block;
+      width: 88%;
+      height: 250px;
+    }
+  }
+  .actions {
+    input {
+      float:right;
+    }
+  }
+}
+.user_new {
+  width:100%;
+  padding: 30px 0 0 0;
+  .form_row {
+    margin: 0 0 15px 0;
+    label {
+      display:inline-block;
+      width: 106px;
+    }
+    input {
+      display:inline-block;
+      margin-right: 10px;
+    }
+  }
+}
+ul.ui-autocomplete.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+  background:#eee;
+  width:100px;
+  margin: 0;
+  padding: 0;  
+  li {
+    list-style:none;
+    border-bottom:1px solid #ddd;
+    margin: 0;    
+    a {
+      display:block;
+      padding: 5px 0 5px 10px;
+      &:hover {
+        background:#dedede;
+      }
+    }
+  }
+}
+span.tags {
+  display:inline-block;
+  padding: 0 5px 0 0;
+}
+ul.tags {
+  display:inline-block;
+  
+  li {
+    display:inline;
+    .lineargradient(top, #f8f8f6, #f1f1f1 );
+    border:1px solid #d4d4d4;
+    .rounded;
+    padding: 2px 8px;
+    font-size: .8em;
+    margin: 0 4px 0 0;
+    color:#666;
+    .box-shadow(1px 1px 0px #eee);
+    
+  }
+}
 /* AMPERSAND FONTS ============================================================================= */
 h4 span.amp{
   font-size: 150%;
