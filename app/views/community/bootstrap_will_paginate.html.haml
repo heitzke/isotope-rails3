@@ -7,18 +7,10 @@
   .fixed_content
     = render_sibling_nav_for(:community)
     .work_content_left
-      %h3 bootstrap-will_paginate
-      %p
-        = link_to('bootstrap-will_paginate', 'http://github.com/yrgoldteeth/bootstrap-will_paginate')
-        is a gem used in conjunction with Twitter's Bootstrap styling framework and the will_paginate library that
-        is a drop-in to ensure will_paginate's HTML is generated to match the Bootstrap standard.
+      #github-readme
+        Loading...
       %p
         = link_to 'Back to Community', '/community'
-      %br
-      %br
-      %br
-      %br
-      %br
     .work_content_right
       = image_tag 'phase_zero.png', :alt => 'state_machine_audits image'
       %ul
@@ -30,3 +22,8 @@
           = link_to('Blog Post', 'http://isotope11.com/blog/will-paginate-link-renderer-for-twitter-bootstrap')
 
     .clear
+- content_for :javascripts do
+  :javascript
+    $(function(){
+      $('#github-readme').load('/community/get_github_project?project=yrgoldteeth/bootstrap-will_paginate #readme article');
+    });

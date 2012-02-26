@@ -7,21 +7,10 @@
   .fixed_content
     = render_sibling_nav_for(:community)
     .work_content_left
-      %h3 css_progress_bar_rails
-      %p
-        = link_to('css3-progress-bar-rails', 'http://github.com/yrgoldteeth/css3-progress-bar-rails')
-        is a gem that generates progress bars in CSS3 via some custom Rails helper methods.
+      #github-readme
+        Loading...
       %p
         = link_to 'Back to Community', '/community'
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
-      %br
     .work_content_right
       = image_tag 'phase_zero.png', :alt => 'progress bar img'
       %ul
@@ -33,3 +22,8 @@
           = link_to('Blog Post', 'http://isotope11.com/blog/css3-progress-bars-for-rails')
 
     .clear
+- content_for :javascripts do
+  :javascript
+    $(function(){
+      $('#github-readme').load('/community/get_github_project?project=yrgoldteeth/css3-progress-bar-rails #readme article');
+    });
