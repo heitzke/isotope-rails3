@@ -29,6 +29,7 @@ IsotopeRails3::Application.routes.draw do
   match '/services/saas' => 'services#saas'
 
   match '/community' => 'community#index'
+  match '/community/get_github_project' => 'community#get_github_project'
   match '/community/xrono' => 'community#xrono'
   match '/community/rubyham' => 'community#rubyham'
   match '/community/state_machine_audits' => 'community#state_machine_audits'

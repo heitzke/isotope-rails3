@@ -7,8 +7,8 @@
   .fixed_content
     = render_sibling_nav_for(:community)
     .work_content_left
-      %h3 Xrono
       #github-readme
+        Loading...
       %p
         = link_to 'Back to Community', '/community'
     .work_content_right
@@ -30,5 +30,5 @@
 - content_for :javascripts do
   :javascript
     $(function(){
-      $('#github-readme').load('http://github.com/isotope11/xrono #readme article');
+      $('#github-readme').load('/community/get_github_project?project=isotope11/xrono #readme article');
     });
