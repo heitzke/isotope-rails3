@@ -88,6 +88,11 @@ module ApplicationHelper
         :path => '/community/data_science_theater_3000',
         :image => 'ruby.png',
         :description => "is a gem for interacting with the APIs in the DataScienceToolkit"
+      },
+      "jenkins, Isotope style" => {
+        :path => '/community/jenkins_isotope_style',
+        :image => 'ruby.png',
+        :description => "is a project to help you style the Jenkins CI server"
       }
     })
   end

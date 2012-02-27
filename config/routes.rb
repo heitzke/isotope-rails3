@@ -41,7 +41,8 @@ IsotopeRails3::Application.routes.draw do
   match '/community/quote_app' => 'community#quote_app'
   match '/community/spree_suppliers_extension' => 'community#spree_suppliers_extension'
   match '/community/data_science_theater_3000' => 'community#data_science_theater_3000'
-  
+  match '/community/jenkins_isotope_style' => 'community#jenkins_isotope_style'
+
   match '/home/payments' => 'home#payments'
   match '/home/resources' => 'home#resources'
   match '/home/careers' => 'home#careers'
