@@ -6,11 +6,12 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:services)
-
     .work_content_left
       %h3 MLM
       %p
         We have a complete multi-level marketing solution which has the following features: Accounts, upline direct and generation based payments and bonuses, integration with third party vendors, points and position systems with full up and down line calculations, administrative and representative based reporting, replicated websites, editable marketing and video based training, genealogy reporting.
+      .talk_more_link
+        = link_to 'Want to talk more?', '/contact'
       %p
         = link_to 'Back to Services', '/services'
       .work_examples

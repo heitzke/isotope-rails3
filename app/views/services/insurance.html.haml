@@ -6,11 +6,12 @@
 .interior
   .fixed_content
     = render_sibling_nav_for(:services)
-
     .work_content_left
       %h3 Insurance
       %p
         Many factors go into a successful insurance quote, from location based information such as distance for fire hydrants and other emergency services, to calculating flood planes, or on demand credit inquiries. isotope|eleven has extensive experience in writing custom web applications for insurance companies and cooperatives.
+      .talk_more_link
+        = link_to 'Want to talk more?', '/contact'
       %p
         = link_to 'Back to Services', '/services'
       .work_examples

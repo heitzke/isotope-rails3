@@ -9,11 +9,13 @@
 
     .work_content_left
       %h3 E-Commerce
+      .talk_more_link
       %p
         Ready to get your business online, and move beyond a basic webpage? We leverage proven open source tools such as Spree to provide a complete solution for your online sales needs. It is easily extensible and can be customized to not only have the look and feel your customers demand, but the features and reporting that you need to grow your business, all in an easy to use package.
+      .talk_more_link
+        = link_to 'Want to talk more?', '/contact'
       %p
         = link_to 'Back to Services', '/services'
-
       .work_examples
         = image_tag 'portfolio_freshfully.png'
         .work_examples_content
@@ -22,7 +24,6 @@
             Custom built from the ground up on the Spree e-commerce engine, Freshfully looks to easily connect and sell local produce to consumers. Besides a full online grocery store, they share interesting articles and recipes as well. New local farmers, vendors and products are actively being added to the site every day, so be sure to check them out. Those of you not in the Birmingham area, don't fret, as they are looking to expand in the future.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_apt.png'
         .work_examples_content
@@ -31,7 +32,6 @@
             Auto Parts Tomorrow is a major distributor of quality auto parts who understands that parts are needed ASAP. Appropriately named, APT has the ability to easily and affordably get you parts quickly. APT came to us with an existing rails application that needed a major overhaul. The changes and improvements haven't stopped rolling into production since the site has relaunched. We are still actively developing and improving the parts buying experience. isotope|eleven has rewritten much of the back-end code as well as giving the site a refresher on the front-end.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_brynneridge.png'
         .work_examples_content
@@ -43,7 +43,6 @@
             packed with custom extensions.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_sportgraphics.png'
         .work_examples_content
@@ -52,7 +51,6 @@
             Sportgraphics has photographed most of the major regattas since 1986 in the U.S., Canada, and England. You can check out their Archive to see if they've covered an event you've competed in. You can order your photo right online within minutes using their secure order form. Look for Sport Graphics at an upcoming event.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_deepsouth.png'
         .work_examples_content
@@ -61,7 +59,6 @@
             Deep South Fibers, the innovative source for ‘all things knitting,’ supports and advances designers and retailers in the needle arts industry through innovation, insight and accessibility.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_shopitm.png'
         .work_examples_content
@@ -70,7 +67,6 @@
             ShopITM.com is a 5000+ item online store specializing in knitting items.
       .clearfix
       %hr
-
       .work_examples
         = image_tag 'portfolio_scootercoolers.png'
         .work_examples_content
@@ -95,5 +91,6 @@
         %li Inventory Control
         %li User management
         %li Recurring billing
-        %li Wholesale and retail shops
+        %li.last 
+          Wholesale and retail shops
     

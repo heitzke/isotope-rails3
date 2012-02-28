@@ -682,12 +682,20 @@ body.controller-home.action-index{
     }
   }
   ul{
+    li.last {
+      -moz-border-radius-topleft: 0px;
+      -moz-border-radius-topright: 0px;
+      -moz-border-radius-bottomright: 4px;
+      -moz-border-radius-bottomleft: 4px;
+      -webkit-border-radius: 0px 0px 4px 4px;
+      border-radius: 0px 0px 4px 4px;
+    }
     li{
       display: block;
       list-style-type: none;
       padding: .5em;
-      background-color: #eee;
-      margin-bottom: .5em;
+      .lineargradient(top, #eee, #f1f1f1 );
+      border:1px solid #eee;
     }
   }
 }
@@ -1173,7 +1181,26 @@ a.talk_more {
   margin: 0 0 10px 0;
   display:block;
 }
-
+.talk_more_link {
+  float:right;
+  a {
+    display:block;
+    border:1px solid #5a7e92;
+    padding: 4px 12px;
+    color:#fff;
+    text-decoration: none;
+    .gradient(#6D95AC, #6D95AC, #5a7e92);
+    cursor: pointer;
+    .drop-shadow(1px, 1px, 5px, 0.2);
+    position:relative;
+    &:hover {
+      background:#5a7e92;
+    }
+    &:active {
+      top:1px;
+    }
+  }
+}
 div.interior{
   background: url(/assets/content_bg.png ) repeat;
   background-color: white;
@@ -1609,7 +1636,7 @@ ul.sibling_nav{
   position: relative;
   overflow: hidden;
   z-index: 30;
-  .drop-shadow(0, 0, 10px, 0.6);
+  .drop-shadow(0, 0, 5px, 0.4);
 }
 .edit_post, .edit_user {
   width:100%;
