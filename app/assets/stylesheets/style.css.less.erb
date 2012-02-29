@@ -682,6 +682,30 @@ body.controller-home.action-index{
     }
   }
   ul{
+    .box-shadow(0px 0px 3px #ddd);
+    padding: 0;
+    margin: -7px 0 0 0;
+    width: 100%;
+    float:right;
+    li.button {
+      padding:0;
+      border-bottom:1px solid #8aa3b3;
+      border-left:1px solid #abbfcb;
+      border-right:1px solid #abbfcb;
+      a {
+        padding: .5em;
+        padding-right: 0;
+        display:block;
+        .lineargradient(top, #c4d2d7, #abbfcb );
+        color:#fff;
+        text-decoration:none;
+        &:hover {
+          .lineargradient(top, #aebbc0, #8aa3b3 );
+          color:#fff;
+          text-decoration: underline;
+        }
+      }
+    }
     li.last {
       -moz-border-radius-topleft: 0px;
       -moz-border-radius-topright: 0px;
@@ -694,8 +718,9 @@ body.controller-home.action-index{
       display: block;
       list-style-type: none;
       padding: .5em;
-      .lineargradient(top, #eee, #f1f1f1 );
-      border:1px solid #eee;
+      .lineargradient(top, #f8f8f8, #f1f1f1 );
+      border:1px solid #e4e4e4;
+      border-top:none;
     }
   }
 }
@@ -1468,7 +1493,6 @@ ul.foot.contact {
     text-align:left;
     background:none;
     text-transform:none;
-    
     a {
       padding: 0;
       text-decoration:underline;

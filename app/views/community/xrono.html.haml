@@ -14,7 +14,7 @@
     .work_content_right
       = image_tag 'work-xrono.png', :alt => 'Xrono Work Image'
       %ul
-        %li
+        %li.button
           = link_to('Github Repo', 'http://github.com/isotope11/xrono')
         %li
           Well defined taxonomy for handling a wide range of situations (Clients, Projects, Tickets, Work Units)
@@ -24,7 +24,7 @@
           Real time and daily client updates via email
         %li
           Robust Invoicing and Payroll systems
-        %li
+        %li.last
           Comprehensive test suite for
           = link_to 'continued development', 'https://github.com/isotope11/xrono', :target => '_blank'
 - content_for :javascripts do
