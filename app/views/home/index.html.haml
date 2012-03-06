@@ -16,7 +16,8 @@
           layout
         %p
           Our process starts with Phase Zero, a session that involves a one to two day, face-to-face client meeting to review the precise features that the project will have at its completion.
-
+        = image_tag 'home_phasezero.png', :class => 'phasezero'
+        
       .section.section1
         %h5 1
         %h3 Wireframe
@@ -26,16 +27,14 @@
           user stories
         %p
           At the same time, we generate mockups and user stories for each page in the application.  Doing this in-person with the client at the beginning of each project helps us guarantee that we have a firm, shared vision of the project to move forward.
-        = image_tag 'step_1_blueprint.png', :class => 'shake'
+        = image_tag 'home_wireframe.png', :class => 'wireframe'
       .section.section2
         %h5 2
         %h3 Implement
         %h4 minimum viable product
         %p
           From this initial vision, we build the simplest thing that will work, using test-driven development.  This allows us to put a working, albeit incomplete, product into the customer's hands in the earliest feasible timeline.
-        = image_tag 'step_two_yellow.png', :class => 'yellow_tube'
-        = image_tag 'step_two_blue.png', :class => 'blue_tube'
-        = image_tag 'step_two_beaker.png', :class => 'beaker'
+        = image_tag 'home_implement.png', :class => 'implement'
 
       .section.section3
         %h5 3
@@ -43,7 +42,7 @@
         %h4 hand-in-hand with customer
         %p
           At this point, we work alongside the customer to move the application from &ldquo;a thing that works&rdquo; to a product they love.  Getting this right requires a period of near-constant contact.
-        = image_tag 'step_three_beakers.png', :class => 'beakers'
+        = image_tag 'home_iterate.png', :class => 'iterate'
 
       .section.section4
         %h5 4
@@ -54,7 +53,7 @@
           manage
         %p
           Now we get the current version of the product out the door and in the hands of the end-users.  As soon as users are involved, we can work with the client to not only build the product the client planned, but also the product and experience that their end-users desire.
-        = image_tag 'step_four_box.png', :class => 'ship_box'
+        = image_tag 'home_ship.png', :class => 'ship_box'
 
       .section.section5
         %h5 5
@@ -62,7 +61,7 @@
         %h4 add features
         %p
           Web software is a living, breathing creature.  Metaphorically, of course.  You want to add and refine features to gain customers and keep them happy.  We aim to keep a tight feedback loop between shipping software and adding functionality.
-
+        = image_tag 'home_mushroom.png', :class => 'mushroom'
 - content_for :javascripts do
   :javascript
     $('.services-slider').orbit({

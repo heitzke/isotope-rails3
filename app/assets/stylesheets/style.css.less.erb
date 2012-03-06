@@ -944,95 +944,60 @@ body.controller-home.action-index{
   .gradient(#477a8c, #0b2a35, #477a8c);
   .texture {
     background: image-url('step_zero_texture.png') 50% 0 no-repeat;
+    z-index: -2;
+    position: relative;
+    overflow:hidden;
   }
   .fixed_content {
     .section0 {
-      background: image-url('step_zero_equation.png') 0 0 no-repeat;
       padding-top: 1.6em;
-      .arrow {
-        position: absolute;
-        top: 0;
-        -moz-transform: rotate(90deg);
-        -webkit-transform: rotate(90deg);
-        -o-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-        transform: rotate(90deg);
-      }
       h5 {
         padding: .5em 0 0 0;
+      }
+      .phasezero {
+        position:absolute;
+        top: 33px;
+        left: 0;
       }
     }
     .section1 {
       padding-top: 0;
+      .wireframe {
+        position:absolute;
+        top: 0;
+        left: 0;
+      }
       h5 {
         padding: 0;
       }
-      .shake {
-        position: absolute;
-        top: -44px;
-        left:19px;
-        z-index: 0;
-        
-      }
-      .arrow {
-        position: absolute;
-        top: 211px;
-        left: 112px;
-        z-index: -1000;
-      }
-      .pour {
-        position: absolute;
-        top: 99px;
-        left: -26px;
-        z-index: -1000;
-        
-      }
     }
     .section2 {
-      .blue_tube {
-        position: absolute;
-        top: 0;
+      .implement {
+        position:absolute;
+        top: 17px;
         left: 0;
-        z-index: -1000;
-        
-      }
-      .yellow_tube {
-        position: absolute;
-        top: 0;
-        left: 195px;
-        z-index: -1000;
-        
-      }
-      .beaker {
-        position: absolute;
-        top: 92px;
-        left: 117px;
-        z-index: -1000;
-        .opacity(0.4);
-        
       }
     }
     .section3 {
-      .beakers {
-        position: absolute;
-        top: 97px;
-        .opacity(0.3);
-        z-index: -1000;
-        
+      .iterate {
+        position:absolute;
+        top: 10px;
+        left: 0;
       }
     }
     .section4 {
       .ship_box {
-        position: absolute;
-        top: 136px;
-        left: 79px;
-        .opacity(.4);
-        z-index: -1000;
-        
+        position:absolute;
+        top: 0;
+        left: 10px;
       }
     }
     .section5 {
-      
+      .mushroom {
+        position:absolute;
+        top: 12px;
+        left: 20px;
+      }
     }
     .section{
       padding-left: 4em;
@@ -1064,7 +1029,7 @@ body.controller-home.action-index{
         z-index: 100;
       }
       img {
-        z-index: 50;
+        z-index: -2;
       }
     }
   }
