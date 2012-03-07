@@ -67,12 +67,12 @@ module ApplicationHelper
         },
       "RubyHam" =>  {
         :path => '/community/rubyham',
-        :image => 'feature_xrono.png',
+        :image => 'feature_rubyham.png',
         :description => "Meet and learn with other Ruby professionals and enthusiasts in the greater Birmingham area."
         },
       "TechBirmingham" => {
         :path => '/community/techbirmingham',
-        :image => 'feature_xrono.png',
+        :image => 'techbirmingham_logo.png',
         :description => "isotope|eleven is a silver sponsor for TechBirmingham..."
         },
       "state_machine_audits" => {
