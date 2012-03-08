@@ -15,8 +15,9 @@ IsotopeRails3::Application.routes.draw do
   end
   resources :posts, :path => :blog
   resources :contact
-
   resources :lolnohaxplz_incoming_mails, :controller => 'incoming_mails'
+
+  match '/blog/tags/:id' => 'posts#tagged_with', :as => :blog_tag
 
   match '/services' => 'services#index'
   match '/services/phasezero' => 'services#phasezero'

@@ -12,6 +12,17 @@ class PostsController < ApplicationController
     end
   end
 
+  def tagged_with
+    @the_tag = ActsAsTaggableOn::Tag.find_by_slug params[:id]
+    @posts = PostDecorator.decorate(Post.tagged_with(@the_tag).paginate(:page => params[:page], :order => 'created_at DESC', :per_page => 10))
+    respond_to do |format|
+      format.html # tagged_with.html.erb
+      format.xml  { render :xml => @posts  }
+      format.json { render :json => @posts }
+      format.atom
+    end
+  end
+
   def show
     @post = PostDecorator.decorate(Post.find_by_slug(params[:id]))
     @recent_posts = PostDecorator.decorate(Post.where("slug != ?",params[:id]).order("created_at DESC, title ASC").select("slug, title").limit(10))

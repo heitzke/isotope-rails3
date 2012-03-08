@@ -17,8 +17,8 @@
         %span.tags
           Tags:
         %ul.tags
-          - @post.tag_list.each do |tag|
-            %li= tag
+          - @post.tags.each do |tag|
+            %li= link_to tag.name, blog_tag_path(tag)
     .work_content_right.recent
       .recent_posts
         %h3
