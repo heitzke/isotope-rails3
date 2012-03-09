@@ -11,3 +11,8 @@ Feature: Blog
     Given there is a blog post
     When I am on the blog feed
     Then I should see a basic page
+
+  Scenario: Viewing a tagged blog post
+    Given there is a tagged blog post
+    Then I should the blog post
+

@@ -14,4 +14,15 @@ class Blog < Spinach::FeatureSteps
   Given 'there is a blog post' do
     @post = Factory(:post)
   end
+
+
+  Given 'there is a tagged blog post' do
+    @tagged_post = Factory(:post)
+    @tagged_post.tag_list << "The Tag"
+  end
+
+  Then 'I should the blog post' do
+    visit post_path @tagged_post
+  end
+
 end
