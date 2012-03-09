@@ -14,5 +14,5 @@ Feature: Blog
 
   Scenario: Viewing a tagged blog post
     Given there is a tagged blog post
-    Then I should the blog post
+    Then I should see the blog post
 

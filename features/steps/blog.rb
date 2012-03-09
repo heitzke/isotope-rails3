@@ -21,7 +21,7 @@ class Blog < Spinach::FeatureSteps
     @tagged_post.tag_list << "The Tag"
   end
 
-  Then 'I should the blog post' do
+  Then 'I should see the blog post' do
     visit post_path @tagged_post
   end
 
