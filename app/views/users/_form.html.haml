@@ -23,16 +23,26 @@
       = f.label :position
       = f.text_field :position
     .field
+      = f.label :twitter
+      = f.text_field :twitter
+    .field
       = f.label :bio
       = f.text_area :bio
     .clear  
     - if @user.created_at?
       .field
         %p Current Avatar:
-        %p= image_tag @user.avatar.url
+        %p= image_tag @user.avatar.url      
       .field
         = f.label :avatar
         = f.file_field :avatar
+      .field
+        %p Current Avatar:
+        %p= image_tag @user.avatar_hover.url
+      
+      .field
+        = f.label :avatar_hover
+        = f.file_field :avatar_hover
     - if current_user.admin? && @user.created_at?
       .field.radio
         = f.label :alumni

@@ -4,7 +4,6 @@
     - if current_user && (current_user == @user || current_user.admin?)
       .clear
       %p= link_to 'Edit User', edit_user_path
-
     .clear
     - unless @posts.empty?
       %h2 Blog Posts

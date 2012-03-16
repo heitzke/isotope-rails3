@@ -3,5 +3,8 @@
     = link_to(image_tag(user.avatar.url), about_path(user))
   .profile_info
     %h3= link_to_unless_current user, about_path(user)
+    - if user.twitter
+      %span.twitter
+        = link_to user.twitter, "http://www.twitter.com/#{user.twitter}", :target => '_blank'
     %h5= user.position
     %p= user.bio

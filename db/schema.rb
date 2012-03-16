@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308223911) do
+ActiveRecord::Schema.define(:version => 20120316205348) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -64,16 +64,17 @@ ActiveRecord::Schema.define(:version => 20120308223911) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                              :default => "", :null => false
-    t.string   "encrypted_password",  :limit => 128, :default => "", :null => false
+    t.string   "email",                                    :default => "", :null => false
+    t.string   "encrypted_password",        :limit => 128, :default => "", :null => false
+    t.string   "password_salt",                            :default => "", :null => false
     t.string   "remember_token"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      :default => 0
+    t.integer  "sign_in_count",                            :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "failed_attempts",                    :default => 0
+    t.integer  "failed_attempts",                          :default => 0
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "created_at"
@@ -91,6 +92,11 @@ ActiveRecord::Schema.define(:version => 20120308223911) do
     t.string   "slug"
     t.boolean  "alumni"
     t.integer  "list_position"
+    t.string   "twitter"
+    t.string   "avatar_hover_file_name"
+    t.string   "avatar_hover_content_type"
+    t.integer  "avatar_hover_file_size"
+    t.datetime "avatar_hover_updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
