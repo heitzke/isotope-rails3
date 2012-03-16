@@ -4,7 +4,6 @@
   .profile_info
     %h3= link_to_unless_current user, about_path(user)
     - if user.twitter
-      %span.twitter
-        = link_to user.twitter, "http://www.twitter.com/#{user.twitter}", :target => '_blank'
+      = link_to user.twitter, "http://www.twitter.com/#{user.twitter}", :target => '_blank', :class => 'twitter'
     %h5= user.position
     %p= user.bio
