@@ -42,12 +42,79 @@ body.controller-home.action-index {
   }
 }
 #who-we-are {
-    h2.first {
-      font-size:3.2em;
+  width: 600px;
+  display: block;
+  margin: 0 auto;
+  header {
+    display: inline-block;
+  }
+  nav{
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 42px;
+    .jump-link {
+      display: none;
     }
-    h2.second {
-      font-size:2.3em;
-    } 
+    ul {
+      display: block;
+    }
+    li{
+      display: none;
+      text-transform: uppercase;
+      float: left;
+      font-size: .9em;
+      padding: 0 11px 0 0;
+      &.active{
+        a, a:hover{
+          background-color: #6d95ac;
+        }
+      }
+      &.tablet{
+        display: inline;
+      }
+      &.last{
+        padding: 0;
+      }
+      a{
+        display: block;
+        padding: 3em .25em .25em .25em;
+        margin-top: -3em;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        color: white;
+        text-decoration: none;
+        &:hover{
+          -webkit-transition: background-color .5s ease;
+          -moz-transition: background-color .5s ease;
+          -o-transition: background-color .5s ease;
+          transition: background-color .5s ease;
+          background-color: #8199A7;
+        }
+      }
+    }
+    li.active.home {
+      background-color: none;
+      a {
+        background: none;
+        &:hover {
+          -webkit-transition: background-color .5s ease;
+          -moz-transition: background-color .5s ease;
+          -o-transition: background-color .5s ease;
+          transition: background-color .5s ease;
+          background-color: #8199A7;
+        }
+      }
+    }
+  }
+  h2.first {
+    font-size:3.2em;
+  }
+  h2.second {
+    font-size:2.3em;
+  } 
+  h1 {
+    background-position: left;
+  }
 }
 div.slide div.slide-content h3 {
   font-size:2.3em;

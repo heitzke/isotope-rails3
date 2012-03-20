@@ -565,12 +565,27 @@ body.controller-home.action-index{
   overflow: hidden;
   z-index: 2;
   position: relative;
+  header {
+    display: inline-block;
+  }
   nav{
-    display: none;
     z-index: 3;
+    display: inline-block;
+    vertical-align:top;
+    float: right;
+    .jump-link {
+      display: block;
+      background: url(/assets/nav_expand.png ) no-repeat;
+      background-color: #9fb3bf;
+      border: 1px solid #89a0ab;
+      height: 33px;
+      width: 40px;
+      margin: 28px 10px 0 0;
+      .rounded(5px);
+      .drop-shadow( 1px, 1px, 0px, 0.2);      
+    }
     ul {
-      li { 
-      }
+      display: none;
     }
   }
   height: 90px;
@@ -583,12 +598,13 @@ body.controller-home.action-index{
     position: relative;
   }
   h1{
+    display: inline-block;
     position: relative;
     z-index: 2;
     height: 95px;
     margin: 0;
     background-image: image-url('/assets/isotope_logo.png');
-    background-position: top center;
+    background-position: top left;
     background-repeat: no-repeat;
     span{
       a{
@@ -1469,7 +1485,7 @@ ul.foot.contact {
   margin-top: 4px;
   margin-bottom: 25px;
   font-family: 'Cabin', sans-serif;
-  padding-left: 24px;
+  padding-left: 9px;
   li {
     padding: 0 12px 0 0;
     color: #a6dbef;
@@ -1495,7 +1511,7 @@ ul.foot{
   margin-top: 20px;
   display: inline-block;
   list-style-type: none;
-  padding-left: 40px;
+  padding-left: 24px;
   margin-top: 1px;
   width: 83%;
   li.first {
@@ -1727,6 +1743,7 @@ ul.tags {
 text-indent: 100%;
 white-space: nowrap;
 overflow: hidden;
+display: block;
 }
 
 
