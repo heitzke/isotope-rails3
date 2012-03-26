@@ -12,17 +12,13 @@
     %title
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
     = render partial: 'layouts/head_bits'
-
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
     #top_area
       #swoosh
       #clouds.gradient
       = render partial: 'layouts/who_we_are'      
       = yield :top_area
-        
-
     = yield
-
     = render partial: 'layouts/footer'
     = render partial: 'layouts/responsive/javascripts'
     = yield :javascripts
