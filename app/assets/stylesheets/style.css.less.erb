@@ -579,10 +579,9 @@ body.controller-home.action-index{
       background-color: #9fb3bf;
       border: 1px solid #89a0ab;
       height: 33px;
-      width: 32px;
-      margin: 28px 4px 0 0;
+      width: 30px;
+      margin: 28px 6px 0 0;
       .rounded(5px);
-      .drop-shadow( 1px, 1px, 0px, 0.2);      
     }
     ul {
       display: none;
@@ -1509,20 +1508,26 @@ ul.foot.contact {
   }  
 }
 .casestudy_left {
-  width: 49%;
+  width: 95%;
   display: inline-block;
   vertical-align: top;
   ul.thumbs {
-    padding: 0;
+    padding: 0 0 10px 0;
     margin: 0;
+    border-bottom: 1px solid #eee;
     li {
       list-style: none;
       display: inline-block;
     }
   }
+  ul.technologies {
+    li {
+      list-style: none;
+    }
+  }
 }
 .casestudy_right {
-  width: 49%;
+  width: 95%;
   display: inline-block;
   vertical-align: top;
 }
@@ -1646,6 +1651,15 @@ blockquote.aside{
 ul.sibling_nav{
   border-bottom:1px solid #eee;
   padding-bottom: 10px;
+  padding-left: 0;
+  li.next {
+    float:right;
+    margin: 0;
+  }
+  li.previous {
+    float: left;
+    margin: 0;
+  }
   li{
     display: inline-block;
     margin: .25em;
@@ -1675,6 +1689,7 @@ ul.sibling_nav{
   border-top:1px solid #ddd;
   padding: 10px 0;
 }
+
 #top_area{
   position: relative;
   overflow: hidden;
@@ -1789,4 +1804,23 @@ html.ie8 {
 
 #rss_link{
   padding-left: 8px;
+}
+
+.incubate_notice {
+  width: 100%;
+  display:block;
+  height: auto;
+  text-align: center;
+  background: #f2f6f8;
+  .lineargradient(#e4ebef,  #ebf2f5, #ebf2f5 );
+  position: relative;
+  z-index: 9999;
+  .fixed_content {
+    p {
+      margin: 0;
+      padding: 5px 0;
+      color: #666;
+      font-size: .9em;
+    }
+  }
 }

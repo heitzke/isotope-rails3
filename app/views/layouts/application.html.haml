@@ -13,6 +13,12 @@
       = content_for?(:title) ? yield(:title) : "isotope|eleven"
     = render partial: 'layouts/head_bits'
   %body.clearfix{ class: "action-#{params[:action]} controller-#{params[:controller]}" }
+    .incubate_notice
+      .fixed_content
+        %p 
+          incubate!(bang) has officially started back up - check 
+          = link_to 'incubatebang.com', 'http://www.incubatebang.com', :target => '_blank' 
+          for details
     #top_area
       #swoosh
       #clouds.gradient
