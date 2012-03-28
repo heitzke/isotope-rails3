@@ -1,8 +1,7 @@
 - content_for :title do
-  Case Studies &ndash; isotope|eleven
+  Autopartstomorrow &ndash; Case Studies &ndash; isotope|eleven
 
 = interior_header 'Case Studies'
-
 .interior
   .fixed_content
     %ul.sibling_nav
@@ -12,15 +11,15 @@
         = link_to 'previous', '#'
       .clearfix
     .casestudy_left
-      %h2 Alabamaintel
-      %ul.goals
-        %li Compete with 
-      %ul.responsibilities
-        %li Branding
-        %li Full featured CMS w/ integrated forum
-        %li Full featured CMS w/ integrated forum
-      %ul.technologies
-        %li 
+      %h2 Autopartstomorrow
+      %ul.categories
+        %li E-commerce
+      %ul.results
+        %li Restructuring codebase
+        %li Full layout redesign 
+        %li Decrease average page load by 60%
+        %li Total unique visitor traffic increase of 55%
+        %li Bounce rate decrease of 20%
       %ul.thumbs
         %li
           %a{ :href => '/assets/case_studies/alabamaintel1.png', :id => 'image', :rel => "alabamaintel"}
@@ -35,7 +34,9 @@
           %a{ :href => '/assets/case_studies/alabamaintel4.png', :id => 'image', :rel => "alabamaintel"}
             = image_tag 'case_studies/casestudy_image_thumb.png'
     .casestudy_right
-      
+      %p.description
+        AutoPartsTomorrow.com is a leading distributor of automotive parts and supplies that offers time-definite service at the low prices. The parts shown on the site reflect in-stock and ready to ship parts.  
+        
       %p This app does everything you could possibly want it to do and not only that, it is beautifully designed and extremely intuitive to use. Download it from the App Store for FREE if you don’t mind some adverts popping up or if you prefer an ad-free experience then you can down load the ad-free version for 99p.
       %blockquote.aside
         &ldquo; One ring...to rule them all&rdquo;
@@ -54,4 +55,4 @@
       'speedOut': 200, 
       'overlayShow': false
     });
-  });  
+  });

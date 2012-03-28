@@ -30,6 +30,8 @@ IsotopeRails3::Application.routes.draw do
   match '/services/saas' => 'services#saas'
   
   match '/case_studies' => 'case_studies#index'
+  match '/case_studies/autopartstomorrow' => 'case_studies#autopartstomorrow'
+  
 
   match '/community' => 'community#index'
   match '/community/get_github_project' => 'community#get_github_project'
